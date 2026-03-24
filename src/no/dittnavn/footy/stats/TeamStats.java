@@ -34,6 +34,12 @@ public class TeamStats {
     public int awayGoalsScored = 0;
     public int awayGoalsConceded = 0;
 
+    public int shotsOnTarget = 0;
+    public int shotsOnTargetAgainst = 0;
+
+    public int homeShotsOnTarget = 0;
+    public int awayShotsOnTarget = 0;
+
 
 
     private double elo = 1500; // start rating
@@ -72,6 +78,11 @@ public class TeamStats {
             homeGoalsScored += match.getHomeGoals();
             homeGoalsConceded += match.getAwayGoals();
 
+            shotsOnTarget += match.getHomeShotsTarget();
+            shotsOnTargetAgainst += match.getAwayShotsTarget();
+            homeShotsOnTarget += match.getHomeShotsTarget();
+
+
             updateForm(match.getHomeGoals(), match.getAwayGoals(), true);
 
             if(match.getHomeGoals() > match.getAwayGoals()){
@@ -96,6 +107,10 @@ public class TeamStats {
             awayGoalsScored += match.getAwayGoals();
             awayGoalsConceded += match.getHomeGoals();
 
+            shotsOnTarget += match.getAwayShotsTarget();
+            shotsOnTargetAgainst += match.getHomeShotsTarget();
+            awayShotsOnTarget += match.getAwayShotsTarget();
+
             updateForm(match.getAwayGoals(), match.getHomeGoals(), false);
 
             if(match.getAwayGoals() > match.getHomeGoals()){
@@ -108,6 +123,14 @@ public class TeamStats {
                 losses++;
                 awayLosses++;
             }
+        }
+
+        if (games % 10 == 0) {
+            System.out.println(
+                    name +
+                            " SOT=" + getShotsOnTargetPerMatch() +
+                            " | Against=" + getShotsOnTargetAgainstPerMatch()
+            );
         }
     }
 
@@ -311,6 +334,17 @@ public class TeamStats {
     public void setLosses(int losses) {
         this.losses = losses;
     }
+
+    public double getShotsOnTargetPerMatch() {
+        if (games == 0) return 4.0;
+        return (double) shotsOnTarget / games;
+    }
+
+    public double getShotsOnTargetAgainstPerMatch() {
+        if (games == 0) return 4.0;
+        return (double) shotsOnTargetAgainst / games;
+    }
+
 
 
 }

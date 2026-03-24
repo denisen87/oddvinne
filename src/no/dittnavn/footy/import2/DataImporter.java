@@ -26,7 +26,9 @@ public class DataImporter {
                 "SP1", "laliga",
                 "F1", "ligue1",
                 "NOR", "eliteserien",
-                "SP2", "laliga2"
+                "SP2", "laliga2",
+                "E2", "league one",
+                "N1", "Eredivisie"
         );
 
         try (Connection conn = DatabaseManager.getConnection()) {

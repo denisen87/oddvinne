@@ -58,6 +58,120 @@
           "LOSS"
         ]
       },
+      "leyton orient": {
+        "name": "leyton orient",
+        "games": 38,
+        "wins": 14,
+        "draws": 6,
+        "losses": 18,
+        "goalsScored": 55,
+        "goalsConceded": 62,
+        "homeGames": 19,
+        "homeWins": 8,
+        "awayLosses": 12,
+        "homeLosses": 6,
+        "awayWins": 6,
+        "homeDraws": 5,
+        "awayDraws": 1,
+        "awayGames": 19,
+        "homeGoalsScored": 29,
+        "homeGoalsConceded": 24,
+        "awayGoalsScored": 26,
+        "awayGoalsConceded": 38,
+        "elo": 1485.3818984490954,
+        "recentHomeResults": [
+          "WIN",
+          "WIN",
+          "LOSS",
+          "LOSS",
+          "LOSS"
+        ],
+        "recentAwayResults": [
+          "WIN",
+          "WIN",
+          "LOSS",
+          "WIN",
+          "DRAW"
+        ],
+        "dna": {
+          "attackIndex": 0.5,
+          "defenseIndex": 0.5,
+          "tempoIndex": 0.5,
+          "comebackAbility": 0.5,
+          "chokeFactor": 0.5
+        },
+        "profile": {
+          "injuredPlayers": 0,
+          "suspendedPlayers": 0,
+          "coachRating": 0.5,
+          "motivation": 0.5,
+          "fatigue": 0.0
+        },
+        "lastResults": [
+          "WIN",
+          "WIN",
+          "WIN",
+          "WIN",
+          "LOSS"
+        ]
+      },
+      "luton": {
+        "name": "luton",
+        "games": 39,
+        "wins": 15,
+        "draws": 10,
+        "losses": 14,
+        "goalsScored": 52,
+        "goalsConceded": 49,
+        "homeGames": 20,
+        "homeWins": 10,
+        "awayLosses": 10,
+        "homeLosses": 4,
+        "awayWins": 5,
+        "homeDraws": 6,
+        "awayDraws": 4,
+        "awayGames": 19,
+        "homeGoalsScored": 31,
+        "homeGoalsConceded": 21,
+        "awayGoalsScored": 21,
+        "awayGoalsConceded": 28,
+        "elo": 1507.2564543900355,
+        "recentHomeResults": [
+          "DRAW",
+          "WIN",
+          "LOSS",
+          "DRAW",
+          "WIN"
+        ],
+        "recentAwayResults": [
+          "WIN",
+          "DRAW",
+          "DRAW",
+          "LOSS",
+          "LOSS"
+        ],
+        "dna": {
+          "attackIndex": 0.5,
+          "defenseIndex": 0.5,
+          "tempoIndex": 0.5,
+          "comebackAbility": 0.5,
+          "chokeFactor": 0.5
+        },
+        "profile": {
+          "injuredPlayers": 0,
+          "suspendedPlayers": 0,
+          "coachRating": 0.5,
+          "motivation": 0.5,
+          "fatigue": 0.0
+        },
+        "lastResults": [
+          "DRAW",
+          "WIN",
+          "WIN",
+          "DRAW",
+          "LOSS"
+        ]
+      },
       "brann": {
         "name": "brann",
         "games": 363,
@@ -343,6 +457,63 @@
           "WIN"
         ]
       },
+      "ajax": {
+        "name": "ajax",
+        "games": 28,
+        "wins": 12,
+        "draws": 12,
+        "losses": 4,
+        "goalsScored": 53,
+        "goalsConceded": 35,
+        "homeGames": 14,
+        "homeWins": 9,
+        "awayLosses": 2,
+        "homeLosses": 2,
+        "awayWins": 3,
+        "homeDraws": 3,
+        "awayDraws": 9,
+        "awayGames": 14,
+        "homeGoalsScored": 28,
+        "homeGoalsConceded": 11,
+        "awayGoalsScored": 25,
+        "awayGoalsConceded": 24,
+        "elo": 1552.0461926224211,
+        "recentHomeResults": [
+          "WIN",
+          "DRAW",
+          "WIN",
+          "WIN",
+          "DRAW"
+        ],
+        "recentAwayResults": [
+          "DRAW",
+          "LOSS",
+          "DRAW",
+          "DRAW",
+          "DRAW"
+        ],
+        "dna": {
+          "attackIndex": 0.5,
+          "defenseIndex": 0.5,
+          "tempoIndex": 0.5,
+          "comebackAbility": 0.5,
+          "chokeFactor": 0.5
+        },
+        "profile": {
+          "injuredPlayers": 0,
+          "suspendedPlayers": 0,
+          "coachRating": 0.5,
+          "motivation": 0.5,
+          "fatigue": 0.0
+        },
+        "lastResults": [
+          "DRAW",
+          "WIN",
+          "LOSS",
+          "DRAW",
+          "DRAW"
+        ]
+      },
       "andorra": {
         "name": "andorra",
         "games": 31,
@@ -398,6 +569,63 @@
           "WIN",
           "WIN",
           "WIN"
+        ]
+      },
+      "groningen": {
+        "name": "groningen",
+        "games": 28,
+        "wins": 11,
+        "draws": 5,
+        "losses": 12,
+        "goalsScored": 40,
+        "goalsConceded": 37,
+        "homeGames": 14,
+        "homeWins": 6,
+        "awayLosses": 7,
+        "homeLosses": 5,
+        "awayWins": 5,
+        "homeDraws": 3,
+        "awayDraws": 2,
+        "awayGames": 14,
+        "homeGoalsScored": 23,
+        "homeGoalsConceded": 14,
+        "awayGoalsScored": 17,
+        "awayGoalsConceded": 23,
+        "elo": 1488.467050866432,
+        "recentHomeResults": [
+          "WIN",
+          "WIN",
+          "LOSS",
+          "LOSS",
+          "LOSS"
+        ],
+        "recentAwayResults": [
+          "DRAW",
+          "LOSS",
+          "LOSS",
+          "LOSS",
+          "WIN"
+        ],
+        "dna": {
+          "attackIndex": 0.5,
+          "defenseIndex": 0.5,
+          "tempoIndex": 0.5,
+          "comebackAbility": 0.5,
+          "chokeFactor": 0.5
+        },
+        "profile": {
+          "injuredPlayers": 0,
+          "suspendedPlayers": 0,
+          "coachRating": 0.5,
+          "motivation": 0.5,
+          "fatigue": 0.0
+        },
+        "lastResults": [
+          "WIN",
+          "DRAW",
+          "WIN",
+          "LOSS",
+          "LOSS"
         ]
       },
       "oviedo": {
@@ -970,6 +1198,120 @@
           "DRAW"
         ]
       },
+      "zwolle": {
+        "name": "zwolle",
+        "games": 28,
+        "wins": 8,
+        "draws": 9,
+        "losses": 11,
+        "goalsScored": 38,
+        "goalsConceded": 53,
+        "homeGames": 14,
+        "homeWins": 7,
+        "awayLosses": 7,
+        "homeLosses": 4,
+        "awayWins": 1,
+        "homeDraws": 3,
+        "awayDraws": 6,
+        "awayGames": 14,
+        "homeGoalsScored": 18,
+        "homeGoalsConceded": 17,
+        "awayGoalsScored": 20,
+        "awayGoalsConceded": 36,
+        "elo": 1481.7974626722623,
+        "recentHomeResults": [
+          "WIN",
+          "DRAW",
+          "DRAW",
+          "LOSS",
+          "WIN"
+        ],
+        "recentAwayResults": [
+          "DRAW",
+          "DRAW",
+          "LOSS",
+          "LOSS",
+          "DRAW"
+        ],
+        "dna": {
+          "attackIndex": 0.5,
+          "defenseIndex": 0.5,
+          "tempoIndex": 0.5,
+          "comebackAbility": 0.5,
+          "chokeFactor": 0.5
+        },
+        "profile": {
+          "injuredPlayers": 0,
+          "suspendedPlayers": 0,
+          "coachRating": 0.5,
+          "motivation": 0.5,
+          "fatigue": 0.0
+        },
+        "lastResults": [
+          "WIN",
+          "DRAW",
+          "DRAW",
+          "DRAW",
+          "DRAW"
+        ]
+      },
+      "huddersfield": {
+        "name": "huddersfield",
+        "games": 39,
+        "wins": 16,
+        "draws": 9,
+        "losses": 14,
+        "goalsScored": 59,
+        "goalsConceded": 51,
+        "homeGames": 19,
+        "homeWins": 11,
+        "awayLosses": 12,
+        "homeLosses": 2,
+        "awayWins": 5,
+        "homeDraws": 6,
+        "awayDraws": 3,
+        "awayGames": 20,
+        "homeGoalsScored": 36,
+        "homeGoalsConceded": 18,
+        "awayGoalsScored": 23,
+        "awayGoalsConceded": 33,
+        "elo": 1503.8202969601589,
+        "recentHomeResults": [
+          "DRAW",
+          "WIN",
+          "WIN",
+          "DRAW",
+          "WIN"
+        ],
+        "recentAwayResults": [
+          "LOSS",
+          "DRAW",
+          "LOSS",
+          "LOSS",
+          "LOSS"
+        ],
+        "dna": {
+          "attackIndex": 0.5,
+          "defenseIndex": 0.5,
+          "tempoIndex": 0.5,
+          "comebackAbility": 0.5,
+          "chokeFactor": 0.5
+        },
+        "profile": {
+          "injuredPlayers": 0,
+          "suspendedPlayers": 0,
+          "coachRating": 0.5,
+          "motivation": 0.5,
+          "fatigue": 0.0
+        },
+        "lastResults": [
+          "LOSS",
+          "DRAW",
+          "DRAW",
+          "WIN",
+          "LOSS"
+        ]
+      },
       "sociedad": {
         "name": "sociedad",
         "games": 28,
@@ -1540,6 +1882,63 @@
           "LOSS"
         ]
       },
+      "for sittard": {
+        "name": "for sittard",
+        "games": 28,
+        "wins": 10,
+        "draws": 5,
+        "losses": 13,
+        "goalsScored": 43,
+        "goalsConceded": 52,
+        "homeGames": 14,
+        "homeWins": 6,
+        "awayLosses": 8,
+        "homeLosses": 5,
+        "awayWins": 4,
+        "homeDraws": 3,
+        "awayDraws": 2,
+        "awayGames": 14,
+        "homeGoalsScored": 23,
+        "homeGoalsConceded": 24,
+        "awayGoalsScored": 20,
+        "awayGoalsConceded": 28,
+        "elo": 1482.245111095606,
+        "recentHomeResults": [
+          "LOSS",
+          "LOSS",
+          "WIN",
+          "DRAW",
+          "LOSS"
+        ],
+        "recentAwayResults": [
+          "WIN",
+          "WIN",
+          "LOSS",
+          "LOSS",
+          "WIN"
+        ],
+        "dna": {
+          "attackIndex": 0.5,
+          "defenseIndex": 0.5,
+          "tempoIndex": 0.5,
+          "comebackAbility": 0.5,
+          "chokeFactor": 0.5
+        },
+        "profile": {
+          "injuredPlayers": 0,
+          "suspendedPlayers": 0,
+          "coachRating": 0.5,
+          "motivation": 0.5,
+          "fatigue": 0.0
+        },
+        "lastResults": [
+          "LOSS",
+          "WIN",
+          "LOSS",
+          "WIN",
+          "WIN"
+        ]
+      },
       "eibar": {
         "name": "eibar",
         "games": 31,
@@ -1595,6 +1994,63 @@
           "WIN",
           "WIN",
           "LOSS"
+        ]
+      },
+      "mansfield": {
+        "name": "mansfield",
+        "games": 37,
+        "wins": 12,
+        "draws": 13,
+        "losses": 12,
+        "goalsScored": 47,
+        "goalsConceded": 41,
+        "homeGames": 20,
+        "homeWins": 8,
+        "awayLosses": 6,
+        "homeLosses": 6,
+        "awayWins": 4,
+        "homeDraws": 6,
+        "awayDraws": 7,
+        "awayGames": 17,
+        "homeGoalsScored": 31,
+        "homeGoalsConceded": 21,
+        "awayGoalsScored": 16,
+        "awayGoalsConceded": 20,
+        "elo": 1503.4323926806965,
+        "recentHomeResults": [
+          "WIN",
+          "DRAW",
+          "WIN",
+          "DRAW",
+          "LOSS"
+        ],
+        "recentAwayResults": [
+          "DRAW",
+          "DRAW",
+          "LOSS",
+          "DRAW",
+          "DRAW"
+        ],
+        "dna": {
+          "attackIndex": 0.5,
+          "defenseIndex": 0.5,
+          "tempoIndex": 0.5,
+          "comebackAbility": 0.5,
+          "chokeFactor": 0.5
+        },
+        "profile": {
+          "injuredPlayers": 0,
+          "suspendedPlayers": 0,
+          "coachRating": 0.5,
+          "motivation": 0.5,
+          "fatigue": 0.0
+        },
+        "lastResults": [
+          "WIN",
+          "DRAW",
+          "DRAW",
+          "WIN",
+          "DRAW"
         ]
       },
       "bodo/glimt": {
@@ -1768,6 +2224,120 @@
           "LOSS"
         ]
       },
+      "barnsley": {
+        "name": "barnsley",
+        "games": 37,
+        "wins": 13,
+        "draws": 11,
+        "losses": 13,
+        "goalsScored": 59,
+        "goalsConceded": 60,
+        "homeGames": 20,
+        "homeWins": 9,
+        "awayLosses": 7,
+        "homeLosses": 6,
+        "awayWins": 4,
+        "homeDraws": 5,
+        "awayDraws": 6,
+        "awayGames": 17,
+        "homeGoalsScored": 36,
+        "homeGoalsConceded": 29,
+        "awayGoalsScored": 23,
+        "awayGoalsConceded": 31,
+        "elo": 1492.9759337700668,
+        "recentHomeResults": [
+          "LOSS",
+          "DRAW",
+          "DRAW",
+          "WIN",
+          "LOSS"
+        ],
+        "recentAwayResults": [
+          "DRAW",
+          "WIN",
+          "LOSS",
+          "LOSS",
+          "LOSS"
+        ],
+        "dna": {
+          "attackIndex": 0.5,
+          "defenseIndex": 0.5,
+          "tempoIndex": 0.5,
+          "comebackAbility": 0.5,
+          "chokeFactor": 0.5
+        },
+        "profile": {
+          "injuredPlayers": 0,
+          "suspendedPlayers": 0,
+          "coachRating": 0.5,
+          "motivation": 0.5,
+          "fatigue": 0.0
+        },
+        "lastResults": [
+          "LOSS",
+          "DRAW",
+          "DRAW",
+          "DRAW",
+          "WIN"
+        ]
+      },
+      "stockport": {
+        "name": "stockport",
+        "games": 37,
+        "wins": 17,
+        "draws": 9,
+        "losses": 11,
+        "goalsScored": 51,
+        "goalsConceded": 48,
+        "homeGames": 18,
+        "homeWins": 10,
+        "awayLosses": 7,
+        "homeLosses": 4,
+        "awayWins": 7,
+        "homeDraws": 4,
+        "awayDraws": 5,
+        "awayGames": 19,
+        "homeGoalsScored": 28,
+        "homeGoalsConceded": 22,
+        "awayGoalsScored": 23,
+        "awayGoalsConceded": 26,
+        "elo": 1526.534565386502,
+        "recentHomeResults": [
+          "WIN",
+          "WIN",
+          "DRAW",
+          "WIN",
+          "WIN"
+        ],
+        "recentAwayResults": [
+          "DRAW",
+          "LOSS",
+          "LOSS",
+          "LOSS",
+          "LOSS"
+        ],
+        "dna": {
+          "attackIndex": 0.5,
+          "defenseIndex": 0.5,
+          "tempoIndex": 0.5,
+          "comebackAbility": 0.5,
+          "chokeFactor": 0.5
+        },
+        "profile": {
+          "injuredPlayers": 0,
+          "suspendedPlayers": 0,
+          "coachRating": 0.5,
+          "motivation": 0.5,
+          "fatigue": 0.0
+        },
+        "lastResults": [
+          "DRAW",
+          "WIN",
+          "LOSS",
+          "LOSS",
+          "LOSS"
+        ]
+      },
       "ath madrid": {
         "name": "ath madrid",
         "games": 28,
@@ -1820,6 +2390,63 @@
         "lastResults": [
           "WIN",
           "WIN",
+          "WIN",
+          "WIN",
+          "LOSS"
+        ]
+      },
+      "telstar": {
+        "name": "telstar",
+        "games": 28,
+        "wins": 6,
+        "draws": 9,
+        "losses": 13,
+        "goalsScored": 38,
+        "goalsConceded": 46,
+        "homeGames": 14,
+        "homeWins": 3,
+        "awayLosses": 7,
+        "homeLosses": 6,
+        "awayWins": 3,
+        "homeDraws": 5,
+        "awayDraws": 4,
+        "awayGames": 14,
+        "homeGoalsScored": 24,
+        "homeGoalsConceded": 25,
+        "awayGoalsScored": 14,
+        "awayGoalsConceded": 21,
+        "elo": 1464.807992141582,
+        "recentHomeResults": [
+          "WIN",
+          "WIN",
+          "DRAW",
+          "LOSS",
+          "LOSS"
+        ],
+        "recentAwayResults": [
+          "LOSS",
+          "WIN",
+          "LOSS",
+          "DRAW",
+          "LOSS"
+        ],
+        "dna": {
+          "attackIndex": 0.5,
+          "defenseIndex": 0.5,
+          "tempoIndex": 0.5,
+          "comebackAbility": 0.5,
+          "chokeFactor": 0.5
+        },
+        "profile": {
+          "injuredPlayers": 0,
+          "suspendedPlayers": 0,
+          "coachRating": 0.5,
+          "motivation": 0.5,
+          "fatigue": 0.0
+        },
+        "lastResults": [
+          "WIN",
+          "LOSS",
           "WIN",
           "WIN",
           "LOSS"
@@ -2395,6 +3022,63 @@
           "WIN"
         ]
       },
+      "nijmegen": {
+        "name": "nijmegen",
+        "games": 28,
+        "wins": 14,
+        "draws": 8,
+        "losses": 6,
+        "goalsScored": 69,
+        "goalsConceded": 47,
+        "homeGames": 14,
+        "homeWins": 8,
+        "awayLosses": 3,
+        "homeLosses": 3,
+        "awayWins": 6,
+        "homeDraws": 3,
+        "awayDraws": 5,
+        "awayGames": 14,
+        "homeGoalsScored": 37,
+        "homeGoalsConceded": 22,
+        "awayGoalsScored": 32,
+        "awayGoalsConceded": 25,
+        "elo": 1559.572026226005,
+        "recentHomeResults": [
+          "DRAW",
+          "WIN",
+          "LOSS",
+          "LOSS",
+          "WIN"
+        ],
+        "recentAwayResults": [
+          "WIN",
+          "DRAW",
+          "DRAW",
+          "WIN",
+          "WIN"
+        ],
+        "dna": {
+          "attackIndex": 0.5,
+          "defenseIndex": 0.5,
+          "tempoIndex": 0.5,
+          "comebackAbility": 0.5,
+          "chokeFactor": 0.5
+        },
+        "profile": {
+          "injuredPlayers": 0,
+          "suspendedPlayers": 0,
+          "coachRating": 0.5,
+          "motivation": 0.5,
+          "fatigue": 0.0
+        },
+        "lastResults": [
+          "DRAW",
+          "WIN",
+          "WIN",
+          "LOSS",
+          "DRAW"
+        ]
+      },
       "sevilla": {
         "name": "sevilla",
         "games": 28,
@@ -2450,6 +3134,63 @@
           "DRAW",
           "WIN",
           "DRAW"
+        ]
+      },
+      "az alkmaar": {
+        "name": "az alkmaar",
+        "games": 28,
+        "wins": 12,
+        "draws": 6,
+        "losses": 10,
+        "goalsScored": 47,
+        "goalsConceded": 45,
+        "homeGames": 13,
+        "homeWins": 6,
+        "awayLosses": 8,
+        "homeLosses": 2,
+        "awayWins": 6,
+        "homeDraws": 5,
+        "awayDraws": 1,
+        "awayGames": 15,
+        "homeGoalsScored": 29,
+        "homeGoalsConceded": 21,
+        "awayGoalsScored": 18,
+        "awayGoalsConceded": 24,
+        "elo": 1504.6288515504978,
+        "recentHomeResults": [
+          "WIN",
+          "WIN",
+          "DRAW",
+          "LOSS",
+          "DRAW"
+        ],
+        "recentAwayResults": [
+          "LOSS",
+          "LOSS",
+          "LOSS",
+          "WIN",
+          "WIN"
+        ],
+        "dna": {
+          "attackIndex": 0.5,
+          "defenseIndex": 0.5,
+          "tempoIndex": 0.5,
+          "comebackAbility": 0.5,
+          "chokeFactor": 0.5
+        },
+        "profile": {
+          "injuredPlayers": 0,
+          "suspendedPlayers": 0,
+          "coachRating": 0.5,
+          "motivation": 0.5,
+          "fatigue": 0.0
+        },
+        "lastResults": [
+          "LOSS",
+          "WIN",
+          "LOSS",
+          "LOSS",
+          "WIN"
         ]
       },
       "rb leipzig": {
@@ -3410,6 +4151,120 @@
           "LOSS"
         ]
       },
+      "rotherham": {
+        "name": "rotherham",
+        "games": 38,
+        "wins": 9,
+        "draws": 9,
+        "losses": 20,
+        "goalsScored": 35,
+        "goalsConceded": 58,
+        "homeGames": 19,
+        "homeWins": 6,
+        "awayLosses": 14,
+        "homeLosses": 6,
+        "awayWins": 3,
+        "homeDraws": 7,
+        "awayDraws": 2,
+        "awayGames": 19,
+        "homeGoalsScored": 22,
+        "homeGoalsConceded": 26,
+        "awayGoalsScored": 13,
+        "awayGoalsConceded": 32,
+        "elo": 1426.3573466093362,
+        "recentHomeResults": [
+          "DRAW",
+          "DRAW",
+          "WIN",
+          "LOSS",
+          "LOSS"
+        ],
+        "recentAwayResults": [
+          "LOSS",
+          "LOSS",
+          "LOSS",
+          "LOSS",
+          "LOSS"
+        ],
+        "dna": {
+          "attackIndex": 0.5,
+          "defenseIndex": 0.5,
+          "tempoIndex": 0.5,
+          "comebackAbility": 0.5,
+          "chokeFactor": 0.5
+        },
+        "profile": {
+          "injuredPlayers": 0,
+          "suspendedPlayers": 0,
+          "coachRating": 0.5,
+          "motivation": 0.5,
+          "fatigue": 0.0
+        },
+        "lastResults": [
+          "LOSS",
+          "LOSS",
+          "DRAW",
+          "LOSS",
+          "DRAW"
+        ]
+      },
+      "bradford": {
+        "name": "bradford",
+        "games": 39,
+        "wins": 19,
+        "draws": 8,
+        "losses": 12,
+        "goalsScored": 49,
+        "goalsConceded": 44,
+        "homeGames": 19,
+        "homeWins": 14,
+        "awayLosses": 10,
+        "homeLosses": 2,
+        "awayWins": 5,
+        "homeDraws": 3,
+        "awayDraws": 5,
+        "awayGames": 20,
+        "homeGoalsScored": 29,
+        "homeGoalsConceded": 14,
+        "awayGoalsScored": 20,
+        "awayGoalsConceded": 30,
+        "elo": 1521.7332299201319,
+        "recentHomeResults": [
+          "DRAW",
+          "WIN",
+          "WIN",
+          "WIN",
+          "WIN"
+        ],
+        "recentAwayResults": [
+          "LOSS",
+          "LOSS",
+          "WIN",
+          "LOSS",
+          "LOSS"
+        ],
+        "dna": {
+          "attackIndex": 0.5,
+          "defenseIndex": 0.5,
+          "tempoIndex": 0.5,
+          "comebackAbility": 0.5,
+          "chokeFactor": 0.5
+        },
+        "profile": {
+          "injuredPlayers": 0,
+          "suspendedPlayers": 0,
+          "coachRating": 0.5,
+          "motivation": 0.5,
+          "fatigue": 0.0
+        },
+        "lastResults": [
+          "LOSS",
+          "DRAW",
+          "LOSS",
+          "WIN",
+          "WIN"
+        ]
+      },
       "hamburg": {
         "name": "hamburg",
         "games": 25,
@@ -3809,6 +4664,63 @@
           "WIN"
         ]
       },
+      "twente": {
+        "name": "twente",
+        "games": 28,
+        "wins": 12,
+        "draws": 11,
+        "losses": 5,
+        "goalsScored": 47,
+        "goalsConceded": 30,
+        "homeGames": 14,
+        "homeWins": 7,
+        "awayLosses": 2,
+        "homeLosses": 3,
+        "awayWins": 5,
+        "homeDraws": 4,
+        "awayDraws": 7,
+        "awayGames": 14,
+        "homeGoalsScored": 22,
+        "homeGoalsConceded": 14,
+        "awayGoalsScored": 25,
+        "awayGoalsConceded": 16,
+        "elo": 1554.111558226665,
+        "recentHomeResults": [
+          "LOSS",
+          "WIN",
+          "WIN",
+          "WIN",
+          "DRAW"
+        ],
+        "recentAwayResults": [
+          "WIN",
+          "WIN",
+          "DRAW",
+          "DRAW",
+          "WIN"
+        ],
+        "dna": {
+          "attackIndex": 0.5,
+          "defenseIndex": 0.5,
+          "tempoIndex": 0.5,
+          "comebackAbility": 0.5,
+          "chokeFactor": 0.5
+        },
+        "profile": {
+          "injuredPlayers": 0,
+          "suspendedPlayers": 0,
+          "coachRating": 0.5,
+          "motivation": 0.5,
+          "fatigue": 0.0
+        },
+        "lastResults": [
+          "WIN",
+          "LOSS",
+          "WIN",
+          "WIN",
+          "WIN"
+        ]
+      },
       "real madrid": {
         "name": "real madrid",
         "games": 28,
@@ -3863,6 +4775,63 @@
           "WIN",
           "LOSS",
           "LOSS",
+          "WIN"
+        ]
+      },
+      "lincoln": {
+        "name": "lincoln",
+        "games": 39,
+        "wins": 25,
+        "draws": 9,
+        "losses": 5,
+        "goalsScored": 74,
+        "goalsConceded": 34,
+        "homeGames": 20,
+        "homeWins": 15,
+        "awayLosses": 4,
+        "homeLosses": 1,
+        "awayWins": 10,
+        "homeDraws": 4,
+        "awayDraws": 5,
+        "awayGames": 19,
+        "homeGoalsScored": 46,
+        "homeGoalsConceded": 16,
+        "awayGoalsScored": 28,
+        "awayGoalsConceded": 18,
+        "elo": 1640.7804453283838,
+        "recentHomeResults": [
+          "WIN",
+          "WIN",
+          "WIN",
+          "WIN",
+          "DRAW"
+        ],
+        "recentAwayResults": [
+          "DRAW",
+          "WIN",
+          "WIN",
+          "WIN",
+          "WIN"
+        ],
+        "dna": {
+          "attackIndex": 0.5,
+          "defenseIndex": 0.5,
+          "tempoIndex": 0.5,
+          "comebackAbility": 0.5,
+          "chokeFactor": 0.5
+        },
+        "profile": {
+          "injuredPlayers": 0,
+          "suspendedPlayers": 0,
+          "coachRating": 0.5,
+          "motivation": 0.5,
+          "fatigue": 0.0
+        },
+        "lastResults": [
+          "WIN",
+          "DRAW",
+          "WIN",
+          "WIN",
           "WIN"
         ]
       },
@@ -4037,6 +5006,120 @@
           "WIN"
         ]
       },
+      "heerenveen": {
+        "name": "heerenveen",
+        "games": 28,
+        "wins": 11,
+        "draws": 8,
+        "losses": 9,
+        "goalsScored": 49,
+        "goalsConceded": 46,
+        "homeGames": 14,
+        "homeWins": 6,
+        "awayLosses": 6,
+        "homeLosses": 3,
+        "awayWins": 5,
+        "homeDraws": 5,
+        "awayDraws": 3,
+        "awayGames": 14,
+        "homeGoalsScored": 27,
+        "homeGoalsConceded": 22,
+        "awayGoalsScored": 22,
+        "awayGoalsConceded": 24,
+        "elo": 1526.8876171899183,
+        "recentHomeResults": [
+          "WIN",
+          "WIN",
+          "WIN",
+          "DRAW",
+          "LOSS"
+        ],
+        "recentAwayResults": [
+          "DRAW",
+          "WIN",
+          "LOSS",
+          "WIN",
+          "LOSS"
+        ],
+        "dna": {
+          "attackIndex": 0.5,
+          "defenseIndex": 0.5,
+          "tempoIndex": 0.5,
+          "comebackAbility": 0.5,
+          "chokeFactor": 0.5
+        },
+        "profile": {
+          "injuredPlayers": 0,
+          "suspendedPlayers": 0,
+          "coachRating": 0.5,
+          "motivation": 0.5,
+          "fatigue": 0.0
+        },
+        "lastResults": [
+          "DRAW",
+          "WIN",
+          "WIN",
+          "WIN",
+          "LOSS"
+        ]
+      },
+      "afc wimbledon": {
+        "name": "afc wimbledon",
+        "games": 38,
+        "wins": 14,
+        "draws": 8,
+        "losses": 16,
+        "goalsScored": 49,
+        "goalsConceded": 55,
+        "homeGames": 19,
+        "homeWins": 8,
+        "awayLosses": 9,
+        "homeLosses": 7,
+        "awayWins": 6,
+        "homeDraws": 4,
+        "awayDraws": 4,
+        "awayGames": 19,
+        "homeGoalsScored": 24,
+        "homeGoalsConceded": 19,
+        "awayGoalsScored": 25,
+        "awayGoalsConceded": 36,
+        "elo": 1478.5227715240035,
+        "recentHomeResults": [
+          "DRAW",
+          "LOSS",
+          "WIN",
+          "WIN",
+          "WIN"
+        ],
+        "recentAwayResults": [
+          "LOSS",
+          "DRAW",
+          "LOSS",
+          "DRAW",
+          "WIN"
+        ],
+        "dna": {
+          "attackIndex": 0.5,
+          "defenseIndex": 0.5,
+          "tempoIndex": 0.5,
+          "comebackAbility": 0.5,
+          "chokeFactor": 0.5
+        },
+        "profile": {
+          "injuredPlayers": 0,
+          "suspendedPlayers": 0,
+          "coachRating": 0.5,
+          "motivation": 0.5,
+          "fatigue": 0.0
+        },
+        "lastResults": [
+          "DRAW",
+          "LOSS",
+          "LOSS",
+          "WIN",
+          "WIN"
+        ]
+      },
       "sp gijon": {
         "name": "sp gijon",
         "games": 31,
@@ -4091,6 +5174,63 @@
           "WIN",
           "LOSS",
           "DRAW",
+          "DRAW"
+        ]
+      },
+      "wigan": {
+        "name": "wigan",
+        "games": 38,
+        "wins": 11,
+        "draws": 12,
+        "losses": 15,
+        "goalsScored": 41,
+        "goalsConceded": 51,
+        "homeGames": 19,
+        "homeWins": 9,
+        "awayLosses": 8,
+        "homeLosses": 7,
+        "awayWins": 2,
+        "homeDraws": 3,
+        "awayDraws": 9,
+        "awayGames": 19,
+        "homeGoalsScored": 19,
+        "homeGoalsConceded": 15,
+        "awayGoalsScored": 22,
+        "awayGoalsConceded": 36,
+        "elo": 1480.1024406287966,
+        "recentHomeResults": [
+          "WIN",
+          "WIN",
+          "LOSS",
+          "WIN",
+          "WIN"
+        ],
+        "recentAwayResults": [
+          "DRAW",
+          "DRAW",
+          "LOSS",
+          "LOSS",
+          "LOSS"
+        ],
+        "dna": {
+          "attackIndex": 0.5,
+          "defenseIndex": 0.5,
+          "tempoIndex": 0.5,
+          "comebackAbility": 0.5,
+          "chokeFactor": 0.5
+        },
+        "profile": {
+          "injuredPlayers": 0,
+          "suspendedPlayers": 0,
+          "coachRating": 0.5,
+          "motivation": 0.5,
+          "fatigue": 0.0
+        },
+        "lastResults": [
+          "WIN",
+          "DRAW",
+          "WIN",
+          "LOSS",
           "DRAW"
         ]
       },
@@ -4149,6 +5289,63 @@
           "WIN",
           "WIN",
           "LOSS"
+        ]
+      },
+      "psv eindhoven": {
+        "name": "psv eindhoven",
+        "games": 28,
+        "wins": 22,
+        "draws": 2,
+        "losses": 4,
+        "goalsScored": 78,
+        "goalsConceded": 37,
+        "homeGames": 14,
+        "homeWins": 10,
+        "awayLosses": 2,
+        "homeLosses": 2,
+        "awayWins": 12,
+        "homeDraws": 2,
+        "awayDraws": 0,
+        "awayGames": 14,
+        "homeGoalsScored": 43,
+        "homeGoalsConceded": 21,
+        "awayGoalsScored": 35,
+        "awayGoalsConceded": 16,
+        "elo": 1613.1766050015858,
+        "recentHomeResults": [
+          "LOSS",
+          "WIN",
+          "WIN",
+          "WIN",
+          "DRAW"
+        ],
+        "recentAwayResults": [
+          "LOSS",
+          "WIN",
+          "LOSS",
+          "WIN",
+          "WIN"
+        ],
+        "dna": {
+          "attackIndex": 0.5,
+          "defenseIndex": 0.5,
+          "tempoIndex": 0.5,
+          "comebackAbility": 0.5,
+          "chokeFactor": 0.5
+        },
+        "profile": {
+          "injuredPlayers": 0,
+          "suspendedPlayers": 0,
+          "coachRating": 0.5,
+          "motivation": 0.5,
+          "fatigue": 0.0
+        },
+        "lastResults": [
+          "LOSS",
+          "LOSS",
+          "WIN",
+          "WIN",
+          "WIN"
         ]
       },
       "everton": {
@@ -4892,6 +6089,63 @@
           "DRAW"
         ]
       },
+      "burton": {
+        "name": "burton",
+        "games": 39,
+        "wins": 12,
+        "draws": 10,
+        "losses": 17,
+        "goalsScored": 44,
+        "goalsConceded": 54,
+        "homeGames": 20,
+        "homeWins": 8,
+        "awayLosses": 8,
+        "homeLosses": 9,
+        "awayWins": 4,
+        "homeDraws": 3,
+        "awayDraws": 7,
+        "awayGames": 19,
+        "homeGoalsScored": 24,
+        "homeGoalsConceded": 26,
+        "awayGoalsScored": 20,
+        "awayGoalsConceded": 28,
+        "elo": 1476.3259886774376,
+        "recentHomeResults": [
+          "WIN",
+          "LOSS",
+          "LOSS",
+          "WIN",
+          "WIN"
+        ],
+        "recentAwayResults": [
+          "WIN",
+          "DRAW",
+          "LOSS",
+          "DRAW",
+          "DRAW"
+        ],
+        "dna": {
+          "attackIndex": 0.5,
+          "defenseIndex": 0.5,
+          "tempoIndex": 0.5,
+          "comebackAbility": 0.5,
+          "chokeFactor": 0.5
+        },
+        "profile": {
+          "injuredPlayers": 0,
+          "suspendedPlayers": 0,
+          "coachRating": 0.5,
+          "motivation": 0.5,
+          "fatigue": 0.0
+        },
+        "lastResults": [
+          "WIN",
+          "LOSS",
+          "WIN",
+          "LOSS",
+          "DRAW"
+        ]
+      },
       "lillestrom": {
         "name": "lillestrom",
         "games": 362,
@@ -5177,6 +6431,120 @@
           "WIN"
         ]
       },
+      "heracles": {
+        "name": "heracles",
+        "games": 28,
+        "wins": 5,
+        "draws": 4,
+        "losses": 19,
+        "goalsScored": 33,
+        "goalsConceded": 70,
+        "homeGames": 14,
+        "homeWins": 4,
+        "awayLosses": 12,
+        "homeLosses": 7,
+        "awayWins": 1,
+        "homeDraws": 3,
+        "awayDraws": 1,
+        "awayGames": 14,
+        "homeGoalsScored": 22,
+        "homeGoalsConceded": 29,
+        "awayGoalsScored": 11,
+        "awayGoalsConceded": 41,
+        "elo": 1404.500288252312,
+        "recentHomeResults": [
+          "DRAW",
+          "DRAW",
+          "LOSS",
+          "LOSS",
+          "WIN"
+        ],
+        "recentAwayResults": [
+          "LOSS",
+          "LOSS",
+          "LOSS",
+          "LOSS",
+          "LOSS"
+        ],
+        "dna": {
+          "attackIndex": 0.5,
+          "defenseIndex": 0.5,
+          "tempoIndex": 0.5,
+          "comebackAbility": 0.5,
+          "chokeFactor": 0.5
+        },
+        "profile": {
+          "injuredPlayers": 0,
+          "suspendedPlayers": 0,
+          "coachRating": 0.5,
+          "motivation": 0.5,
+          "fatigue": 0.0
+        },
+        "lastResults": [
+          "DRAW",
+          "LOSS",
+          "DRAW",
+          "LOSS",
+          "LOSS"
+        ]
+      },
+      "stevenage": {
+        "name": "stevenage",
+        "games": 38,
+        "wins": 17,
+        "draws": 9,
+        "losses": 12,
+        "goalsScored": 41,
+        "goalsConceded": 38,
+        "homeGames": 19,
+        "homeWins": 11,
+        "awayLosses": 10,
+        "homeLosses": 2,
+        "awayWins": 6,
+        "homeDraws": 6,
+        "awayDraws": 3,
+        "awayGames": 19,
+        "homeGoalsScored": 22,
+        "homeGoalsConceded": 11,
+        "awayGoalsScored": 19,
+        "awayGoalsConceded": 27,
+        "elo": 1522.0781061194161,
+        "recentHomeResults": [
+          "WIN",
+          "WIN",
+          "LOSS",
+          "WIN",
+          "WIN"
+        ],
+        "recentAwayResults": [
+          "LOSS",
+          "WIN",
+          "LOSS",
+          "LOSS",
+          "LOSS"
+        ],
+        "dna": {
+          "attackIndex": 0.5,
+          "defenseIndex": 0.5,
+          "tempoIndex": 0.5,
+          "comebackAbility": 0.5,
+          "chokeFactor": 0.5
+        },
+        "profile": {
+          "injuredPlayers": 0,
+          "suspendedPlayers": 0,
+          "coachRating": 0.5,
+          "motivation": 0.5,
+          "fatigue": 0.0
+        },
+        "lastResults": [
+          "WIN",
+          "LOSS",
+          "WIN",
+          "LOSS",
+          "WIN"
+        ]
+      },
       "viking": {
         "name": "viking",
         "games": 390,
@@ -5232,6 +6600,63 @@
           "WIN",
           "WIN",
           "WIN"
+        ]
+      },
+      "sparta rotterdam": {
+        "name": "sparta rotterdam",
+        "games": 28,
+        "wins": 12,
+        "draws": 5,
+        "losses": 11,
+        "goalsScored": 35,
+        "goalsConceded": 47,
+        "homeGames": 14,
+        "homeWins": 6,
+        "awayLosses": 7,
+        "homeLosses": 4,
+        "awayWins": 6,
+        "homeDraws": 4,
+        "awayDraws": 1,
+        "awayGames": 14,
+        "homeGoalsScored": 17,
+        "homeGoalsConceded": 20,
+        "awayGoalsScored": 18,
+        "awayGoalsConceded": 27,
+        "elo": 1505.370561683488,
+        "recentHomeResults": [
+          "WIN",
+          "DRAW",
+          "DRAW",
+          "WIN",
+          "WIN"
+        ],
+        "recentAwayResults": [
+          "LOSS",
+          "LOSS",
+          "LOSS",
+          "DRAW",
+          "WIN"
+        ],
+        "dna": {
+          "attackIndex": 0.5,
+          "defenseIndex": 0.5,
+          "tempoIndex": 0.5,
+          "comebackAbility": 0.5,
+          "chokeFactor": 0.5
+        },
+        "profile": {
+          "injuredPlayers": 0,
+          "suspendedPlayers": 0,
+          "coachRating": 0.5,
+          "motivation": 0.5,
+          "fatigue": 0.0
+        },
+        "lastResults": [
+          "WIN",
+          "LOSS",
+          "DRAW",
+          "LOSS",
+          "LOSS"
         ]
       },
       "ceuta": {
@@ -5633,6 +7058,63 @@
           "DRAW"
         ]
       },
+      "port vale": {
+        "name": "port vale",
+        "games": 36,
+        "wins": 7,
+        "draws": 10,
+        "losses": 19,
+        "goalsScored": 29,
+        "goalsConceded": 49,
+        "homeGames": 19,
+        "homeWins": 3,
+        "awayLosses": 10,
+        "homeLosses": 9,
+        "awayWins": 4,
+        "homeDraws": 7,
+        "awayDraws": 3,
+        "awayGames": 17,
+        "homeGoalsScored": 16,
+        "homeGoalsConceded": 23,
+        "awayGoalsScored": 13,
+        "awayGoalsConceded": 26,
+        "elo": 1430.2841169437554,
+        "recentHomeResults": [
+          "WIN",
+          "DRAW",
+          "LOSS",
+          "DRAW",
+          "DRAW"
+        ],
+        "recentAwayResults": [
+          "LOSS",
+          "WIN",
+          "LOSS",
+          "WIN",
+          "LOSS"
+        ],
+        "dna": {
+          "attackIndex": 0.5,
+          "defenseIndex": 0.5,
+          "tempoIndex": 0.5,
+          "comebackAbility": 0.5,
+          "chokeFactor": 0.5
+        },
+        "profile": {
+          "injuredPlayers": 0,
+          "suspendedPlayers": 0,
+          "coachRating": 0.5,
+          "motivation": 0.5,
+          "fatigue": 0.0
+        },
+        "lastResults": [
+          "WIN",
+          "LOSS",
+          "DRAW",
+          "LOSS",
+          "DRAW"
+        ]
+      },
       "brest": {
         "name": "brest",
         "games": 49,
@@ -6021,6 +7503,63 @@
           "WIN"
         ]
       },
+      "northampton": {
+        "name": "northampton",
+        "games": 39,
+        "wins": 9,
+        "draws": 8,
+        "losses": 22,
+        "goalsScored": 33,
+        "goalsConceded": 56,
+        "homeGames": 19,
+        "homeWins": 6,
+        "awayLosses": 13,
+        "homeLosses": 9,
+        "awayWins": 3,
+        "homeDraws": 4,
+        "awayDraws": 4,
+        "awayGames": 20,
+        "homeGoalsScored": 19,
+        "homeGoalsConceded": 21,
+        "awayGoalsScored": 14,
+        "awayGoalsConceded": 35,
+        "elo": 1396.7841572588131,
+        "recentHomeResults": [
+          "LOSS",
+          "DRAW",
+          "LOSS",
+          "LOSS",
+          "WIN"
+        ],
+        "recentAwayResults": [
+          "LOSS",
+          "LOSS",
+          "LOSS",
+          "LOSS",
+          "DRAW"
+        ],
+        "dna": {
+          "attackIndex": 0.5,
+          "defenseIndex": 0.5,
+          "tempoIndex": 0.5,
+          "comebackAbility": 0.5,
+          "chokeFactor": 0.5
+        },
+        "profile": {
+          "injuredPlayers": 0,
+          "suspendedPlayers": 0,
+          "coachRating": 0.5,
+          "motivation": 0.5,
+          "fatigue": 0.0
+        },
+        "lastResults": [
+          "LOSS",
+          "LOSS",
+          "LOSS",
+          "LOSS",
+          "DRAW"
+        ]
+      },
       "freiburg": {
         "name": "freiburg",
         "games": 25,
@@ -6192,6 +7731,120 @@
           "LOSS"
         ]
       },
+      "plymouth": {
+        "name": "plymouth",
+        "games": 39,
+        "wins": 18,
+        "draws": 5,
+        "losses": 16,
+        "goalsScored": 60,
+        "goalsConceded": 54,
+        "homeGames": 20,
+        "homeWins": 9,
+        "awayLosses": 8,
+        "homeLosses": 8,
+        "awayWins": 9,
+        "homeDraws": 3,
+        "awayDraws": 2,
+        "awayGames": 19,
+        "homeGoalsScored": 28,
+        "homeGoalsConceded": 28,
+        "awayGoalsScored": 32,
+        "awayGoalsConceded": 26,
+        "elo": 1541.761560949581,
+        "recentHomeResults": [
+          "WIN",
+          "WIN",
+          "WIN",
+          "WIN",
+          "LOSS"
+        ],
+        "recentAwayResults": [
+          "DRAW",
+          "WIN",
+          "LOSS",
+          "WIN",
+          "WIN"
+        ],
+        "dna": {
+          "attackIndex": 0.5,
+          "defenseIndex": 0.5,
+          "tempoIndex": 0.5,
+          "comebackAbility": 0.5,
+          "chokeFactor": 0.5
+        },
+        "profile": {
+          "injuredPlayers": 0,
+          "suspendedPlayers": 0,
+          "coachRating": 0.5,
+          "motivation": 0.5,
+          "fatigue": 0.0
+        },
+        "lastResults": [
+          "WIN",
+          "WIN",
+          "DRAW",
+          "WIN",
+          "WIN"
+        ]
+      },
+      "nac breda": {
+        "name": "nac breda",
+        "games": 28,
+        "wins": 5,
+        "draws": 8,
+        "losses": 15,
+        "goalsScored": 29,
+        "goalsConceded": 50,
+        "homeGames": 14,
+        "homeWins": 4,
+        "awayLosses": 9,
+        "homeLosses": 6,
+        "awayWins": 1,
+        "homeDraws": 4,
+        "awayDraws": 4,
+        "awayGames": 14,
+        "homeGoalsScored": 18,
+        "homeGoalsConceded": 21,
+        "awayGoalsScored": 11,
+        "awayGoalsConceded": 29,
+        "elo": 1427.7011191008526,
+        "recentHomeResults": [
+          "DRAW",
+          "WIN",
+          "LOSS",
+          "DRAW",
+          "LOSS"
+        ],
+        "recentAwayResults": [
+          "LOSS",
+          "LOSS",
+          "LOSS",
+          "WIN",
+          "DRAW"
+        ],
+        "dna": {
+          "attackIndex": 0.5,
+          "defenseIndex": 0.5,
+          "tempoIndex": 0.5,
+          "comebackAbility": 0.5,
+          "chokeFactor": 0.5
+        },
+        "profile": {
+          "injuredPlayers": 0,
+          "suspendedPlayers": 0,
+          "coachRating": 0.5,
+          "motivation": 0.5,
+          "fatigue": 0.0
+        },
+        "lastResults": [
+          "LOSS",
+          "LOSS",
+          "DRAW",
+          "LOSS",
+          "WIN"
+        ]
+      },
       "leeds": {
         "name": "leeds",
         "games": 38,
@@ -6247,6 +7900,120 @@
           "DRAW",
           "LOSS",
           "LOSS"
+        ]
+      },
+      "bolton": {
+        "name": "bolton",
+        "games": 39,
+        "wins": 17,
+        "draws": 15,
+        "losses": 7,
+        "goalsScored": 55,
+        "goalsConceded": 39,
+        "homeGames": 19,
+        "homeWins": 12,
+        "awayLosses": 6,
+        "homeLosses": 1,
+        "awayWins": 5,
+        "homeDraws": 6,
+        "awayDraws": 9,
+        "awayGames": 20,
+        "homeGoalsScored": 34,
+        "homeGoalsConceded": 15,
+        "awayGoalsScored": 21,
+        "awayGoalsConceded": 24,
+        "elo": 1556.0804703253061,
+        "recentHomeResults": [
+          "DRAW",
+          "WIN",
+          "DRAW",
+          "WIN",
+          "WIN"
+        ],
+        "recentAwayResults": [
+          "LOSS",
+          "DRAW",
+          "WIN",
+          "DRAW",
+          "DRAW"
+        ],
+        "dna": {
+          "attackIndex": 0.5,
+          "defenseIndex": 0.5,
+          "tempoIndex": 0.5,
+          "comebackAbility": 0.5,
+          "chokeFactor": 0.5
+        },
+        "profile": {
+          "injuredPlayers": 0,
+          "suspendedPlayers": 0,
+          "coachRating": 0.5,
+          "motivation": 0.5,
+          "fatigue": 0.0
+        },
+        "lastResults": [
+          "LOSS",
+          "DRAW",
+          "DRAW",
+          "WIN",
+          "WIN"
+        ]
+      },
+      "peterboro": {
+        "name": "peterboro",
+        "games": 38,
+        "wins": 15,
+        "draws": 5,
+        "losses": 18,
+        "goalsScored": 57,
+        "goalsConceded": 52,
+        "homeGames": 18,
+        "homeWins": 8,
+        "awayLosses": 11,
+        "homeLosses": 7,
+        "awayWins": 7,
+        "homeDraws": 3,
+        "awayDraws": 2,
+        "awayGames": 20,
+        "homeGoalsScored": 35,
+        "homeGoalsConceded": 22,
+        "awayGoalsScored": 22,
+        "awayGoalsConceded": 30,
+        "elo": 1486.9499093126713,
+        "recentHomeResults": [
+          "WIN",
+          "DRAW",
+          "WIN",
+          "LOSS",
+          "LOSS"
+        ],
+        "recentAwayResults": [
+          "DRAW",
+          "LOSS",
+          "DRAW",
+          "LOSS",
+          "LOSS"
+        ],
+        "dna": {
+          "attackIndex": 0.5,
+          "defenseIndex": 0.5,
+          "tempoIndex": 0.5,
+          "comebackAbility": 0.5,
+          "chokeFactor": 0.5
+        },
+        "profile": {
+          "injuredPlayers": 0,
+          "suspendedPlayers": 0,
+          "coachRating": 0.5,
+          "motivation": 0.5,
+          "fatigue": 0.0
+        },
+        "lastResults": [
+          "DRAW",
+          "WIN",
+          "LOSS",
+          "DRAW",
+          "DRAW"
         ]
       },
       "arsenal": {
@@ -6417,6 +8184,63 @@
           "WIN",
           "LOSS",
           "WIN",
+          "WIN"
+        ]
+      },
+      "wycombe": {
+        "name": "wycombe",
+        "games": 39,
+        "wins": 15,
+        "draws": 11,
+        "losses": 13,
+        "goalsScored": 55,
+        "goalsConceded": 43,
+        "homeGames": 19,
+        "homeWins": 11,
+        "awayLosses": 8,
+        "homeLosses": 5,
+        "awayWins": 4,
+        "homeDraws": 3,
+        "awayDraws": 8,
+        "awayGames": 20,
+        "homeGoalsScored": 37,
+        "homeGoalsConceded": 18,
+        "awayGoalsScored": 18,
+        "awayGoalsConceded": 25,
+        "elo": 1521.5617236378016,
+        "recentHomeResults": [
+          "LOSS",
+          "WIN",
+          "WIN",
+          "WIN",
+          "WIN"
+        ],
+        "recentAwayResults": [
+          "LOSS",
+          "WIN",
+          "LOSS",
+          "WIN",
+          "DRAW"
+        ],
+        "dna": {
+          "attackIndex": 0.5,
+          "defenseIndex": 0.5,
+          "tempoIndex": 0.5,
+          "comebackAbility": 0.5,
+          "chokeFactor": 0.5
+        },
+        "profile": {
+          "injuredPlayers": 0,
+          "suspendedPlayers": 0,
+          "coachRating": 0.5,
+          "motivation": 0.5,
+          "fatigue": 0.0
+        },
+        "lastResults": [
+          "LOSS",
+          "WIN",
+          "LOSS",
+          "LOSS",
           "WIN"
         ]
       },
@@ -7446,6 +9270,120 @@
           "LOSS"
         ]
       },
+      "feyenoord": {
+        "name": "feyenoord",
+        "games": 28,
+        "wins": 16,
+        "draws": 5,
+        "losses": 7,
+        "goalsScored": 61,
+        "goalsConceded": 40,
+        "homeGames": 15,
+        "homeWins": 10,
+        "awayLosses": 4,
+        "homeLosses": 3,
+        "awayWins": 6,
+        "homeDraws": 2,
+        "awayDraws": 3,
+        "awayGames": 13,
+        "homeGoalsScored": 35,
+        "homeGoalsConceded": 21,
+        "awayGoalsScored": 26,
+        "awayGoalsConceded": 19,
+        "elo": 1552.2486257728333,
+        "recentHomeResults": [
+          "DRAW",
+          "WIN",
+          "WIN",
+          "WIN",
+          "WIN"
+        ],
+        "recentAwayResults": [
+          "DRAW",
+          "LOSS",
+          "WIN",
+          "LOSS",
+          "DRAW"
+        ],
+        "dna": {
+          "attackIndex": 0.5,
+          "defenseIndex": 0.5,
+          "tempoIndex": 0.5,
+          "comebackAbility": 0.5,
+          "chokeFactor": 0.5
+        },
+        "profile": {
+          "injuredPlayers": 0,
+          "suspendedPlayers": 0,
+          "coachRating": 0.5,
+          "motivation": 0.5,
+          "fatigue": 0.0
+        },
+        "lastResults": [
+          "DRAW",
+          "WIN",
+          "DRAW",
+          "LOSS",
+          "WIN"
+        ]
+      },
+      "cardiff": {
+        "name": "cardiff",
+        "games": 39,
+        "wins": 23,
+        "draws": 8,
+        "losses": 8,
+        "goalsScored": 73,
+        "goalsConceded": 41,
+        "homeGames": 20,
+        "homeWins": 14,
+        "awayLosses": 4,
+        "homeLosses": 4,
+        "awayWins": 9,
+        "homeDraws": 2,
+        "awayDraws": 6,
+        "awayGames": 19,
+        "homeGoalsScored": 42,
+        "homeGoalsConceded": 22,
+        "awayGoalsScored": 31,
+        "awayGoalsConceded": 19,
+        "elo": 1583.0409909315615,
+        "recentHomeResults": [
+          "DRAW",
+          "LOSS",
+          "LOSS",
+          "WIN",
+          "WIN"
+        ],
+        "recentAwayResults": [
+          "WIN",
+          "DRAW",
+          "WIN",
+          "LOSS",
+          "WIN"
+        ],
+        "dna": {
+          "attackIndex": 0.5,
+          "defenseIndex": 0.5,
+          "tempoIndex": 0.5,
+          "comebackAbility": 0.5,
+          "chokeFactor": 0.5
+        },
+        "profile": {
+          "injuredPlayers": 0,
+          "suspendedPlayers": 0,
+          "coachRating": 0.5,
+          "motivation": 0.5,
+          "fatigue": 0.0
+        },
+        "lastResults": [
+          "DRAW",
+          "LOSS",
+          "WIN",
+          "DRAW",
+          "LOSS"
+        ]
+      },
       "rosenborg": {
         "name": "rosenborg",
         "games": 420,
@@ -7617,6 +9555,63 @@
           "WIN"
         ]
       },
+      "excelsior": {
+        "name": "excelsior",
+        "games": 28,
+        "wins": 7,
+        "draws": 6,
+        "losses": 15,
+        "goalsScored": 29,
+        "goalsConceded": 47,
+        "homeGames": 14,
+        "homeWins": 4,
+        "awayLosses": 7,
+        "homeLosses": 8,
+        "awayWins": 3,
+        "homeDraws": 2,
+        "awayDraws": 4,
+        "awayGames": 14,
+        "homeGoalsScored": 14,
+        "homeGoalsConceded": 19,
+        "awayGoalsScored": 15,
+        "awayGoalsConceded": 28,
+        "elo": 1439.1802408495512,
+        "recentHomeResults": [
+          "LOSS",
+          "LOSS",
+          "LOSS",
+          "DRAW",
+          "DRAW"
+        ],
+        "recentAwayResults": [
+          "DRAW",
+          "LOSS",
+          "LOSS",
+          "WIN",
+          "DRAW"
+        ],
+        "dna": {
+          "attackIndex": 0.5,
+          "defenseIndex": 0.5,
+          "tempoIndex": 0.5,
+          "comebackAbility": 0.5,
+          "chokeFactor": 0.5
+        },
+        "profile": {
+          "injuredPlayers": 0,
+          "suspendedPlayers": 0,
+          "coachRating": 0.5,
+          "motivation": 0.5,
+          "fatigue": 0.0
+        },
+        "lastResults": [
+          "DRAW",
+          "LOSS",
+          "LOSS",
+          "LOSS",
+          "LOSS"
+        ]
+      },
       "sassuolo": {
         "name": "sassuolo",
         "games": 29,
@@ -7731,6 +9726,120 @@
           "LOSS"
         ]
       },
+      "doncaster": {
+        "name": "doncaster",
+        "games": 38,
+        "wins": 13,
+        "draws": 8,
+        "losses": 17,
+        "goalsScored": 41,
+        "goalsConceded": 59,
+        "homeGames": 18,
+        "homeWins": 7,
+        "awayLosses": 11,
+        "homeLosses": 6,
+        "awayWins": 6,
+        "homeDraws": 5,
+        "awayDraws": 3,
+        "awayGames": 20,
+        "homeGoalsScored": 24,
+        "homeGoalsConceded": 27,
+        "awayGoalsScored": 17,
+        "awayGoalsConceded": 32,
+        "elo": 1484.0030963778966,
+        "recentHomeResults": [
+          "WIN",
+          "DRAW",
+          "LOSS",
+          "WIN",
+          "WIN"
+        ],
+        "recentAwayResults": [
+          "WIN",
+          "DRAW",
+          "LOSS",
+          "WIN",
+          "LOSS"
+        ],
+        "dna": {
+          "attackIndex": 0.5,
+          "defenseIndex": 0.5,
+          "tempoIndex": 0.5,
+          "comebackAbility": 0.5,
+          "chokeFactor": 0.5
+        },
+        "profile": {
+          "injuredPlayers": 0,
+          "suspendedPlayers": 0,
+          "coachRating": 0.5,
+          "motivation": 0.5,
+          "fatigue": 0.0
+        },
+        "lastResults": [
+          "WIN",
+          "DRAW",
+          "WIN",
+          "DRAW",
+          "LOSS"
+        ]
+      },
+      "reading": {
+        "name": "reading",
+        "games": 39,
+        "wins": 15,
+        "draws": 13,
+        "losses": 11,
+        "goalsScored": 57,
+        "goalsConceded": 51,
+        "homeGames": 19,
+        "homeWins": 9,
+        "awayLosses": 8,
+        "homeLosses": 3,
+        "awayWins": 6,
+        "homeDraws": 7,
+        "awayDraws": 6,
+        "awayGames": 20,
+        "homeGoalsScored": 28,
+        "homeGoalsConceded": 22,
+        "awayGoalsScored": 29,
+        "awayGoalsConceded": 29,
+        "elo": 1532.4463597555466,
+        "recentHomeResults": [
+          "DRAW",
+          "WIN",
+          "DRAW",
+          "WIN",
+          "DRAW"
+        ],
+        "recentAwayResults": [
+          "LOSS",
+          "WIN",
+          "LOSS",
+          "WIN",
+          "DRAW"
+        ],
+        "dna": {
+          "attackIndex": 0.5,
+          "defenseIndex": 0.5,
+          "tempoIndex": 0.5,
+          "comebackAbility": 0.5,
+          "chokeFactor": 0.5
+        },
+        "profile": {
+          "injuredPlayers": 0,
+          "suspendedPlayers": 0,
+          "coachRating": 0.5,
+          "motivation": 0.5,
+          "fatigue": 0.0
+        },
+        "lastResults": [
+          "LOSS",
+          "WIN",
+          "DRAW",
+          "LOSS",
+          "WIN"
+        ]
+      },
       "bournemouth": {
         "name": "bournemouth",
         "games": 38,
@@ -7842,6 +9951,120 @@
           "LOSS",
           "LOSS",
           "DRAW",
+          "DRAW"
+        ]
+      },
+      "exeter": {
+        "name": "exeter",
+        "games": 39,
+        "wins": 11,
+        "draws": 9,
+        "losses": 19,
+        "goalsScored": 42,
+        "goalsConceded": 52,
+        "homeGames": 19,
+        "homeWins": 7,
+        "awayLosses": 12,
+        "homeLosses": 7,
+        "awayWins": 4,
+        "homeDraws": 5,
+        "awayDraws": 4,
+        "awayGames": 20,
+        "homeGoalsScored": 23,
+        "homeGoalsConceded": 24,
+        "awayGoalsScored": 19,
+        "awayGoalsConceded": 28,
+        "elo": 1445.1187003087082,
+        "recentHomeResults": [
+          "LOSS",
+          "LOSS",
+          "DRAW",
+          "LOSS",
+          "DRAW"
+        ],
+        "recentAwayResults": [
+          "LOSS",
+          "LOSS",
+          "LOSS",
+          "DRAW",
+          "DRAW"
+        ],
+        "dna": {
+          "attackIndex": 0.5,
+          "defenseIndex": 0.5,
+          "tempoIndex": 0.5,
+          "comebackAbility": 0.5,
+          "chokeFactor": 0.5
+        },
+        "profile": {
+          "injuredPlayers": 0,
+          "suspendedPlayers": 0,
+          "coachRating": 0.5,
+          "motivation": 0.5,
+          "fatigue": 0.0
+        },
+        "lastResults": [
+          "LOSS",
+          "LOSS",
+          "LOSS",
+          "LOSS",
+          "LOSS"
+        ]
+      },
+      "blackpool": {
+        "name": "blackpool",
+        "games": 39,
+        "wins": 11,
+        "draws": 9,
+        "losses": 19,
+        "goalsScored": 46,
+        "goalsConceded": 63,
+        "homeGames": 19,
+        "homeWins": 8,
+        "awayLosses": 13,
+        "homeLosses": 6,
+        "awayWins": 3,
+        "homeDraws": 5,
+        "awayDraws": 4,
+        "awayGames": 20,
+        "homeGoalsScored": 29,
+        "homeGoalsConceded": 28,
+        "awayGoalsScored": 17,
+        "awayGoalsConceded": 35,
+        "elo": 1456.667043754298,
+        "recentHomeResults": [
+          "WIN",
+          "DRAW",
+          "WIN",
+          "LOSS",
+          "LOSS"
+        ],
+        "recentAwayResults": [
+          "DRAW",
+          "LOSS",
+          "LOSS",
+          "LOSS",
+          "DRAW"
+        ],
+        "dna": {
+          "attackIndex": 0.5,
+          "defenseIndex": 0.5,
+          "tempoIndex": 0.5,
+          "comebackAbility": 0.5,
+          "chokeFactor": 0.5
+        },
+        "profile": {
+          "injuredPlayers": 0,
+          "suspendedPlayers": 0,
+          "coachRating": 0.5,
+          "motivation": 0.5,
+          "fatigue": 0.0
+        },
+        "lastResults": [
+          "DRAW",
+          "WIN",
+          "LOSS",
+          "LOSS",
           "DRAW"
         ]
       },
@@ -8073,6 +10296,120 @@
           "DRAW"
         ]
       },
+      "go ahead eagles": {
+        "name": "go ahead eagles",
+        "games": 28,
+        "wins": 7,
+        "draws": 11,
+        "losses": 10,
+        "goalsScored": 45,
+        "goalsConceded": 45,
+        "homeGames": 14,
+        "homeWins": 5,
+        "awayLosses": 7,
+        "homeLosses": 3,
+        "awayWins": 2,
+        "homeDraws": 6,
+        "awayDraws": 5,
+        "awayGames": 14,
+        "homeGoalsScored": 28,
+        "homeGoalsConceded": 20,
+        "awayGoalsScored": 17,
+        "awayGoalsConceded": 25,
+        "elo": 1475.2180404994306,
+        "recentHomeResults": [
+          "WIN",
+          "LOSS",
+          "WIN",
+          "LOSS",
+          "DRAW"
+        ],
+        "recentAwayResults": [
+          "LOSS",
+          "WIN",
+          "LOSS",
+          "DRAW",
+          "DRAW"
+        ],
+        "dna": {
+          "attackIndex": 0.5,
+          "defenseIndex": 0.5,
+          "tempoIndex": 0.5,
+          "comebackAbility": 0.5,
+          "chokeFactor": 0.5
+        },
+        "profile": {
+          "injuredPlayers": 0,
+          "suspendedPlayers": 0,
+          "coachRating": 0.5,
+          "motivation": 0.5,
+          "fatigue": 0.0
+        },
+        "lastResults": [
+          "LOSS",
+          "WIN",
+          "LOSS",
+          "WIN",
+          "WIN"
+        ]
+      },
+      "volendam": {
+        "name": "volendam",
+        "games": 28,
+        "wins": 7,
+        "draws": 6,
+        "losses": 15,
+        "goalsScored": 30,
+        "goalsConceded": 48,
+        "homeGames": 14,
+        "homeWins": 6,
+        "awayLosses": 11,
+        "homeLosses": 4,
+        "awayWins": 1,
+        "homeDraws": 4,
+        "awayDraws": 2,
+        "awayGames": 14,
+        "homeGoalsScored": 23,
+        "homeGoalsConceded": 19,
+        "awayGoalsScored": 7,
+        "awayGoalsConceded": 29,
+        "elo": 1445.2819250352534,
+        "recentHomeResults": [
+          "LOSS",
+          "WIN",
+          "WIN",
+          "DRAW",
+          "WIN"
+        ],
+        "recentAwayResults": [
+          "LOSS",
+          "LOSS",
+          "LOSS",
+          "WIN",
+          "LOSS"
+        ],
+        "dna": {
+          "attackIndex": 0.5,
+          "defenseIndex": 0.5,
+          "tempoIndex": 0.5,
+          "comebackAbility": 0.5,
+          "chokeFactor": 0.5
+        },
+        "profile": {
+          "injuredPlayers": 0,
+          "suspendedPlayers": 0,
+          "coachRating": 0.5,
+          "motivation": 0.5,
+          "fatigue": 0.0
+        },
+        "lastResults": [
+          "LOSS",
+          "LOSS",
+          "LOSS",
+          "WIN",
+          "LOSS"
+        ]
+      },
       "genoa": {
         "name": "genoa",
         "games": 29,
@@ -8231,6 +10568,63 @@
         "lastResults": [
           "WIN",
           "LOSS"
+        ]
+      },
+      "utrecht": {
+        "name": "utrecht",
+        "games": 28,
+        "wins": 11,
+        "draws": 8,
+        "losses": 9,
+        "goalsScored": 42,
+        "goalsConceded": 31,
+        "homeGames": 14,
+        "homeWins": 7,
+        "awayLosses": 5,
+        "homeLosses": 4,
+        "awayWins": 4,
+        "homeDraws": 3,
+        "awayDraws": 5,
+        "awayGames": 14,
+        "homeGoalsScored": 23,
+        "homeGoalsConceded": 12,
+        "awayGoalsScored": 19,
+        "awayGoalsConceded": 19,
+        "elo": 1522.7587312133041,
+        "recentHomeResults": [
+          "WIN",
+          "WIN",
+          "DRAW",
+          "LOSS",
+          "LOSS"
+        ],
+        "recentAwayResults": [
+          "WIN",
+          "DRAW",
+          "WIN",
+          "WIN",
+          "DRAW"
+        ],
+        "dna": {
+          "attackIndex": 0.5,
+          "defenseIndex": 0.5,
+          "tempoIndex": 0.5,
+          "comebackAbility": 0.5,
+          "chokeFactor": 0.5
+        },
+        "profile": {
+          "injuredPlayers": 0,
+          "suspendedPlayers": 0,
+          "coachRating": 0.5,
+          "motivation": 0.5,
+          "fatigue": 0.0
+        },
+        "lastResults": [
+          "WIN",
+          "WIN",
+          "DRAW",
+          "WIN",
+          "DRAW"
         ]
       },
       "vallecano": {

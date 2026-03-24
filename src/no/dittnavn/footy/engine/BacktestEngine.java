@@ -90,9 +90,10 @@ public class BacktestEngine {
         double wMarket = 0.3;
         double learningRate = 0.01;
 
-        double homeBias = 1.0;
-        double drawBias = 1.0;
-        double awayBias = 1.0;
+
+        double homeBias = 0.95;
+        double drawBias = 1.00;
+        double awayBias = 1.03;
 
         double biasLearningRate = 0.01; // (kan brukes senere)
 
@@ -124,16 +125,68 @@ public class BacktestEngine {
             double pHome = poisson[0] * wModel + market[0] * wMarket;
             double pDraw = poisson[1] * wModel + market[1] * wMarket;
             double pAway = poisson[2] * wModel + market[2] * wMarket;
+/*
+            double shotDiff =
+                    homeStats.getShotsOnTargetPerMatch() -
+                            awayStats.getShotsOnTargetPerMatch();
+
+ */
+
+            double shotNetHome =
+                    homeStats.getShotsOnTargetPerMatch() -
+                            homeStats.getShotsOnTargetAgainstPerMatch();
+
+            double shotNetAway =
+                    awayStats.getShotsOnTargetPerMatch() -
+                            awayStats.getShotsOnTargetAgainstPerMatch();
+
+            double diff = shotNetHome - shotNetAway;
+
+            pHome += diff * 0.012;
+            pAway -= diff * 0.012;
+
+            double homeShotsOnTarget = homeStats.getShotsOnTargetPerMatch();
+            double awayShotsOnTarget = awayStats.getShotsOnTargetPerMatch();
+
+            double homeGoals = homeStats.getGoalsScoredPerMatch();
+            double awayGoals = awayStats.getGoalsScoredPerMatch();
+
+            // 🔥 Shot efficiency
+            double homeEff = (homeShotsOnTarget == 0) ? 0 : homeGoals / homeShotsOnTarget;
+            double awayEff = (awayShotsOnTarget == 0) ? 0 : awayGoals / awayShotsOnTarget;
+
+            double effDiff = homeEff - awayEff;
+
+// clamp (veldig viktig)
+            effDiff = Math.max(-0.25, Math.min(0.25, effDiff));
+
+// legg til i probs
+            pHome += effDiff * 0.008;
+            pAway -= effDiff * 0.008;
 
             // bias først
             pHome *= homeBias;
             pDraw *= drawBias;
             pAway *= awayBias;
 
+            double alpha = 0.95;
+
+            pHome = 0.33 + (pHome - 0.33) * alpha;
+            pDraw = 0.33 + (pDraw - 0.33) * alpha;
+            pAway = 0.33 + (pAway - 0.33) * alpha;
+
+
 // så draw fix
 
 // 🔥 global draw correction (viktig!)
-            pDraw *= 0.92;
+            pHome *= 0.96;
+            pDraw *= 0.90;
+            pAway *= 1.04;
+
+            // 🔒 CLAMP (HER!)
+            pHome = Math.max(0.02, Math.min(0.90, pHome));
+            pDraw = Math.max(0.02, Math.min(0.90, pDraw));
+            pAway = Math.max(0.02, Math.min(0.90, pAway));
 
 // 🔥 optional edge fix
             if (pDraw > pHome && pDraw > pAway &&
