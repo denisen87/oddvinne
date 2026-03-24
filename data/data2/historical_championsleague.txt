@@ -1,0 +1,4745 @@
+25 Feb 2026 - Play Offs
+1
+X
+2
+B's
+21:00
+
+Juventus
+Juventus
+
+3
+–
+2
+Galatasaray
+Galatasaray
+
+ET
+
+1.52
+
+5.41
+
+6.20
+
+17
+21:00
+
+PSG
+PSG
+
+2
+–
+2
+Monaco
+Monaco
+
+1.32
+
+6.96
+
+11.00
+
+17
+21:00
+
+Real Madrid
+Real Madrid
+
+2
+–
+1
+Benfica
+Benfica
+
+1.85
+
+4.32
+
+4.76
+
+17
+18:45
+
+Atalanta
+Atalanta
+
+4
+–
+1
+Dortmund
+Dortmund
+
+2.30
+
+3.88
+
+3.16
+
+17
+24 Feb 2026 - Play Offs
+1
+X
+2
+B's
+21:00
+
+Bayer Leverkusen
+Bayer Leverkusen
+
+0
+–
+0
+Olympiacos Piraeus
+Olympiacos Piraeus
+
+1.78
+
+4.20
+
+4.90
+
+17
+21:00
+
+Inter
+Inter
+
+1
+–
+2
+Bodo/Glimt
+Bodo/Glimt
+
+1.26
+
+8.52
+
+12.00
+
+17
+21:00
+
+Newcastle
+Newcastle
+
+3
+–
+2
+Qarabag
+Qarabag
+
+1.18
+
+10.73
+
+18.15
+
+17
+18:45
+
+Atl. Madrid
+Atl. Madrid
+
+4
+–
+1
+Club Brugge KV
+Club Brugge KV
+
+1.45
+
+5.81
+
+8.50
+
+17
+18 Feb 2026 - Play Offs
+1
+X
+2
+B's
+21:00
+
+Bodo/Glimt
+Bodo/Glimt
+
+3
+–
+1
+Inter
+Inter
+
+4.65
+
+4.20
+
+1.80
+
+17
+21:00
+
+Club Brugge KV
+Club Brugge KV
+
+3
+–
+3
+Atl. Madrid
+Atl. Madrid
+
+4.02
+
+3.85
+
+2.05
+
+17
+21:00
+
+Olympiacos Piraeus
+Olympiacos Piraeus
+
+0
+–
+2
+Bayer Leverkusen
+Bayer Leverkusen
+
+2.45
+
+3.47
+
+3.12
+
+17
+18:45
+
+Qarabag
+Qarabag
+
+1
+–
+6
+Newcastle
+Newcastle
+
+9.50
+
+6.00
+
+1.39
+
+17
+17 Feb 2026 - Play Offs
+1
+X
+2
+B's
+21:00
+
+Benfica
+Benfica
+
+0
+–
+1
+Real Madrid
+Real Madrid
+
+3.35
+
+3.85
+
+2.25
+
+17
+21:00
+
+Dortmund
+Dortmund
+
+2
+–
+0
+Atalanta
+Atalanta
+
+2.25
+
+3.65
+
+4.02
+
+17
+21:00
+
+Monaco
+Monaco
+
+2
+–
+3
+PSG
+PSG
+
+7.00
+
+5.40
+
+1.50
+
+17
+18:45
+
+Galatasaray
+Galatasaray
+
+5
+–
+2
+Juventus
+Juventus
+
+3.25
+
+3.57
+
+2.42
+
+17
+28 Jan 2026 - League phase
+1
+X
+2
+B's
+21:00
+
+Ajax
+Ajax
+
+1
+–
+2
+Olympiacos Piraeus
+Olympiacos Piraeus
+
+3.35
+
+3.78
+
+2.25
+
+17
+21:00
+
+Arsenal
+Arsenal
+
+3
+–
+2
+Kairat Almaty
+Kairat Almaty
+
+1.07
+
+21.00
+
+100.00
+
+17
+21:00
+
+Ath Bilbao
+Ath Bilbao
+
+2
+–
+3
+Sporting CP
+Sporting CP
+
+3.05
+
+3.45
+
+2.60
+
+17
+21:00
+
+Atl. Madrid
+Atl. Madrid
+
+1
+–
+2
+Bodo/Glimt
+Bodo/Glimt
+
+1.29
+
+7.21
+
+9.50
+
+17
+21:00
+
+Barcelona
+Barcelona
+
+4
+–
+1
+FC Copenhagen
+FC Copenhagen
+
+1.14
+
+13.00
+
+25.00
+
+17
+21:00
+
+Bayer Leverkusen
+Bayer Leverkusen
+
+3
+–
+0
+Villarreal
+Villarreal
+
+1.73
+
+4.58
+
+5.00
+
+17
+21:00
+
+Benfica
+Benfica
+
+4
+–
+2
+Real Madrid
+Real Madrid
+
+4.49
+
+4.32
+
+1.80
+
+17
+21:00
+
+Club Brugge KV
+Club Brugge KV
+
+3
+–
+0
+Marseille
+Marseille
+
+2.90
+
+3.75
+
+2.50
+
+17
+21:00
+
+Dortmund
+Dortmund
+
+0
+–
+2
+Inter
+Inter
+
+3.00
+
+3.66
+
+2.50
+
+17
+21:00
+
+Eintracht Frankfurt
+Eintracht Frankfurt
+
+0
+–
+2
+Tottenham
+Tottenham
+
+5.17
+
+4.25
+
+1.75
+
+17
+21:00
+
+Liverpool
+Liverpool
+
+6
+–
+0
+Qarabag
+Qarabag
+
+1.12
+
+13.00
+
+32.00
+
+17
+21:00
+
+Manchester City
+Manchester City
+
+2
+–
+0
+Galatasaray
+Galatasaray
+
+1.25
+
+7.80
+
+12.00
+
+17
+21:00
+
+Monaco
+Monaco
+
+0
+–
+0
+Juventus
+Juventus
+
+4.08
+
+3.79
+
+2.10
+
+17
+21:00
+
+Napoli
+Napoli
+
+2
+–
+3
+Chelsea
+Chelsea
+
+3.70
+
+3.70
+
+2.17
+
+17
+21:00
+
+Pafos
+Pafos
+
+4
+–
+1
+Slavia Prague
+Slavia Prague
+
+3.35
+
+3.48
+
+2.40
+
+17
+21:00
+
+PSG
+PSG
+
+1
+–
+1
+Newcastle
+Newcastle
+
+1.59
+
+5.14
+
+5.59
+
+17
+21:00
+
+PSV
+PSV
+
+1
+–
+2
+Bayern Munich
+Bayern Munich
+
+5.05
+
+4.80
+
+1.68
+
+17
+21:00
+
+Royale Union SG
+Royale Union SG
+
+1
+–
+0
+Atalanta
+Atalanta
+
+3.15
+
+3.67
+
+2.45
+
+17
+21 Jan 2026 - League phase
+1
+X
+2
+B's
+21:00
+
+Atalanta
+Atalanta
+
+2
+–
+3
+Ath Bilbao
+Ath Bilbao
+
+1.85
+
+3.95
+
+5.71
+
+17
+21:00
+
+Bayern Munich
+Bayern Munich
+
+2
+–
+0
+Royale Union SG
+Royale Union SG
+
+1.21
+
+12.00
+
+25.00
+
+17
+21:00
+
+Chelsea
+Chelsea
+
+1
+–
+0
+Pafos
+Pafos
+
+1.22
+
+12.00
+
+31.00
+
+17
+21:00
+
+Juventus
+Juventus
+
+2
+–
+0
+Benfica
+Benfica
+
+1.95
+
+4.05
+
+5.90
+
+17
+21:00
+
+Marseille
+Marseille
+
+0
+–
+3
+Liverpool
+Liverpool
+
+4.10
+
+4.14
+
+1.96
+
+17
+21:00
+
+Newcastle
+Newcastle
+
+3
+–
+0
+PSV
+PSV
+
+1.53
+
+6.40
+
+9.70
+
+17
+21:00
+
+Slavia Prague
+Slavia Prague
+
+2
+–
+4
+Barcelona
+Barcelona
+
+8.40
+
+6.40
+
+1.45
+
+17
+18:45
+
+Galatasaray
+Galatasaray
+
+1
+–
+1
+Atl. Madrid
+Atl. Madrid
+
+3.45
+
+4.00
+
+2.22
+
+17
+18:45
+
+Qarabag
+Qarabag
+
+3
+–
+2
+Eintracht Frankfurt
+Eintracht Frankfurt
+
+3.66
+
+3.97
+
+2.20
+
+17
+20 Jan 2026 - League phase
+1
+X
+2
+B's
+21:00
+
+FC Copenhagen
+FC Copenhagen
+
+1
+–
+1
+Napoli
+Napoli
+
+4.28
+
+3.80
+
+2.05
+
+17
+21:00
+
+Inter
+Inter
+
+1
+–
+3
+Arsenal
+Arsenal
+
+2.94
+
+3.46
+
+2.85
+
+17
+21:00
+
+Olympiacos Piraeus
+Olympiacos Piraeus
+
+2
+–
+0
+Bayer Leverkusen
+Bayer Leverkusen
+
+2.49
+
+3.80
+
+3.25
+
+17
+21:00
+
+Real Madrid
+Real Madrid
+
+6
+–
+1
+Monaco
+Monaco
+
+1.33
+
+6.50
+
+10.50
+
+17
+21:00
+
+Sporting CP
+Sporting CP
+
+2
+–
+1
+PSG
+PSG
+
+4.57
+
+4.40
+
+1.75
+
+17
+21:00
+
+Tottenham
+Tottenham
+
+2
+–
+0
+Dortmund
+Dortmund
+
+2.95
+
+3.75
+
+3.25
+
+17
+21:00
+
+Villarreal
+Villarreal
+
+1
+–
+2
+Ajax
+Ajax
+
+1.59
+
+6.00
+
+9.50
+
+1720 Jan 2026 - League phase
+1
+X
+2
+B's
+18:45
+
+Bodo/Glimt
+Bodo/Glimt
+
+3
+–
+1
+Manchester City
+Manchester City
+
+7.60
+
+5.90
+
+1.42
+
+17
+16:30
+
+Kairat Almaty
+Kairat Almaty
+
+1
+–
+4
+Club Brugge KV
+Club Brugge KV
+
+7.15
+
+5.19
+
+1.72
+
+17
+10 Dec 2025 - League phase
+1
+X
+2
+B's
+21:00
+
+Ath Bilbao
+Ath Bilbao
+
+0
+–
+0
+PSG
+PSG
+
+4.73
+
+4.00
+
+1.85
+
+15
+21:00
+
+Bayer Leverkusen
+Bayer Leverkusen
+
+2
+–
+2
+Newcastle
+Newcastle
+
+3.43
+
+3.90
+
+2.18
+
+15
+21:00
+
+Benfica
+Benfica
+
+2
+–
+0
+Napoli
+Napoli
+
+2.94
+
+3.21
+
+2.95
+
+15
+21:00
+
+Club Brugge KV
+Club Brugge KV
+
+0
+–
+3
+Arsenal
+Arsenal
+
+7.60
+
+5.33
+
+1.46
+
+15
+21:00
+
+Dortmund
+Dortmund
+
+2
+–
+2
+Bodo/Glimt
+Bodo/Glimt
+
+1.39
+
+6.10
+
+7.71
+
+15
+21:00
+
+Juventus
+Juventus
+
+2
+–
+0
+Pafos
+Pafos
+
+1.21
+
+9.00
+
+18.50
+
+15
+21:00
+
+Real Madrid
+Real Madrid
+
+1
+–
+2
+Manchester City
+Manchester City
+
+3.45
+
+4.19
+
+2.21
+
+15
+18:45
+
+Qarabag
+Qarabag
+
+2
+–
+4
+Ajax
+Ajax
+
+2.25
+
+3.95
+
+3.40
+
+15
+18:45
+
+Villarreal
+Villarreal
+
+2
+–
+3
+FC Copenhagen
+FC Copenhagen
+
+1.44
+
+5.41
+
+7.35
+
+15
+09 Dec 2025 - League phase
+1
+X
+2
+B's
+21:00
+
+Atalanta
+Atalanta
+
+2
+–
+1
+Chelsea
+Chelsea
+
+3.70
+
+3.60
+
+2.25
+
+15
+21:00
+
+Barcelona
+Barcelona
+
+2
+–
+1
+Eintracht Frankfurt
+Eintracht Frankfurt
+
+1.17
+
+10.10
+
+18.50
+
+15
+21:00
+
+Inter
+Inter
+
+0
+–
+1
+Liverpool
+Liverpool
+
+2.12
+
+3.83
+
+3.80
+
+15
+21:00
+
+Monaco
+Monaco
+
+1
+–
+0
+Galatasaray
+Galatasaray
+
+2.10
+
+4.05
+
+3.84
+
+15
+21:00
+
+PSV
+PSV
+
+2
+–
+3
+Atl. Madrid
+Atl. Madrid
+
+3.15
+
+3.90
+
+2.30
+
+15
+21:00
+
+Royale Union SG
+Royale Union SG
+
+2
+–
+3
+Marseille
+Marseille
+
+3.23
+
+3.60
+
+2.40
+
+15
+21:00
+
+Tottenham
+Tottenham
+
+3
+–
+0
+Slavia Prague
+Slavia Prague
+
+1.46
+
+5.02
+
+7.90
+
+15
+18:45
+
+Bayern Munich
+Bayern Munich
+
+3
+–
+1
+Sporting CP
+Sporting CP
+
+1.28
+
+7.54
+
+13.50
+
+15
+16:30
+
+Kairat Almaty
+Kairat Almaty
+
+0
+–
+1
+Olympiacos Piraeus
+Olympiacos Piraeus
+
+8.00
+
+4.95
+
+1.50
+
+15
+26 Nov 2025 - League phase
+1
+X
+2
+B's
+21:00
+
+Arsenal
+Arsenal
+
+3
+–
+1
+Bayern Munich
+Bayern Munich
+
+2.10
+
+3.82
+
+3.85
+
+15
+21:00
+
+Atl. Madrid
+Atl. Madrid
+
+2
+–
+1
+Inter
+Inter
+
+2.72
+
+3.57
+
+2.82
+
+15
+21:00
+
+Eintracht Frankfurt
+Eintracht Frankfurt
+
+0
+–
+3
+Atalanta
+Atalanta
+
+3.02
+
+3.70
+
+2.55
+
+15
+21:00
+
+Liverpool
+Liverpool
+
+1
+–
+4
+PSV
+PSV
+
+1.32
+
+7.88
+
+11.00
+
+15
+21:00
+
+Olympiacos Piraeus
+Olympiacos Piraeus
+
+3
+–
+4
+Real Madrid
+Real Madrid
+
+5.00
+
+4.75
+
+1.69
+
+15
+21:00
+
+PSG
+PSG
+
+5
+–
+3
+Tottenham
+Tottenham
+
+1.47
+
+5.20
+
+8.50
+
+15
+21:00
+
+Sporting CP
+Sporting CP
+
+3
+–
+0
+Club Brugge KV
+Club Brugge KV
+
+1.56
+
+4.90
+
+6.40
+
+15
+18:45
+
+FC Copenhagen
+FC Copenhagen
+
+3
+–
+2
+Kairat Almaty
+Kairat Almaty
+
+1.35
+
+5.70
+
+12.00
+
+15
+18:45
+
+Pafos
+Pafos
+
+2
+–
+2
+Monaco
+Monaco
+
+7.00
+
+4.85
+
+1.54
+
+15
+25 Nov 2025 - League phase
+1
+X
+2
+B's
+21:00
+
+Bodo/Glimt
+Bodo/Glimt
+
+2
+–
+3
+Juventus
+Juventus
+
+3.28
+
+3.80
+
+2.29
+
+15
+21:00
+
+Chelsea
+Chelsea
+
+3
+–
+0
+Barcelona
+Barcelona
+
+2.26
+
+4.15
+
+3.13
+
+15
+21:00
+
+Dortmund
+Dortmund
+
+4
+–
+0
+Villarreal
+Villarreal
+
+2.04
+
+3.80
+
+4.05
+
+15
+21:00
+
+Manchester City
+Manchester City
+
+0
+–
+2
+Bayer Leverkusen
+Bayer Leverkusen
+
+1.41
+
+5.97
+
+9.10
+
+15
+21:00
+
+Marseille
+Marseille
+
+2
+–
+1
+Newcastle
+Newcastle
+
+3.20
+
+3.55
+
+2.40
+
+15
+21:00
+
+Napoli
+Napoli
+
+2
+–
+0
+Qarabag
+Qarabag
+
+1.21
+
+7.75
+
+17.50
+
+15
+21:00
+
+Slavia Prague
+Slavia Prague
+
+0
+–
+0
+Ath Bilbao
+Ath Bilbao
+
+3.15
+
+3.40
+
+2.52
+
+15
+18:45
+
+Ajax
+Ajax
+
+0
+–
+2
+Benfica
+Benfica
+
+4.21
+
+3.82
+
+2.02
+
+15
+18:45
+
+Galatasaray
+Galatasaray
+
+0
+–
+1
+Royale Union SG
+Royale Union SG
+
+1.85
+
+4.22
+
+4.57
+
+15
+05 Nov 2025 - League phase
+1
+X
+2
+B's
+21:00
+
+Ajax
+Ajax
+
+0
+–
+3
+Galatasaray
+Galatasaray
+
+3.67
+
+3.90
+
+2.20
+
+14
+21:00
+
+Benfica
+Benfica
+
+0
+–
+1
+Bayer Leverkusen
+Bayer Leverkusen
+
+1.98
+
+3.85
+
+4.05
+
+14
+21:00
+
+Club Brugge KV
+Club Brugge KV
+
+3
+–
+3
+Barcelona
+Barcelona
+
+5.95
+
+5.30
+
+1.55
+
+14
+21:00
+
+Inter
+Inter
+
+2
+–
+1
+Kairat Almaty
+Kairat Almaty
+
+1.05
+
+24.00
+
+130.00
+
+14
+21:00
+
+Manchester City
+Manchester City
+
+4
+–
+1
+Dortmund
+Dortmund
+
+1.40
+
+5.80
+
+8.30
+
+14
+21:00
+
+Marseille
+Marseille
+
+0
+–
+1
+Atalanta
+Atalanta
+
+2.34
+
+3.57
+
+3.34
+
+14
+21:00
+
+Newcastle
+Newcastle
+
+2
+–
+0
+Ath Bilbao
+Ath Bilbao
+
+1.42
+
+5.36
+
+9.80
+
+14
+18:45
+
+Pafos
+Pafos
+
+1
+–
+0
+Villarreal
+Villarreal
+
+12.00
+
+6.18
+
+1.31
+
+14
+18:45
+
+Qarabag
+Qarabag
+
+2
+–
+2
+Chelsea
+Chelsea
+
+9.50
+
+5.80
+
+1.36
+
+14
+04 Nov 2025 - League phase
+1
+X
+2
+B's
+21:00
+
+Atl. Madrid
+Atl. Madrid
+
+3
+–
+1
+Royale Union SG
+Royale Union SG
+
+1.29
+
+6.80
+
+11.47
+
+14
+21:00
+
+Liverpool
+Liverpool
+
+1
+–
+0
+Real Madrid
+Real Madrid
+
+2.57
+
+4.00
+
+2.77
+
+14
+21:00
+
+PSG
+PSG
+
+1
+–
+2
+Bayern Munich
+Bayern Munich
+
+2.52
+
+3.90
+
+2.95
+
+1404 Nov 2025 - League phase
+1
+X
+2
+B's
+21:00
+
+Bodo/Glimt
+Bodo/Glimt
+
+0
+–
+1
+Monaco
+Monaco
+
+2.35
+
+4.10
+
+2.91
+
+14
+21:00
+
+Juventus
+Juventus
+
+1
+–
+1
+Sporting CP
+Sporting CP
+
+2.05
+
+3.60
+
+4.36
+
+14
+21:00
+
+Olympiacos Piraeus
+Olympiacos Piraeus
+
+1
+–
+1
+PSV
+PSV
+
+2.78
+
+3.76
+
+2.65
+
+14
+21:00
+
+Tottenham
+Tottenham
+
+4
+–
+0
+FC Copenhagen
+FC Copenhagen
+
+1.55
+
+4.60
+
+7.02
+
+14
+18:45
+
+Napoli
+Napoli
+
+0
+–
+0
+Eintracht Frankfurt
+Eintracht Frankfurt
+
+1.63
+
+4.50
+
+5.95
+
+14
+18:45
+
+Slavia Prague
+Slavia Prague
+
+0
+–
+3
+Arsenal
+Arsenal
+
+16.50
+
+7.00
+
+1.25
+
+14
+22 Oct 2025 - League phase
+1
+X
+2
+B's
+21:00
+
+Atalanta
+Atalanta
+
+0
+–
+0
+Slavia Prague
+Slavia Prague
+
+1.49
+
+5.77
+
+11.00
+
+15
+21:00
+
+Bayern Munich
+Bayern Munich
+
+4
+–
+0
+Club Brugge KV
+Club Brugge KV
+
+1.25
+
+11.75
+
+25.00
+
+15
+21:00
+
+Chelsea
+Chelsea
+
+5
+–
+1
+Ajax
+Ajax
+
+1.37
+
+6.45
+
+10.50
+
+15
+21:00
+
+Eintracht Frankfurt
+Eintracht Frankfurt
+
+1
+–
+5
+Liverpool
+Liverpool
+
+5.45
+
+4.90
+
+1.61
+
+15
+21:00
+
+Monaco
+Monaco
+
+0
+–
+0
+Tottenham
+Tottenham
+
+3.26
+
+3.65
+
+2.40
+
+15
+21:00
+
+Real Madrid
+Real Madrid
+
+1
+–
+0
+Juventus
+Juventus
+
+1.56
+
+5.25
+
+7.10
+
+15
+21:00
+
+Sporting CP
+Sporting CP
+
+2
+–
+1
+Marseille
+Marseille
+
+2.28
+
+3.85
+
+3.30
+
+15
+18:45
+
+Ath Bilbao
+Ath Bilbao
+
+3
+–
+1
+Qarabag
+Qarabag
+
+1.38
+
+5.90
+
+9.70
+
+15
+18:45
+
+Galatasaray
+Galatasaray
+
+3
+–
+1
+Bodo/Glimt
+Bodo/Glimt
+
+1.58
+
+5.00
+
+5.50
+
+15
+21 Oct 2025 - League phase
+1
+X
+2
+B's
+21:00
+
+Arsenal
+Arsenal
+
+4
+–
+0
+Atl. Madrid
+Atl. Madrid
+
+1.60
+
+4.25
+
+6.75
+
+15
+21:00
+
+Bayer Leverkusen
+Bayer Leverkusen
+
+2
+–
+7
+PSG
+PSG
+
+5.23
+
+4.22
+
+1.72
+
+15
+21:00
+
+FC Copenhagen
+FC Copenhagen
+
+2
+–
+4
+Dortmund
+Dortmund
+
+4.85
+
+3.75
+
+1.96
+
+15
+21:00
+
+Newcastle
+Newcastle
+
+3
+–
+0
+Benfica
+Benfica
+
+1.75
+
+4.20
+
+5.63
+
+15
+21:00
+
+PSV
+PSV
+
+6
+–
+2
+Napoli
+Napoli
+
+3.35
+
+3.65
+
+2.28
+
+15
+21:00
+
+Royale Union SG
+Royale Union SG
+
+0
+–
+4
+Inter
+Inter
+
+5.44
+
+4.02
+
+1.80
+
+15
+21:00
+
+Villarreal
+Villarreal
+
+0
+–
+2
+Manchester City
+Manchester City
+
+5.17
+
+4.14
+
+1.80
+
+15
+18:45
+
+Barcelona
+Barcelona
+
+6
+–
+1
+Olympiacos Piraeus
+Olympiacos Piraeus
+
+1.30
+
+7.50
+
+15.00
+
+15
+18:45
+
+Kairat Almaty
+Kairat Almaty
+
+0
+–
+0
+Pafos
+Pafos
+
+3.25
+
+3.46
+
+2.61
+
+15
+01 Oct 2025 - League phase
+1
+X
+2
+B's
+21:00
+
+Arsenal
+Arsenal
+
+2
+–
+0
+Olympiacos Piraeus
+Olympiacos Piraeus
+
+1.23
+
+9.00
+
+22.00
+
+15
+21:00
+
+Barcelona
+Barcelona
+
+1
+–
+2
+PSG
+PSG
+
+1.80
+
+4.60
+
+4.66
+
+15
+21:00
+
+Bayer Leverkusen
+Bayer Leverkusen
+
+1
+–
+1
+PSV
+PSV
+
+2.00
+
+3.97
+
+4.00
+
+15
+21:00
+
+Dortmund
+Dortmund
+
+4
+–
+1
+Ath Bilbao
+Ath Bilbao
+
+1.83
+
+3.85
+
+5.10
+
+15
+21:00
+
+Monaco
+Monaco
+
+2
+–
+2
+Manchester City
+Manchester City
+
+8.54
+
+5.95
+
+1.41
+
+15
+21:00
+
+Napoli
+Napoli
+
+2
+–
+1
+Sporting CP
+Sporting CP
+
+1.96
+
+3.60
+
+4.47
+
+15
+21:00
+
+Villarreal
+Villarreal
+
+2
+–
+2
+Juventus
+Juventus
+
+2.51
+
+3.45
+
+3.35
+
+15
+18:45
+
+Qarabag
+Qarabag
+
+2
+–
+0
+FC Copenhagen
+FC Copenhagen
+
+3.96
+
+3.54
+
+2.13
+
+15
+18:45
+
+Royale Union SG
+Royale Union SG
+
+0
+–
+4
+Newcastle
+Newcastle
+
+4.49
+
+3.88
+
+1.96
+
+15
+30 Sep 2025 - League phase
+1
+X
+2
+B's
+21:00
+
+Atl. Madrid
+Atl. Madrid
+
+5
+–
+1
+Eintracht Frankfurt
+Eintracht Frankfurt
+
+1.48
+
+5.40
+
+7.12
+
+15
+21:00
+
+Bodo/Glimt
+Bodo/Glimt
+
+2
+–
+2
+Tottenham
+Tottenham
+
+3.38
+
+3.70
+
+2.22
+
+15
+21:00
+
+Chelsea
+Chelsea
+
+1
+–
+0
+Benfica
+Benfica
+
+1.75
+
+4.10
+
+5.61
+
+15
+21:00
+
+Galatasaray
+Galatasaray
+
+1
+–
+0
+Liverpool
+Liverpool
+
+5.46
+
+4.79
+
+1.67
+
+15
+21:00
+
+Inter
+Inter
+
+3
+–
+0
+Slavia Prague
+Slavia Prague
+
+1.30
+
+6.50
+
+11.10
+
+15
+21:00
+
+Marseille
+Marseille
+
+4
+–
+0
+Ajax
+Ajax
+
+1.59
+
+4.70
+
+6.75
+
+15
+21:00
+
+Pafos
+Pafos
+
+1
+–
+5
+Bayern Munich
+Bayern Munich
+
+28.00
+
+12.00
+
+1.14
+
+15
+18:45
+
+Atalanta
+Atalanta
+
+2
+–
+1
+Club Brugge KV
+Club Brugge KV
+
+1.85
+
+4.20
+
+4.66
+
+15
+18:45
+
+Kairat Almaty
+Kairat Almaty
+
+0
+–
+5
+Real Madrid
+Real Madrid
+
+31.00
+
+14.10
+
+1.10
+
+15
+18 Sep 2025 - League phase
+1
+X
+2
+B's
+21:00
+
+Eintracht Frankfurt
+Eintracht Frankfurt
+
+5
+–
+1
+Galatasaray
+Galatasaray
+
+2.42
+
+3.85
+
+3.04
+
+15
+21:00
+
+Manchester City
+Manchester City
+
+2
+–
+0
+Napoli
+Napoli
+
+1.73
+
+4.40
+
+6.04
+
+15
+21:00
+
+Newcastle
+Newcastle
+
+1
+–
+2
+Barcelona
+Barcelona
+
+2.66
+
+3.88
+
+2.80
+
+15
+21:00
+
+Sporting CP
+Sporting CP
+
+4
+–
+1
+Kairat Almaty
+Kairat Almaty
+
+1.09
+
+15.00
+
+45.00
+
+15
+18:45
+
+Club Brugge KV
+Club Brugge KV
+
+4
+–
+1
+Monaco
+Monaco
+
+2.45
+
+3.75
+
+3.30
+
+15
+18:45
+
+FC Copenhagen
+FC Copenhagen
+
+2
+–
+2
+Bayer Leverkusen
+Bayer Leverkusen
+
+3.33
+
+3.40
+
+2.45
+
+15
+17 Sep 2025 - League phase
+1
+X
+2
+B's
+21:00
+
+Bayern Munich
+Bayern Munich
+
+3
+–
+1
+Chelsea
+Chelsea
+
+1.85
+
+4.45
+
+4.52
+
+15
+21:00
+
+PSG
+PSG
+
+4
+–
+0
+Atalanta
+Atalanta
+
+1.45
+
+5.35
+
+8.35
+
+1517 Sep 2025 - League phase
+1
+X
+2
+B's
+21:00
+
+Ajax
+Ajax
+
+0
+–
+2
+Inter
+Inter
+
+5.45
+
+4.30
+
+1.93
+
+15
+21:00
+
+Liverpool
+Liverpool
+
+3
+–
+2
+Atl. Madrid
+Atl. Madrid
+
+1.66
+
+4.80
+
+7.09
+
+15
+18:45
+
+Olympiacos Piraeus
+Olympiacos Piraeus
+
+0
+–
+0
+Pafos
+Pafos
+
+1.47
+
+5.05
+
+9.00
+
+15
+18:45
+
+Slavia Prague
+Slavia Prague
+
+2
+–
+2
+Bodo/Glimt
+Bodo/Glimt
+
+2.05
+
+4.21
+
+3.95
+
+15
+16 Sep 2025 - League phase
+1
+X
+2
+B's
+21:00
+
+Benfica
+Benfica
+
+2
+–
+3
+Qarabag
+Qarabag
+
+1.22
+
+9.50
+
+18.00
+
+15
+21:00
+
+Juventus
+Juventus
+
+4
+–
+4
+Dortmund
+Dortmund
+
+2.11
+
+3.64
+
+4.10
+
+15
+21:00
+
+Real Madrid
+Real Madrid
+
+2
+–
+1
+Marseille
+Marseille
+
+1.40
+
+5.89
+
+8.55
+
+15
+21:00
+
+Tottenham
+Tottenham
+
+1
+–
+0
+Villarreal
+Villarreal
+
+1.99
+
+3.85
+
+4.20
+
+15
+18:45
+
+Ath Bilbao
+Ath Bilbao
+
+0
+–
+2
+Arsenal
+Arsenal
+
+5.95
+
+3.65
+
+2.06
+
+15
+18:45
+
+PSV
+PSV
+
+1
+–
+3
+Royale Union SG
+Royale Union SG
+
+2.05
+
+3.90
+
+4.26
+
+15
+27 Aug 2025 - Qualification
+1
+X
+2
+B's
+21:00
+
+Benfica (Por) 
+Benfica (Por)
+
+1
+–
+0
+Fenerbahce (Tur) 
+Fenerbahce (Tur)
+
+1.75
+
+4.04
+
+5.40
+
+15
+21:00
+
+Club Brugge KV (Bel) 
+Club Brugge KV (Bel)
+
+6
+–
+0
+Rangers (Sco) 
+Rangers (Sco)
+
+1.55
+
+4.88
+
+5.90
+
+15
+21:00
+
+FC Copenhagen (Den) 
+FC Copenhagen (Den)
+
+2
+–
+0
+Basel (Sui) 
+Basel (Sui)
+
+1.63
+
+4.30
+
+6.25
+
+15
+18:45
+
+Qarabag (Aze) 
+Qarabag (Aze)
+
+2
+–
+3
+Ferencvaros (Hun) 
+Ferencvaros (Hun)
+
+2.27
+
+3.84
+
+3.35
+
+15
+26 Aug 2025 - Qualification
+1
+X
+2
+B's
+21:00
+
+Pafos (Cyp) 
+Pafos (Cyp)
+
+1
+–
+1
+Crvena zvezda (Srb) 
+Crvena zvezda (Srb)
+
+3.56
+
+4.00
+
+2.15
+
+15
+21:00
+
+Sturm Graz (Aut) 
+Sturm Graz (Aut)
+
+2
+–
+1
+Bodo/Glimt (Nor) 
+Bodo/Glimt (Nor)
+
+2.50
+
+4.01
+
+3.10
+
+15
+18:45
+
+Kairat Almaty (Kaz) 
+Kairat Almaty (Kaz)
+
+1
+–
+0
+Celtic (Sco) 
+Celtic (Sco)
+
+pen.
+
+6.50
+
+4.50
+
+1.55
+
+15
+20 Aug 2025 - Qualification
+1
+X
+2
+B's
+21:00
+
+Basel (Sui) 
+Basel (Sui)
+
+1
+–
+1
+FC Copenhagen (Den) 
+FC Copenhagen (Den)
+
+2.77
+
+3.54
+
+2.88
+
+15
+21:00
+
+Bodo/Glimt (Nor) 
+Bodo/Glimt (Nor)
+
+5
+–
+0
+Sturm Graz (Aut) 
+Sturm Graz (Aut)
+
+1.49
+
+5.01
+
+6.75
+
+15
+21:00
+
+Celtic (Sco) 
+Celtic (Sco)
+
+0
+–
+0
+Kairat Almaty (Kaz) 
+Kairat Almaty (Kaz)
+
+1.14
+
+11.00
+
+26.46
+
+15
+21:00
+
+Fenerbahce (Tur) 
+Fenerbahce (Tur)
+
+0
+–
+0
+Benfica (Por) 
+Benfica (Por)
+
+3.09
+
+3.60
+
+2.50
+
+15
+19 Aug 2025 - Qualification
+1
+X
+2
+B's
+21:00
+
+Crvena zvezda (Srb) 
+Crvena zvezda (Srb)
+
+1
+–
+2
+Pafos (Cyp) 
+Pafos (Cyp)
+
+1.65
+
+4.58
+
+6.50
+
+15
+21:00
+
+Ferencvaros (Hun) 
+Ferencvaros (Hun)
+
+1
+–
+3
+Qarabag (Aze) 
+Qarabag (Aze)
+
+2.20
+
+3.46
+
+3.96
+
+15
+21:00
+
+Rangers (Sco) 
+Rangers (Sco)
+
+1
+–
+3
+Club Brugge KV (Bel) 
+Club Brugge KV (Bel)
+
+3.14
+
+3.66
+
+2.45
+
+15
+12 Aug 2025 - Qualification
+1
+X
+2
+B's
+21:00
+
+Benfica (Por) 
+Benfica (Por)
+
+2
+–
+0
+Nice (Fra) 
+Nice (Fra)
+
+1.52
+
+4.93
+
+6.50
+
+15
+21:00
+
+Crvena zvezda (Srb) 
+Crvena zvezda (Srb)
+
+1
+–
+1
+Lech Poznan (Pol) 
+Lech Poznan (Pol)
+
+1.58
+
+4.77
+
+6.25
+
+15
+20:15
+
+Ferencvaros (Hun) 
+Ferencvaros (Hun)
+
+3
+–
+0
+Ludogorets (Bul) 
+Ludogorets (Bul)
+
+1.53
+
+4.25
+
+7.17
+
+15
+20:15
+
+Slovan Bratislava (Svk) 
+Slovan Bratislava (Svk)
+
+1
+–
+1
+Kairat Almaty (Kaz) 
+Kairat Almaty (Kaz)
+
+pen.
+
+1.67
+
+4.28
+
+5.50
+
+15
+19:30
+
+Club Brugge KV (Bel) 
+Club Brugge KV (Bel)
+
+3
+–
+2
+Salzburg (Aut) 
+Salzburg (Aut)
+
+1.78
+
+4.27
+
+4.65
+
+15
+19:00
+
+FC Copenhagen (Den) 
+FC Copenhagen (Den)
+
+5
+–
+0
+Malmo FF (Swe) 
+Malmo FF (Swe)
+
+1.80
+
+3.50
+
+5.59
+
+15
+19:00
+
+Fenerbahce (Tur) 
+Fenerbahce (Tur)
+
+5
+–
+2
+Feyenoord (Ned) 
+Feyenoord (Ned)
+
+1.63
+
+4.71
+
+6.01
+
+15
+19:00
+
+Pafos (Cyp) 
+Pafos (Cyp)
+
+2
+–
+0
+Dyn. Kyiv (Ukr) 
+Dyn. Kyiv (Ukr)
+
+3.41
+
+3.45
+
+2.28
+
+15
+19:00
+
+Plzen (Cze) 
+Plzen (Cze)
+
+2
+–
+1
+Rangers (Sco) 
+Rangers (Sco)
+
+1.82
+
+4.33
+
+4.15
+
+15
+18:00
+
+Qarabag (Aze) 
+Qarabag (Aze)
+
+5
+–
+1
+Shkendija (Mkd) 
+Shkendija (Mkd)
+
+1.34
+
+5.56
+
+10.50
+
+15
+06 Aug 2025 - Qualification
+1
+X
+2
+B's
+21:00
+
+Feyenoord (Ned) 
+Feyenoord (Ned)
+
+2
+–
+1
+Fenerbahce (Tur) 
+Fenerbahce (Tur)
+
+2.55
+
+3.60
+
+2.85
+
+15
+21:00
+
+Nice (Fra) 
+Nice (Fra)
+
+0
+–
+2
+Benfica (Por) 
+Benfica (Por)
+
+2.98
+
+3.68
+
+2.44
+
+15
+20:30
+
+Lech Poznan (Pol) 
+Lech Poznan (Pol)
+
+1
+–
+3
+Crvena zvezda (Srb) 
+Crvena zvezda (Srb)
+
+2.84
+
+3.71
+
+2.70
+
+15
+19:30
+
+Ludogorets (Bul) 
+Ludogorets (Bul)
+
+0
+–
+0
+Ferencvaros (Hun) 
+Ferencvaros (Hun)
+
+3.20
+
+3.20
+
+2.54
+
+15
+19:00
+
+Salzburg (Aut) 
+Salzburg (Aut)
+
+0
+–
+1
+Club Brugge KV (Bel) 
+Club Brugge KV (Bel)
+
+2.80
+
+3.64
+
+2.61
+
+15
+17:00
+
+Kairat Almaty (Kaz) 
+Kairat Almaty (Kaz)
+
+1
+–
+0
+Slovan Bratislava (Svk) 
+Slovan Bratislava (Svk)
+
+2.25
+
+3.45
+
+3.81
+
+15
+05 Aug 2025 - Qualification
+1
+X
+2
+B's
+20:45
+
+Rangers (Sco) 
+Rangers (Sco)
+
+3
+–
+0
+Plzen (Cze) 
+Plzen (Cze)
+
+2.20
+
+3.70
+
+3.60
+
+15
+20:00
+
+Dyn. Kyiv (Ukr) 
+Dyn. Kyiv (Ukr)
+
+0
+–
+1
+Pafos (Cyp) 
+Pafos (Cyp)
+
+1.63
+
+3.95
+
+6.73
+
+15
+20:00
+
+Shkendija (Mkd) 
+Shkendija (Mkd)
+
+0
+–
+1
+Qarabag (Aze) 
+Qarabag (Aze)
+
+5.40
+
+3.75
+
+1.75
+
+15
+19:00
+
+Malmo FF (Swe) 
+Malmo FF (Swe)
+
+0
+–
+0
+FC Copenhagen (Den) 
+FC Copenhagen (Den)
+
+3.45
+
+3.25
+
+2.46
+
+15
+30 Jul 2025 - Qualification
+1
+X
+2
+B's
+21:00
+
+Servette (Sui) 
+Servette (Sui)
+
+1
+–
+3
+Plzen (Cze) 
+Plzen (Cze)
+
+4.60
+
+4.29
+
+1.80
+
+15
+20:45
+
+Salzburg (Aut) 
+Salzburg (Aut)
+
+1
+–
+1
+Brann (Nor) 
+Brann (Nor)
+
+1.57
+
+4.90
+
+5.94
+
+15
+20:30
+
+Breidablik (Ice) 
+Breidablik (Ice)
+
+0
+–
+1
+Lech Poznan (Pol) 
+Lech Poznan (Pol)
+
+2.80
+
+3.85
+
+2.48
+
+15
+20:00
+
+Ferencvaros (Hun) 
+Ferencvaros (Hun)
+
+4
+–
+3
+Noah (Arm) 
+Noah (Arm)
+
+1.45
+
+4.84
+
+7.86
+
+14
+20:00
+
+Maccabi Tel Aviv (Isr) 
+Maccabi Tel Aviv (Isr)
+
+0
+–
+1
+Pafos (Cyp) 
+Pafos (Cyp)
+
+2.02
+
+3.61
+
+4.10
+
+15
+20:00
+
+Panathinaikos (Gre) 
+Panathinaikos (Gre)
+
+1
+–
+1
+Rangers (Sco) 
+Rangers (Sco)
+
+1.75
+
+4.45
+
+4.70
+
+1530 Jul 2025 - Qualification
+1
+X
+2
+B's
+19:30
+
+FCSB (Rou) 
+FCSB (Rou)
+
+1
+–
+2
+Shkendija (Mkd) 
+Shkendija (Mkd)
+
+1.23
+
+6.95
+
+16.00
+
+15
+19:30
+
+Ludogorets (Bul) 
+Ludogorets (Bul)
+
+3
+–
+1
+Rijeka (Cro) 
+Rijeka (Cro)
+
+ET
+
+1.85
+
+3.50
+
+5.90
+
+15
+19:00
+
+Malmo FF (Swe) 
+Malmo FF (Swe)
+
+1
+–
+0
+RFS (Lat) 
+RFS (Lat)
+
+1.49
+
+4.90
+
+8.50
+
+15
+18:00
+
+Qarabag (Aze) 
+Qarabag (Aze)
+
+1
+–
+0
+Shelbourne (Irl) 
+Shelbourne (Irl)
+
+1.21
+
+7.50
+
+19.50
+
+15
+29 Jul 2025 - Qualification
+1
+X
+2
+B's
+21:00
+
+Crvena zvezda (Srb) 
+Crvena zvezda (Srb)
+
+5
+–
+1
+Lincoln Red Imps (Gib) 
+Lincoln Red Imps (Gib)
+
+1.06
+
+17.17
+
+36.00
+
+15
+21:00
+
+Zrinjski (Bih) 
+Zrinjski (Bih)
+
+2
+–
+2
+Slovan Bratislava (Svk) 
+Slovan Bratislava (Svk)
+
+2.73
+
+3.55
+
+2.80
+
+15
+20:00
+
+Drita (Kos) 
+Drita (Kos)
+
+0
+–
+1
+FC Copenhagen (Den) 
+FC Copenhagen (Den)
+
+7.00
+
+4.60
+
+1.56
+
+15
+20:00
+
+Dyn. Kyiv (Ukr) 
+Dyn. Kyiv (Ukr)
+
+3
+–
+0
+Hamrun (Mlt) 
+Hamrun (Mlt)
+
+1.20
+
+7.25
+
+16.50
+
+15
+17:00
+
+Kairat Almaty (Kaz) 
+Kairat Almaty (Kaz)
+
+3
+–
+0
+KuPS (Fin) 
+KuPS (Fin)
+
+1.48
+
+5.20
+
+8.00
+
+15
+23 Jul 2025 - Qualification
+1
+X
+2
+B's
+20:45
+
+Shelbourne (Irl) 
+Shelbourne (Irl)
+
+0
+–
+3
+Qarabag (Aze) 
+Qarabag (Aze)
+
+6.40
+
+4.21
+
+1.61
+
+14
+19:00
+
+Brann (Nor) 
+Brann (Nor)
+
+1
+–
+4
+Salzburg (Aut) 
+Salzburg (Aut)
+
+2.90
+
+3.67
+
+2.51
+
+14
+22 Jul 2025 - Qualification
+1
+X
+2
+B's
+20:45
+
+Rangers (Sco) 
+Rangers (Sco)
+
+2
+–
+0
+Panathinaikos (Gre) 
+Panathinaikos (Gre)
+
+1.90
+
+3.75
+
+4.40
+
+14
+20:45
+
+Rijeka (Cro) 
+Rijeka (Cro)
+
+0
+–
+0
+Ludogorets (Bul) 
+Ludogorets (Bul)
+
+2.46
+
+3.30
+
+3.48
+
+14
+20:30
+
+Lech Poznan (Pol) 
+Lech Poznan (Pol)
+
+7
+–
+1
+Breidablik (Ice) 
+Breidablik (Ice)
+
+1.40
+
+5.30
+
+8.60
+
+14
+20:15
+
+Slovan Bratislava (Svk) 
+Slovan Bratislava (Svk)
+
+4
+–
+0
+Zrinjski (Bih) 
+Zrinjski (Bih)
+
+1.58
+
+4.20
+
+6.40
+
+14
+20:00
+
+Shkendija (Mkd) 
+Shkendija (Mkd)
+
+1
+–
+0
+FCSB (Rou) 
+FCSB (Rou)
+
+5.50
+
+3.66
+
+1.74
+
+14
+19:00
+
+FC Copenhagen (Den) 
+FC Copenhagen (Den)
+
+2
+–
+0
+Drita (Kos) 
+Drita (Kos)
+
+1.13
+
+9.50
+
+25.00
+
+14
+19:00
+
+Hamrun (Mlt) 
+Hamrun (Mlt)
+
+0
+–
+3
+Dyn. Kyiv (Ukr) 
+Dyn. Kyiv (Ukr)
+
+8.00
+
+5.04
+
+1.42
+
+14
+19:00
+
+Pafos (Cyp) 
+Pafos (Cyp)
+
+1
+–
+1
+Maccabi Tel Aviv (Isr) 
+Maccabi Tel Aviv (Isr)
+
+2.54
+
+3.37
+
+3.10
+
+14
+19:00
+
+Plzen (Cze) 
+Plzen (Cze)
+
+0
+–
+1
+Servette (Sui) 
+Servette (Sui)
+
+1.47
+
+5.08
+
+7.40
+
+14
+19:00
+
+RFS (Lat) 
+RFS (Lat)
+
+1
+–
+4
+Malmo FF (Swe) 
+Malmo FF (Swe)
+
+4.15
+
+3.62
+
+1.97
+
+14
+18:00
+
+Lincoln Red Imps (Gib) 
+Lincoln Red Imps (Gib)
+
+0
+–
+1
+Crvena zvezda (Srb) 
+Crvena zvezda (Srb)
+
+20.00
+
+9.84
+
+1.18
+
+14
+18:00
+
+Noah (Arm) 
+Noah (Arm)
+
+1
+–
+2
+Ferencvaros (Hun) 
+Ferencvaros (Hun)
+
+3.30
+
+3.45
+
+2.32
+
+13
+17:00
+
+KuPS (Fin) 
+KuPS (Fin)
+
+2
+–
+0
+Kairat Almaty (Kaz) 
+Kairat Almaty (Kaz)
+
+2.60
+
+3.15
+
+3.10
+
+14
+16 Jul 2025 - Qualification
+1
+X
+2
+B's
+20:45
+
+Din. Minsk (Blr) 
+Din. Minsk (Blr)
+
+2
+–
+2
+Ludogorets (Bul) 
+Ludogorets (Bul)
+
+ET
+
+4.50
+
+3.90
+
+1.85
+
+14
+20:45
+
+Linfield (Nir) 
+Linfield (Nir)
+
+1
+–
+1
+Shelbourne (Irl) 
+Shelbourne (Irl)
+
+3.10
+
+3.60
+
+2.38
+
+14
+15 Jul 2025 - Qualification
+1
+X
+2
+B's
+21:00
+
+Breidablik (Ice) 
+Breidablik (Ice)
+
+5
+–
+0
+Egnatia (Alb) 
+Egnatia (Alb)
+
+1.73
+
+4.20
+
+5.80
+
+13
+21:00
+
+Buducnost (Mne) 
+Buducnost (Mne)
+
+2
+–
+2
+Noah (Arm) 
+Noah (Arm)
+
+3.50
+
+3.51
+
+2.24
+
+13
+21:00
+
+Zrinjski (Bih) 
+Zrinjski (Bih)
+
+2
+–
+1
+Virtus (San) 
+Virtus (San)
+
+1.06
+
+16.00
+
+50.00
+
+14
+20:30
+
+Inter Escaldes (And) 
+Inter Escaldes (And)
+
+2
+–
+1
+FCSB (Rou) 
+FCSB (Rou)
+
+7.75
+
+5.11
+
+1.45
+
+14
+20:00
+
+Differdange (Lux) 
+Differdange (Lux)
+
+2
+–
+3
+Drita (Kos) 
+Drita (Kos)
+
+2.54
+
+3.30
+
+3.06
+
+14
+20:00
+
+Shkendija (Mkd) 
+Shkendija (Mkd)
+
+2
+–
+1
+TNS (Wal) 
+TNS (Wal)
+
+ET
+
+1.73
+
+4.36
+
+5.80
+
+14
+19:00
+
+Hamrun (Mlt) 
+Hamrun (Mlt)
+
+3
+–
+0
+Zalgiris (Ltu) 
+Zalgiris (Ltu)
+
+pen.
+
+2.26
+
+3.65
+
+3.35
+
+14
+19:00
+
+Malmo FF (Swe) 
+Malmo FF (Swe)
+
+3
+–
+1
+Iberia 1999 (Geo) 
+Iberia 1999 (Geo)
+
+1.26
+
+6.50
+
+16.00
+
+14
+19:00
+
+Milsami (Mda) 
+Milsami (Mda)
+
+0
+–
+0
+KuPS (Fin) 
+KuPS (Fin)
+
+3.00
+
+3.55
+
+2.46
+
+14
+19:00
+
+RFS (Lat) 
+RFS (Lat)
+
+1
+–
+0
+Levadia (Est) 
+Levadia (Est)
+
+1.62
+
+4.50
+
+5.92
+
+14
+17:30
+
+Lincoln Red Imps (Gib) 
+Lincoln Red Imps (Gib)
+
+1
+–
+0
+Vikingur (Fai) 
+Vikingur (Fai)
+
+1.96
+
+4.00
+
+4.13
+
+14
+17:00
+
+Kairat Almaty (Kaz) 
+Kairat Almaty (Kaz)
+
+2
+–
+0
+O. Ljubljana (Slo) 
+O. Ljubljana (Slo)
+
+2.20
+
+3.42
+
+3.55
+
+14
+09 Jul 2025 - Qualification
+1
+X
+2
+B's
+20:45
+
+Shelbourne (Irl) 
+Shelbourne (Irl)
+
+1
+–
+0
+Linfield (Nir) 
+Linfield (Nir)
+
+1.96
+
+3.55
+
+4.69
+
+14
+19:30
+
+FCSB (Rou) 
+FCSB (Rou)
+
+3
+–
+1
+Inter Escaldes (And) 
+Inter Escaldes (And)
+
+1.14
+
+17.00
+
+30.62
+
+14
+19:30
+
+Ludogorets (Bul) 
+Ludogorets (Bul)
+
+1
+–
+0
+Din. Minsk (Blr) 
+Din. Minsk (Blr)
+
+1.43
+
+5.20
+
+11.00
+
+14
+18:00
+
+Zalgiris (Ltu) 
+Zalgiris (Ltu)
+
+2
+–
+0
+Hamrun (Mlt) 
+Hamrun (Mlt)
+
+1.72
+
+3.85
+
+6.40
+
+14
+08 Jul 2025 - Qualification
+1
+X
+2
+B's
+21:00
+
+Egnatia (Alb) 
+Egnatia (Alb)
+
+1
+–
+0
+Breidablik (Ice) 
+Breidablik (Ice)
+
+2.19
+
+3.60
+
+4.10
+
+13
+21:00
+
+Virtus (San) 
+Virtus (San)
+
+0
+–
+2
+Zrinjski (Bih) 
+Zrinjski (Bih)
+
+25.00
+
+9.88
+
+1.13
+
+14
+20:00
+
+Drita (Kos) 
+Drita (Kos)
+
+1
+–
+0
+Differdange (Lux) 
+Differdange (Lux)
+
+1.71
+
+3.85
+
+6.80
+
+14
+20:00
+
+TNS (Wal) 
+TNS (Wal)
+
+0
+–
+0
+Shkendija (Mkd) 
+Shkendija (Mkd)
+
+1.97
+
+3.72
+
+4.15
+
+14
+20:00
+
+Vikingur (Fai) 
+Vikingur (Fai)
+
+2
+–
+3
+Lincoln Red Imps (Gib) 
+Lincoln Red Imps (Gib)
+
+1.99
+
+3.55
+
+4.50
+
+14
+19:00
+
+O. Ljubljana (Slo) 
+O. Ljubljana (Slo)
+
+1
+–
+1
+Kairat Almaty (Kaz) 
+Kairat Almaty (Kaz)
+
+2.06
+
+3.69
+
+4.70
+
+14
+18:30
+
+Levadia (Est) 
+Levadia (Est)
+
+0
+–
+1
+RFS (Lat) 
+RFS (Lat)
+
+4.18
+
+4.10
+
+1.94
+
+14
+18:00
+
+Iberia 1999 (Geo) 
+Iberia 1999 (Geo)
+
+1
+–
+3
+Malmo FF (Swe) 
+Malmo FF (Swe)
+
+5.20
+
+3.72
+
+1.81
+
+1408 Jul 2025 - Qualification
+1
+X
+2
+B's
+18:00
+
+Noah (Arm) 
+Noah (Arm)
+
+1
+–
+0
+Buducnost (Mne) 
+Buducnost (Mne)
+
+1.27
+
+7.76
+
+14.00
+
+13
+17:00
+
+KuPS (Fin) 
+KuPS (Fin)
+
+1
+–
+0
+Milsami (Mda) 
+Milsami (Mda)
+
+1.34
+
+5.65
+
+10.70
+
+14

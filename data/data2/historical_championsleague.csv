@@ -1,0 +1,243 @@
+Date,HomeTeam,AwayTeam,FTHG,FTAG,HomeOdds,DrawOdds,AwayOdds
+2026-02-24,Bayer Leverkusen,Olympiacos Piraeus,0,0,1.78,4.20,4.90
+2026-02-24,Inter,Bodo/Glimt,1,2,1.26,8.52,12.00
+2026-02-24,Newcastle,Qarabag,3,2,1.18,10.73,18.15
+2026-02-24,Atl. Madrid,Club Brugge KV,4,1,1.45,5.81,8.50
+2026-02-18,Bodo/Glimt,Inter,3,1,4.65,4.20,1.80
+2026-02-18,Club Brugge KV,Atl. Madrid,3,3,4.02,3.85,2.05
+2026-02-18,Olympiacos Piraeus,Bayer Leverkusen,0,2,2.45,3.47,3.12
+2026-02-18,Qarabag,Newcastle,1,6,9.50,6.00,1.39
+2026-02-17,Benfica,Real Madrid,0,1,3.35,3.85,2.25
+2026-02-17,Dortmund,Atalanta,2,0,2.25,3.65,4.02
+2026-02-17,Monaco,PSG,2,3,7.00,5.40,1.50
+2026-02-17,Galatasaray,Juventus,5,2,3.25,3.57,2.42
+2026-01-28,Ajax,Olympiacos Piraeus,1,2,3.35,3.78,2.25
+2026-01-28,Arsenal,Kairat Almaty,3,2,1.07,21.00,100.00
+2026-01-28,Ath Bilbao,Sporting CP,2,3,3.05,3.45,2.60
+2026-01-28,Atl. Madrid,Bodo/Glimt,1,2,1.29,7.21,9.50
+2026-01-28,Barcelona,FC Copenhagen,4,1,1.14,13.00,25.00
+2026-01-28,Bayer Leverkusen,Villarreal,3,0,1.73,4.58,5.00
+2026-01-28,Benfica,Real Madrid,4,2,4.49,4.32,1.80
+2026-01-28,Club Brugge KV,Marseille,3,0,2.90,3.75,2.50
+2026-01-28,Dortmund,Inter,0,2,3.00,3.66,2.50
+2026-01-28,Eintracht Frankfurt,Tottenham,0,2,5.17,4.25,1.75
+2026-01-28,Liverpool,Qarabag,6,0,1.12,13.00,32.00
+2026-01-28,Manchester City,Galatasaray,2,0,1.25,7.80,12.00
+2026-01-28,Monaco,Juventus,0,0,4.08,3.79,2.10
+2026-01-28,Napoli,Chelsea,2,3,3.70,3.70,2.17
+2026-01-28,Pafos,Slavia Prague,4,1,3.35,3.48,2.40
+2026-01-28,PSG,Newcastle,1,1,1.59,5.14,5.59
+2026-01-28,PSV,Bayern Munich,1,2,5.05,4.80,1.68
+2026-01-28,Royale Union SG,Atalanta,1,0,3.15,3.67,2.45
+2026-01-21,Atalanta,Ath Bilbao,2,3,1.85,3.95,5.71
+2026-01-21,Bayern Munich,Royale Union SG,2,0,1.21,12.00,25.00
+2026-01-21,Chelsea,Pafos,1,0,1.22,12.00,31.00
+2026-01-21,Juventus,Benfica,2,0,1.95,4.05,5.90
+2026-01-21,Marseille,Liverpool,0,3,4.10,4.14,1.96
+2026-01-21,Newcastle,PSV,3,0,1.53,6.40,9.70
+2026-01-21,Slavia Prague,Barcelona,2,4,8.40,6.40,1.45
+2026-01-21,Galatasaray,Atl. Madrid,1,1,3.45,4.00,2.22
+2026-01-21,Qarabag,Eintracht Frankfurt,3,2,3.66,3.97,2.20
+2026-01-20,FC Copenhagen,Napoli,1,1,4.28,3.80,2.05
+2026-01-20,Inter,Arsenal,1,3,2.94,3.46,2.85
+2026-01-20,Olympiacos Piraeus,Bayer Leverkusen,2,0,2.49,3.80,3.25
+2026-01-20,Real Madrid,Monaco,6,1,1.33,6.50,10.50
+2026-01-20,Sporting CP,PSG,2,1,4.57,4.40,1.75
+2026-01-20,Tottenham,Dortmund,2,0,2.95,3.75,3.25
+2026-01-20,Villarreal,Ajax,1,2,1.59,6.00,9.50
+2026-01-20,Bodo/Glimt,Manchester City,3,1,7.60,5.90,1.42
+2026-01-20,Kairat Almaty,Club Brugge KV,1,4,7.15,5.19,1.72
+2025-12-10,Ath Bilbao,PSG,0,0,4.73,4.00,1.85
+2025-12-10,Bayer Leverkusen,Newcastle,2,2,3.43,3.90,2.18
+2025-12-10,Benfica,Napoli,2,0,2.94,3.21,2.95
+2025-12-10,Club Brugge KV,Arsenal,0,3,7.60,5.33,1.46
+2025-12-10,Dortmund,Bodo/Glimt,2,2,1.39,6.10,7.71
+2025-12-10,Juventus,Pafos,2,0,1.21,9.00,18.50
+2025-12-10,Real Madrid,Manchester City,1,2,3.45,4.19,2.21
+2025-12-10,Qarabag,Ajax,2,4,2.25,3.95,3.40
+2025-12-10,Villarreal,FC Copenhagen,2,3,1.44,5.41,7.35
+2025-12-09,Atalanta,Chelsea,2,1,3.70,3.60,2.25
+2025-12-09,Barcelona,Eintracht Frankfurt,2,1,1.17,10.10,18.50
+2025-12-09,Inter,Liverpool,0,1,2.12,3.83,3.80
+2025-12-09,Monaco,Galatasaray,1,0,2.10,4.05,3.84
+2025-12-09,PSV,Atl. Madrid,2,3,3.15,3.90,2.30
+2025-12-09,Royale Union SG,Marseille,2,3,3.23,3.60,2.40
+2025-12-09,Tottenham,Slavia Prague,3,0,1.46,5.02,7.90
+2025-12-09,Bayern Munich,Sporting CP,3,1,1.28,7.54,13.50
+2025-12-09,Kairat Almaty,Olympiacos Piraeus,0,1,8.00,4.95,1.50
+2025-11-26,Arsenal,Bayern Munich,3,1,2.10,3.82,3.85
+2025-11-26,Atl. Madrid,Inter,2,1,2.72,3.57,2.82
+2025-11-26,Eintracht Frankfurt,Atalanta,0,3,3.02,3.70,2.55
+2025-11-26,Liverpool,PSV,1,4,1.32,7.88,11.00
+2025-11-26,Olympiacos Piraeus,Real Madrid,3,4,5.00,4.75,1.69
+2025-11-26,PSG,Tottenham,5,3,1.47,5.20,8.50
+2025-11-26,Sporting CP,Club Brugge KV,3,0,1.56,4.90,6.40
+2025-11-26,FC Copenhagen,Kairat Almaty,3,2,1.35,5.70,12.00
+2025-11-26,Pafos,Monaco,2,2,7.00,4.85,1.54
+2025-11-25,Bodo/Glimt,Juventus,2,3,3.28,3.80,2.29
+2025-11-25,Chelsea,Barcelona,3,0,2.26,4.15,3.13
+2025-11-25,Dortmund,Villarreal,4,0,2.04,3.80,4.05
+2025-11-25,Manchester City,Bayer Leverkusen,0,2,1.41,5.97,9.10
+2025-11-25,Marseille,Newcastle,2,1,3.20,3.55,2.40
+2025-11-25,Napoli,Qarabag,2,0,1.21,7.75,17.50
+2025-11-25,Slavia Prague,Ath Bilbao,0,0,3.15,3.40,2.52
+2025-11-25,Ajax,Benfica,0,2,4.21,3.82,2.02
+2025-11-25,Galatasaray,Royale Union SG,0,1,1.85,4.22,4.57
+2025-11-05,Ajax,Galatasaray,0,3,3.67,3.90,2.20
+2025-11-05,Benfica,Bayer Leverkusen,0,1,1.98,3.85,4.05
+2025-11-05,Club Brugge KV,Barcelona,3,3,5.95,5.30,1.55
+2025-11-05,Inter,Kairat Almaty,2,1,1.05,24.00,130.00
+2025-11-05,Manchester City,Dortmund,4,1,1.40,5.80,8.30
+2025-11-05,Marseille,Atalanta,0,1,2.34,3.57,3.34
+2025-11-05,Newcastle,Ath Bilbao,2,0,1.42,5.36,9.80
+2025-11-05,Pafos,Villarreal,1,0,12.00,6.18,1.31
+2025-11-05,Qarabag,Chelsea,2,2,9.50,5.80,1.36
+2025-11-04,Atl. Madrid,Royale Union SG,3,1,1.29,6.80,11.47
+2025-11-04,Liverpool,Real Madrid,1,0,2.57,4.00,2.77
+2025-11-04,PSG,Bayern Munich,1,2,2.52,3.90,2.95
+2025-11-04,Bodo/Glimt,Monaco,0,1,2.35,4.10,2.91
+2025-11-04,Juventus,Sporting CP,1,1,2.05,3.60,4.36
+2025-11-04,Olympiacos Piraeus,PSV,1,1,2.78,3.76,2.65
+2025-11-04,Tottenham,FC Copenhagen,4,0,1.55,4.60,7.02
+2025-11-04,Napoli,Eintracht Frankfurt,0,0,1.63,4.50,5.95
+2025-11-04,Slavia Prague,Arsenal,0,3,16.50,7.00,1.25
+2025-10-22,Atalanta,Slavia Prague,0,0,1.49,5.77,11.00
+2025-10-22,Bayern Munich,Club Brugge KV,4,0,1.25,11.75,25.00
+2025-10-22,Chelsea,Ajax,5,1,1.37,6.45,10.50
+2025-10-22,Eintracht Frankfurt,Liverpool,1,5,5.45,4.90,1.61
+2025-10-22,Monaco,Tottenham,0,0,3.26,3.65,2.40
+2025-10-22,Real Madrid,Juventus,1,0,1.56,5.25,7.10
+2025-10-22,Sporting CP,Marseille,2,1,2.28,3.85,3.30
+2025-10-22,Ath Bilbao,Qarabag,3,1,1.38,5.90,9.70
+2025-10-22,Galatasaray,Bodo/Glimt,3,1,1.58,5.00,5.50
+2025-10-21,Arsenal,Atl. Madrid,4,0,1.60,4.25,6.75
+2025-10-21,Bayer Leverkusen,PSG,2,7,5.23,4.22,1.72
+2025-10-21,FC Copenhagen,Dortmund,2,4,4.85,3.75,1.96
+2025-10-21,Newcastle,Benfica,3,0,1.75,4.20,5.63
+2025-10-21,PSV,Napoli,6,2,3.35,3.65,2.28
+2025-10-21,Royale Union SG,Inter,0,4,5.44,4.02,1.80
+2025-10-21,Villarreal,Manchester City,0,2,5.17,4.14,1.80
+2025-10-21,Barcelona,Olympiacos Piraeus,6,1,1.30,7.50,15.00
+2025-10-21,Kairat Almaty,Pafos,0,0,3.25,3.46,2.61
+2025-10-01,Arsenal,Olympiacos Piraeus,2,0,1.23,9.00,22.00
+2025-10-01,Barcelona,PSG,1,2,1.80,4.60,4.66
+2025-10-01,Bayer Leverkusen,PSV,1,1,2.00,3.97,4.00
+2025-10-01,Dortmund,Ath Bilbao,4,1,1.83,3.85,5.10
+2025-10-01,Monaco,Manchester City,2,2,8.54,5.95,1.41
+2025-10-01,Napoli,Sporting CP,2,1,1.96,3.60,4.47
+2025-10-01,Villarreal,Juventus,2,2,2.51,3.45,3.35
+2025-10-01,Qarabag,FC Copenhagen,2,0,3.96,3.54,2.13
+2025-10-01,Royale Union SG,Newcastle,0,4,4.49,3.88,1.96
+2025-09-30,Atl. Madrid,Eintracht Frankfurt,5,1,1.48,5.40,7.12
+2025-09-30,Bodo/Glimt,Tottenham,2,2,3.38,3.70,2.22
+2025-09-30,Chelsea,Benfica,1,0,1.75,4.10,5.61
+2025-09-30,Galatasaray,Liverpool,1,0,5.46,4.79,1.67
+2025-09-30,Inter,Slavia Prague,3,0,1.30,6.50,11.10
+2025-09-30,Marseille,Ajax,4,0,1.59,4.70,6.75
+2025-09-30,Pafos,Bayern Munich,1,5,28.00,12.00,1.14
+2025-09-30,Atalanta,Club Brugge KV,2,1,1.85,4.20,4.66
+2025-09-30,Kairat Almaty,Real Madrid,0,5,31.00,14.10,1.10
+2025-09-18,Eintracht Frankfurt,Galatasaray,5,1,2.42,3.85,3.04
+2025-09-18,Manchester City,Napoli,2,0,1.73,4.40,6.04
+2025-09-18,Newcastle,Barcelona,1,2,2.66,3.88,2.80
+2025-09-18,Sporting CP,Kairat Almaty,4,1,1.09,15.00,45.00
+2025-09-18,Club Brugge KV,Monaco,4,1,2.45,3.75,3.30
+2025-09-18,FC Copenhagen,Bayer Leverkusen,2,2,3.33,3.40,2.45
+2025-09-17,Bayern Munich,Chelsea,3,1,1.85,4.45,4.52
+2025-09-17,PSG,Atalanta,4,0,1.45,5.35,8.35
+2025-09-17,Ajax,Inter,0,2,5.45,4.30,1.93
+2025-09-17,Liverpool,Atl. Madrid,3,2,1.66,4.80,7.09
+2025-09-17,Olympiacos Piraeus,Pafos,0,0,1.47,5.05,9.00
+2025-09-17,Slavia Prague,Bodo/Glimt,2,2,2.05,4.21,3.95
+2025-09-16,Benfica,Qarabag,2,3,1.22,9.50,18.00
+2025-09-16,Juventus,Dortmund,4,4,2.11,3.64,4.10
+2025-09-16,Real Madrid,Marseille,2,1,1.40,5.89,8.55
+2025-09-16,Tottenham,Villarreal,1,0,1.99,3.85,4.20
+2025-09-16,Ath Bilbao,Arsenal,0,2,5.95,3.65,2.06
+2025-09-16,PSV,Royale Union SG,1,3,2.05,3.90,4.26
+2025-08-27,Benfica (Por),Fenerbahce (Tur),1,0,1.75,4.04,5.40
+2025-08-27,Club Brugge KV (Bel),Rangers (Sco),6,0,1.55,4.88,5.90
+2025-08-27,FC Copenhagen (Den),Basel (Sui),2,0,1.63,4.30,6.25
+2025-08-27,Qarabag (Aze),Ferencvaros (Hun),2,3,2.27,3.84,3.35
+2025-08-26,Pafos (Cyp),Crvena zvezda (Srb),1,1,3.56,4.00,2.15
+2025-08-26,Sturm Graz (Aut),Bodo/Glimt (Nor),2,1,2.50,4.01,3.10
+2025-08-20,Basel (Sui),FC Copenhagen (Den),1,1,2.77,3.54,2.88
+2025-08-20,Bodo/Glimt (Nor),Sturm Graz (Aut),5,0,1.49,5.01,6.75
+2025-08-20,Celtic (Sco),Kairat Almaty (Kaz),0,0,1.14,11.00,26.46
+2025-08-20,Fenerbahce (Tur),Benfica (Por),0,0,3.09,3.60,2.50
+2025-08-19,Crvena zvezda (Srb),Pafos (Cyp),1,2,1.65,4.58,6.50
+2025-08-19,Ferencvaros (Hun),Qarabag (Aze),1,3,2.20,3.46,3.96
+2025-08-19,Rangers (Sco),Club Brugge KV (Bel),1,3,3.14,3.66,2.45
+2025-08-12,Benfica (Por),Nice (Fra),2,0,1.52,4.93,6.50
+2025-08-12,Crvena zvezda (Srb),Lech Poznan (Pol),1,1,1.58,4.77,6.25
+2025-08-12,Ferencvaros (Hun),Ludogorets (Bul),3,0,1.53,4.25,7.17
+2025-08-12,Club Brugge KV (Bel),Salzburg (Aut),3,2,1.78,4.27,4.65
+2025-08-12,FC Copenhagen (Den),Malmo FF (Swe),5,0,1.80,3.50,5.59
+2025-08-12,Fenerbahce (Tur),Feyenoord (Ned),5,2,1.63,4.71,6.01
+2025-08-12,Pafos (Cyp),Dyn. Kyiv (Ukr),2,0,3.41,3.45,2.28
+2025-08-12,Plzen (Cze),Rangers (Sco),2,1,1.82,4.33,4.15
+2025-08-12,Qarabag (Aze),Shkendija (Mkd),5,1,1.34,5.56,10.50
+2025-08-06,Feyenoord (Ned),Fenerbahce (Tur),2,1,2.55,3.60,2.85
+2025-08-06,Nice (Fra),Benfica (Por),0,2,2.98,3.68,2.44
+2025-08-06,Lech Poznan (Pol),Crvena zvezda (Srb),1,3,2.84,3.71,2.70
+2025-08-06,Ludogorets (Bul),Ferencvaros (Hun),0,0,3.20,3.20,2.54
+2025-08-06,Salzburg (Aut),Club Brugge KV (Bel),0,1,2.80,3.64,2.61
+2025-08-06,Kairat Almaty (Kaz),Slovan Bratislava (Svk),1,0,2.25,3.45,3.81
+2025-08-05,Rangers (Sco),Plzen (Cze),3,0,2.20,3.70,3.60
+2025-08-05,Dyn. Kyiv (Ukr),Pafos (Cyp),0,1,1.63,3.95,6.73
+2025-08-05,Shkendija (Mkd),Qarabag (Aze),0,1,5.40,3.75,1.75
+2025-08-05,Malmo FF (Swe),FC Copenhagen (Den),0,0,3.45,3.25,2.46
+2025-07-30,Servette (Sui),Plzen (Cze),1,3,4.60,4.29,1.80
+2025-07-30,Salzburg (Aut),Brann (Nor),1,1,1.57,4.90,5.94
+2025-07-30,Breidablik (Ice),Lech Poznan (Pol),0,1,2.80,3.85,2.48
+2025-07-30,Ferencvaros (Hun),Noah (Arm),4,3,1.45,4.84,7.86
+2025-07-30,Maccabi Tel Aviv (Isr),Pafos (Cyp),0,1,2.02,3.61,4.10
+2025-07-30,Panathinaikos (Gre),Rangers (Sco),1,1,1.75,4.45,4.70
+2025-07-30,FCSB (Rou),Shkendija (Mkd),1,2,1.23,6.95,16.00
+2025-07-30,Malmo FF (Swe),RFS (Lat),1,0,1.49,4.90,8.50
+2025-07-30,Qarabag (Aze),Shelbourne (Irl),1,0,1.21,7.50,19.50
+2025-07-29,Crvena zvezda (Srb),Lincoln Red Imps (Gib),5,1,1.06,17.17,36.00
+2025-07-29,Zrinjski (Bih),Slovan Bratislava (Svk),2,2,2.73,3.55,2.80
+2025-07-29,Drita (Kos),FC Copenhagen (Den),0,1,7.00,4.60,1.56
+2025-07-29,Dyn. Kyiv (Ukr),Hamrun (Mlt),3,0,1.20,7.25,16.50
+2025-07-29,Kairat Almaty (Kaz),KuPS (Fin),3,0,1.48,5.20,8.00
+2025-07-23,Shelbourne (Irl),Qarabag (Aze),0,3,6.40,4.21,1.61
+2025-07-23,Brann (Nor),Salzburg (Aut),1,4,2.90,3.67,2.51
+2025-07-22,Rangers (Sco),Panathinaikos (Gre),2,0,1.90,3.75,4.40
+2025-07-22,Rijeka (Cro),Ludogorets (Bul),0,0,2.46,3.30,3.48
+2025-07-22,Lech Poznan (Pol),Breidablik (Ice),7,1,1.40,5.30,8.60
+2025-07-22,Slovan Bratislava (Svk),Zrinjski (Bih),4,0,1.58,4.20,6.40
+2025-07-22,Shkendija (Mkd),FCSB (Rou),1,0,5.50,3.66,1.74
+2025-07-22,FC Copenhagen (Den),Drita (Kos),2,0,1.13,9.50,25.00
+2025-07-22,Hamrun (Mlt),Dyn. Kyiv (Ukr),0,3,8.00,5.04,1.42
+2025-07-22,Pafos (Cyp),Maccabi Tel Aviv (Isr),1,1,2.54,3.37,3.10
+2025-07-22,Plzen (Cze),Servette (Sui),0,1,1.47,5.08,7.40
+2025-07-22,RFS (Lat),Malmo FF (Swe),1,4,4.15,3.62,1.97
+2025-07-22,Lincoln Red Imps (Gib),Crvena zvezda (Srb),0,1,20.00,9.84,1.18
+2025-07-22,Noah (Arm),Ferencvaros (Hun),1,2,3.30,3.45,2.32
+2025-07-22,KuPS (Fin),Kairat Almaty (Kaz),2,0,2.60,3.15,3.10
+2025-07-16,Linfield (Nir),Shelbourne (Irl),1,1,3.10,3.60,2.38
+2025-07-15,Breidablik (Ice),Egnatia (Alb),5,0,1.73,4.20,5.80
+2025-07-15,Buducnost (Mne),Noah (Arm),2,2,3.50,3.51,2.24
+2025-07-15,Zrinjski (Bih),Virtus (San),2,1,1.06,16.00,50.00
+2025-07-15,Inter Escaldes (And),FCSB (Rou),2,1,7.75,5.11,1.45
+2025-07-15,Differdange (Lux),Drita (Kos),2,3,2.54,3.30,3.06
+2025-07-15,Malmo FF (Swe),Iberia 1999 (Geo),3,1,1.26,6.50,16.00
+2025-07-15,Milsami (Mda),KuPS (Fin),0,0,3.00,3.55,2.46
+2025-07-15,RFS (Lat),Levadia (Est),1,0,1.62,4.50,5.92
+2025-07-15,Lincoln Red Imps (Gib),Vikingur (Fai),1,0,1.96,4.00,4.13
+2025-07-15,Kairat Almaty (Kaz),O. Ljubljana (Slo),2,0,2.20,3.42,3.55
+2025-07-09,Shelbourne (Irl),Linfield (Nir),1,0,1.96,3.55,4.69
+2025-07-09,FCSB (Rou),Inter Escaldes (And),3,1,1.14,17.00,30.62
+2025-07-09,Ludogorets (Bul),Din. Minsk (Blr),1,0,1.43,5.20,11.00
+2025-07-09,Zalgiris (Ltu),Hamrun (Mlt),2,0,1.72,3.85,6.40
+2025-07-08,Egnatia (Alb),Breidablik (Ice),1,0,2.19,3.60,4.10
+2025-07-08,Virtus (San),Zrinjski (Bih),0,2,25.00,9.88,1.13
+2025-07-08,Drita (Kos),Differdange (Lux),1,0,1.71,3.85,6.80
+2025-07-08,TNS (Wal),Shkendija (Mkd),0,0,1.97,3.72,4.15
+2025-07-08,Vikingur (Fai),Lincoln Red Imps (Gib),2,3,1.99,3.55,4.50
+2025-07-08,O. Ljubljana (Slo),Kairat Almaty (Kaz),1,1,2.06,3.69,4.70
+2025-07-08,Levadia (Est),RFS (Lat),0,1,4.18,4.10,1.94
+2025-07-08,Iberia 1999 (Geo),Malmo FF (Swe),1,3,5.20,3.72,1.81
+2025-07-08,Noah (Arm),Buducnost (Mne),1,0,1.27,7.76,14.00
+2025-07-08,KuPS (Fin),Milsami (Mda),1,0,1.34,5.65,10.70

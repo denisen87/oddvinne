@@ -1,0 +1,263 @@
+HomeTeam,AwayTeam,FTHG,FTAG,HomeOdds,DrawOdds,AwayOdds
+Bologna,Udinese,1,0,1.95,3.65,4.68
+Fiorentina,Pisa,1,0,1.67,4.10,6.16
+AS Roma,Cremonese,3,0,1.36,5.60,12.00
+AC Milan,Parma,0,1,1.35,5.67,11.30
+Atalanta,Napoli,2,1,2.55,3.15,3.36
+Genoa,Torino,3,0,2.40,3.05,3.84
+Cagliari,Lazio,0,0,3.56,3.20,2.58
+Lecce,Inter,0,2,8.30,4.50,1.52
+Juventus,Como,0,2,2.20,3.50,3.85
+Sassuolo,Verona,3,0,1.82,3.55,5.57
+AC Milan,Como,1,1,2.63,3.15,3.26
+Cagliari,Lecce,0,2,2.49,2.95,3.79
+Napoli,AS Roma,2,2,2.62,2.95,3.61
+Torino,Bologna,1,2,3.19,3.40,2.57
+Cremonese,Genoa,0,0,3.60,3.20,2.51
+Parma,Verona,2,1,2.34,3.10,3.95
+Udinese,Sassuolo,1,2,2.69,3.10,3.15
+Inter,Juventus,3,2,2.10,3.40,4.23
+Lazio,Atalanta,0,2,3.76,3.45,2.27
+Como,Fiorentina,1,2,1.73,4.10,5.50
+Pisa,AC Milan,1,2,7.50,4.02,1.60
+AS Roma,Cagliari,2,0,1.51,4.40,8.10
+Atalanta,Cremonese,2,1,1.40,5.40,10.50
+Juventus,Lazio,2,2,1.46,4.70,9.50
+Sassuolo,Inter,0,5,8.00,4.95,1.50
+Lecce,Udinese,2,1,3.00,3.00,2.98
+Bologna,Parma,0,1,1.70,4.01,5.94
+Fiorentina,Torino,2,2,1.75,3.95,5.40
+Genoa,Napoli,2,3,4.46,3.20,2.15
+Verona,Pisa,0,0,2.68,3.05,3.28
+Bologna,AC Milan,0,3,3.48,3.25,2.60
+Udinese,AS Roma,1,0,4.74,3.28,2.05
+Parma,Juventus,1,4,9.75,4.86,1.43
+Cremonese,Inter,0,2,14.60,6.30,1.28
+Como,Atalanta,0,0,2.41,3.45,3.35
+Torino,Lecce,1,0,2.25,3.00,4.38
+Cagliari,Verona,4,0,2.27,3.20,4.08
+Napoli,Fiorentina,2,1,2.01,3.50,4.72
+Pisa,Sassuolo,1,3,3.21,3.25,2.50
+Lazio,Genoa,3,2,2.35,3.00,4.13
+Verona,Udinese,1,3,3.10,3.05,2.81
+AS Roma,AC Milan,1,1,2.94,3.05,3.12
+Juventus,Napoli,3,0,1.99,3.45,5.04
+Atalanta,Parma,4,0,1.40,5.40,10.00
+Genoa,Bologna,3,2,3.39,3.15,2.52
+Sassuolo,Cremonese,1,0,2.15,3.37,4.38
+Lecce,Lazio,0,0,5.18,3.05,2.08
+Fiorentina,Cagliari,1,2,1.85,3.69,4.96
+Lecce,Lazio,0,0,5.18,3.05,2.08
+Fiorentina,Cagliari,1,2,1.85,3.69,4.96
+Como,Torino,6,0,1.58,4.20,7.25
+Inter,Pisa,6,2,1.29,6.75,12.00
+Lazio,Como,0,3,3.40,3.00,2.79
+Cremonese,Verona,0,0,2.50,3.25,3.31
+AC Milan,Lecce,1,0,1.32,5.50,13.00
+Torino,AS Roma,0,2,4.67,3.50,2.00
+Bologna,Fiorentina,1,2,2.42,3.50,3.31
+Parma,Genoa,0,0,3.01,2.80,3.05
+Cagliari,Juventus,1,0,7.40,4.16,1.58
+Napoli,Sassuolo,1,0,1.51,4.42,9.13
+Udinese,Inter,0,1,8.00,4.60,1.50
+Pisa,Atalanta,1,1,6.68,4.20,1.61
+Como,AC Milan,1,3,3.23,3.40,2.52
+Verona,Bologna,2,3,4.12,3.23,2.25
+Inter,Lecce,1,0,1.19,9.00,20.21
+Napoli,Parma,0,0,1.33,5.54,11.92
+Juventus,Cremonese,5,0,1.28,6.29,13.00
+Genoa,Cagliari,3,0,2.26,3.01,4.10
+Inter,Napoli,2,2,1.80,3.70,5.52
+Verona,Lazio,0,1,4.05,3.00,2.45
+Fiorentina,AC Milan,1,1,3.59,3.45,2.30
+Lecce,Parma,1,2,2.88,3.10,3.05
+Atalanta,Torino,2,0,1.63,4.00,6.68
+AS Roma,Sassuolo,2,0,1.72,3.75,6.37
+Como,Bologna,1,1,2.02,3.40,4.36
+Udinese,Pisa,2,2,1.96,3.50,4.91
+AC Milan,Genoa,1,1,1.52,4.19,9.27
+Cremonese,Cagliari,2,2,2.61,3.15,3.45
+Lazio,Fiorentina,2,2,2.45,3.25,3.77
+Parma,Inter,0,2,10.13,5.60,1.37
+Torino,Udinese,1,2,2.27,3.25,3.83
+Bologna,Atalanta,0,2,3.26,3.40,2.45
+Napoli,Verona,2,2,1.35,5.24,12.29
+Sassuolo,Juventus,0,3,5.75,3.85,1.75
+Lecce,AS Roma,0,2,5.50,3.60,1.80
+Pisa,Como,0,3,5.40,3.60,1.80
+Inter,Bologna,3,1,1.48,5.13,8.40
+Verona,Torino,0,3,2.75,3.05,3.09
+Fiorentina,Cremonese,1,0,1.77,3.90,5.40
+Lazio,Napoli,0,2,4.16,3.20,2.22
+Atalanta,AS Roma,1,0,2.45,3.17,3.57
+Juventus,Lecce,1,1,1.28,6.25,15.10
+Genoa,Pisa,1,1,1.95,3.35,5.05
+Sassuolo,Parma,1,1,2.15,3.50,4.25
+Como,Udinese,1,0,1.80,3.70,5.10
+Cagliari,AC Milan,0,1,6.73,4.01,1.67
+AS Roma,Genoa,3,1,1.64,3.86,7.11
+Atalanta,Inter,0,1,3.68,3.66,2.29
+Bologna,Sassuolo,1,1,2.03,3.57,4.83
+Cremonese,Napoli,0,2,7.12,3.97,1.62
+AC Milan,Verona,3,0,1.42,5.26,9.64
+Pisa,Juventus,0,2,8.15,4.38,1.52
+Udinese,Lazio,1,1,3.56,3.25,2.60
+Lecce,Como,0,3,5.12,3.50,1.95
+Torino,Cagliari,1,2,1.98,3.50,5.32
+Parma,Fiorentina,1,0,3.81,3.46,2.38
+Genoa,Atalanta,0,1,4.09,3.50,2.15
+Fiorentina,Udinese,5,1,2.27,3.45,3.98
+Sassuolo,Torino,0,1,2.42,3.35,3.47
+Cagliari,Pisa,2,2,2.20,3.45,4.50
+Juventus,AS Roma,2,1,2.20,3.45,4.61
+Lazio,Cremonese,0,0,1.58,4.15,7.14
+AS Roma,Como,1,0,2.26,3.22,3.88
+Bologna,Juventus,0,1,3.68,3.40,2.35
+Genoa,Inter,1,2,8.00,4.50,1.51
+Fiorentina,Verona,1,2,2.05,3.45,4.47
+Udinese,Napoli,1,0,4.83,3.50,1.95
+AC Milan,Sassuolo,2,2,1.53,4.47,7.50
+Atalanta,Cagliari,2,1,1.40,5.40,9.80
+Parma,Lazio,0,1,4.01,3.32,2.20
+Torino,Cremonese,1,0,2.10,3.50,4.01
+Lecce,Pisa,1,0,2.61,2.96,3.50
+Torino,AC Milan,2,3,5.94,3.90,1.75
+Udinese,Genoa,1,2,2.52,3.00,3.46
+Pisa,Parma,0,1,2.59,3.15,3.25
+Napoli,Juventus,2,1,2.73,2.95,3.43
+Lazio,Bologna,1,1,2.40,3.40,3.55
+Cagliari,AS Roma,1,0,6.40,3.70,1.71
+Cremonese,Lecce,2,0,2.48,3.25,3.57
+Verona,Atalanta,3,1,5.97,3.90,1.70
+Inter,Como,4,0,1.65,4.45,6.46
+Sassuolo,Fiorentina,3,1,2.95,3.34,2.73
+Bologna,Cremonese,1,3,1.56,4.40,7.01
+AS Roma,Napoli,0,1,2.87,2.98,3.16
+Atalanta,Fiorentina,2,0,1.72,4.11,5.92
+Pisa,Inter,0,2,12.05,6.59,1.28
+Lecce,Torino,2,1,3.15,3.10,2.75
+AC Milan,Lazio,1,0,1.75,3.80,5.67
+Juventus,Cagliari,2,1,1.25,6.60,14.50
+Genoa,Verona,2,1,2.12,2.95,5.05
+Parma,Udinese,0,2,2.89,3.10,2.95
+Como,Sassuolo,2,0,1.85,3.75,4.96
+Sassuolo,Pisa,2,2,2.04,3.40,4.35
+Torino,Como,1,5,3.88,3.25,2.30
+Inter,AC Milan,0,1,2.15,3.60,4.40
+Lazio,Lecce,2,0,1.85,3.85,6.33
+Cremonese,AS Roma,1,3,5.79,4.05,1.80
+Verona,Parma,1,2,2.38,3.20,4.15
+Napoli,Atalanta,3,1,2.45,3.30,3.72
+Fiorentina,Juventus,1,1,4.18,3.46,2.12
+Cagliari,Genoa,3,3,3.38,3.00,2.91
+Udinese,Bologna,0,3,3.75,3.35,2.60
+Inter,Lazio,2,0,1.37,5.60,10.53
+AS Roma,Udinese,2,0,1.57,4.20,7.27
+Bologna,Napoli,2,0,3.25,3.00,2.90
+Genoa,Fiorentina,2,2,3.16,3.00,2.85
+Atalanta,Sassuolo,0,3,1.57,4.70,7.25
+Parma,AC Milan,2,2,7.75,4.30,1.55
+Juventus,Torino,0,0,1.55,4.40,7.61
+Como,Cagliari,0,0,1.61,4.20,7.25
+Lecce,Verona,0,0,2.93,2.93,3.21
+Pisa,Cremonese,1,0,2.38,3.16,3.62
+Lazio,Cagliari,2,0,1.67,3.86,6.58
+Sassuolo,Genoa,1,2,2.60,3.05,3.48
+AC Milan,AS Roma,1,0,2.44,3.25,3.86
+Parma,Bologna,1,3,5.02,3.45,2.02
+Fiorentina,Lecce,0,1,1.75,3.70,5.93
+Torino,Pisa,2,2,1.88,3.60,5.40
+Verona,Inter,1,2,9.73,5.14,1.41
+Cremonese,Juventus,1,2,7.03,4.50,1.57
+Napoli,Como,0,0,1.97,3.50,4.92
+Udinese,Atalanta,1,0,5.43,3.95,1.75
+Pisa,Lazio,0,0,4.25,3.32,2.21
+Cagliari,Sassuolo,1,2,2.76,3.35,3.03
+Bologna,Torino,0,0,1.85,3.62,5.24
+Genoa,Cremonese,0,2,1.86,3.60,5.46
+Inter,Fiorentina,3,0,1.41,5.60,10.00
+AS Roma,Parma,2,1,1.50,4.50,9.17
+Como,Verona,3,1,1.63,3.95,6.94
+Juventus,Udinese,3,1,1.50,4.70,7.75
+Atalanta,AC Milan,1,1,2.77,3.55,2.92
+Lecce,Napoli,0,1,7.13,4.47,1.65
+Lazio,Juventus,1,0,3.80,3.35,2.37
+Fiorentina,Bologna,2,2,2.87,3.20,2.97
+Sassuolo,AS Roma,0,1,4.53,3.65,1.95
+Verona,Cagliari,2,2,2.29,3.35,4.76
+Torino,Genoa,2,1,2.57,3.00,3.71
+Cremonese,Atalanta,1,1,7.00,4.87,1.62
+Napoli,Inter,3,1,3.88,3.30,2.49
+Parma,Como,0,0,4.66,3.55,2.05
+Udinese,Lecce,3,2,2.02,3.50,4.98
+AC Milan,Pisa,2,2,1.34,5.94,11.75
+Cremonese,Udinese,1,1,3.32,3.17,2.52
+AC Milan,Fiorentina,2,1,1.75,4.24,6.45
+Atalanta,Lazio,0,0,1.90,3.88,4.50
+Cagliari,Bologna,0,2,4.18,3.35,2.15
+Genoa,Parma,0,0,2.35,3.20,3.96
+Como,Juventus,2,0,3.39,3.39,2.45
+AS Roma,Inter,0,1,3.82,3.45,2.30
+Torino,Napoli,1,0,5.65,3.52,1.90
+Lecce,Sassuolo,0,0,2.94,3.11,2.83
+Pisa,Verona,0,0,2.84,3.14,3.12
+Juventus,AC Milan,0,0,2.85,3.10,2.96
+Napoli,Genoa,2,1,1.49,4.30,9.66
+Bologna,Pisa,4,0,1.73,3.75,5.72
+Fiorentina,AS Roma,1,2,3.24,3.30,2.50
+Udinese,Cagliari,1,1,2.19,3.35,4.10
+Atalanta,Como,1,1,2.25,3.50,3.70
+Inter,Cremonese,4,1,1.20,8.50,21.00
+Lazio,Torino,3,3,2.14,3.50,4.64
+Parma,Lecce,0,1,1.96,3.50,4.68
+Verona,Sassuolo,0,1,2.42,3.30,3.45
+Genoa,Lazio,0,3,3.06,3.05,2.84
+Parma,Torino,2,1,2.63,3.20,3.28
+AC Milan,Napoli,2,1,2.00,3.64,4.42
+Lecce,Bologna,2,2,6.00,3.77,1.80
+AS Roma,Verona,2,0,1.44,4.60,9.40
+Pisa,Fiorentina,0,0,3.73,3.45,2.25
+Sassuolo,Udinese,3,1,2.49,3.35,3.40
+Cagliari,Inter,0,2,7.40,4.50,1.55
+Juventus,Atalanta,1,1,2.08,3.60,4.65
+Como,Cremonese,1,1,1.50,4.81,8.50
+Napoli,Pisa,3,2,1.34,5.46,12.11
+Inter,Sassuolo,2,1,1.35,5.80,10.40
+Fiorentina,Como,1,2,2.78,3.40,2.95
+Cremonese,Parma,0,0,3.20,3.38,2.65
+Torino,Atalanta,0,3,4.42,3.50,2.15
+Lazio,AS Roma,0,1,2.90,3.05,2.97
+Udinese,AC Milan,0,3,5.60,4.18,1.70
+Verona,Juventus,1,1,7.60,4.20,1.57
+Bologna,Genoa,2,1,2.18,3.19,4.60
+Lecce,Cagliari,1,2,2.97,2.96,2.89
+Como,Genoa,1,1,1.75,3.80,6.20
+Verona,Cremonese,0,0,2.97,3.10,3.23
+AC Milan,Bologna,1,0,1.93,3.65,5.19
+Sassuolo,Lazio,1,0,4.50,3.60,2.06
+Atalanta,Lecce,4,1,1.43,5.07,9.00
+Pisa,Udinese,0,1,3.01,3.11,2.77
+AS Roma,Torino,0,1,1.56,4.33,7.23
+Fiorentina,Napoli,1,3,4.67,3.35,2.25
+Juventus,Inter,4,3,2.95,3.15,2.90
+Cagliari,Parma,2,0,2.35,3.25,3.75
+Inter,Udinese,1,2,1.30,6.07,11.35
+Lazio,Verona,4,0,1.60,4.00,7.25
+Genoa,Juventus,0,1,5.56,3.50,1.91
+Torino,Fiorentina,0,0,3.40,3.30,2.52
+Napoli,Cagliari,1,0,1.45,4.58,9.50
+Pisa,AS Roma,0,1,5.62,3.70,1.75
+Bologna,Como,1,0,2.96,3.15,2.80
+Parma,Atalanta,1,1,4.70,3.94,1.85
+Lecce,AC Milan,0,2,7.54,4.00,1.67
+Cremonese,Sassuolo,3,2,2.96,3.26,2.75
+Inter,Torino,5,0,1.38,5.40,9.30
+Udinese,Verona,1,1,2.05,3.35,4.71
+Atalanta,Pisa,1,1,1.51,4.90,7.50
+Juventus,Parma,2,0,1.45,4.80,8.41
+Cagliari,Fiorentina,1,1,3.45,3.35,2.62
+Como,Lazio,2,0,2.55,3.45,3.26
+AC Milan,Cremonese,1,2,1.39,5.57,10.26
+AS Roma,Bologna,1,0,2.23,3.35,3.75
+Genoa,Lecce,0,0,1.82,3.50,5.88
+Sassuolo,Napoli,0,2,6.10,3.92,1.72

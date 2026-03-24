@@ -1,0 +1,207 @@
+Date,HomeTeam,AwayTeam,FTHG,FTAG,HomeOdds,DrawOdds,AwayOdds
+null,Heidenheim,Stuttgart,3,3,4.70,4.46,1.74
+null,St. Pauli,Werder Bremen,2,1,2.82,3.28,2.85
+null,Freiburg,B. Monchengladbach,2,1,2.16,3.50,4.26
+2026-02-21,RB Leipzig,Dortmund,2,2,2.20,4.09,3.55
+2026-02-21,FC Koln,Hoffenheim,2,2,3.80,3.90,2.12
+2026-02-21,Bayern Munich,Eintracht Frankfurt,3,2,1.14,14.50,28.00
+2026-02-21,Union Berlin,Bayer Leverkusen,1,0,3.43,3.50,2.41
+2026-02-21,Wolfsburg,Augsburg,2,3,2.28,3.55,3.78
+2026-02-20,Mainz,Hamburger SV,1,1,2.20,3.59,3.73
+2026-02-15,RB Leipzig,Wolfsburg,2,2,1.55,5.00,6.01
+2026-02-15,Augsburg,Heidenheim,1,0,1.95,3.85,4.20
+2026-02-14,Stuttgart,FC Koln,3,1,1.57,5.13,6.00
+2026-02-14,Bayer Leverkusen,St. Pauli,4,0,1.55,4.53,6.53
+2026-02-14,Eintracht Frankfurt,B. Monchengladbach,3,0,2.25,3.60,3.60
+2026-02-14,Hamburger SV,Union Berlin,3,2,2.48,3.33,3.36
+2026-02-14,Hoffenheim,Freiburg,3,0,1.77,4.10,4.90
+2026-02-14,Werder Bremen,Bayern Munich,0,3,9.00,6.40,1.35
+2026-02-13,Dortmund,Mainz,4,0,1.70,4.30,5.40
+2026-02-08,Bayern Munich,Hoffenheim,5,1,1.28,8.52,12.50
+2026-02-08,FC Koln,RB Leipzig,1,2,3.65,4.00,2.08
+2026-02-07,B. Monchengladbach,Bayer Leverkusen,1,1,3.90,3.78,2.09
+2026-02-07,Freiburg,Werder Bremen,1,0,2.20,3.50,3.75
+2026-02-07,Heidenheim,Hamburger SV,0,2,3.00,3.50,2.52
+2026-02-07,Mainz,Augsburg,2,0,2.00,3.79,4.10
+2026-02-07,St. Pauli,Stuttgart,2,1,5.10,3.99,1.75
+2026-02-07,Wolfsburg,Dortmund,1,2,4.90,4.44,1.74
+2026-02-06,Union Berlin,Eintracht Frankfurt,1,1,2.30,3.63,3.49
+2026-02-01,Dortmund,Heidenheim,3,2,1.30,6.79,11.14
+2026-02-01,Stuttgart,Freiburg,1,0,1.69,4.40,5.20
+2026-01-31,Hamburger SV,Bayern Munich,2,2,10.00,6.69,1.32
+2026-01-31,Augsburg,St. Pauli,2,1,2.21,3.28,4.16
+2026-01-31,Eintracht Frankfurt,Bayer Leverkusen,1,3,3.60,3.82,2.15
+2026-01-31,Hoffenheim,Union Berlin,3,1,1.86,3.86,4.55
+2026-01-31,RB Leipzig,Mainz,1,2,1.58,4.82,5.80
+2026-01-31,Werder Bremen,B. Monchengladbach,1,1,2.30,3.67,3.45
+2026-01-30,FC Koln,Wolfsburg,1,0,2.15,3.81,3.53
+2026-01-27,St. Pauli,RB Leipzig,1,1,5.40,3.73,1.80
+2026-01-27,Werder Bremen,Hoffenheim,0,2,4.06,3.90,2.00
+2026-01-25,Freiburg,FC Koln,2,1,2.06,3.79,3.82
+2026-01-25,B. Monchengladbach,Stuttgart,0,3,3.20,3.78,2.36
+2026-01-24,Union Berlin,Dortmund,0,3,3.47,3.40,2.35
+2026-01-24,Bayer Leverkusen,Werder Bremen,1,0,1.60,4.63,5.60
+2026-01-24,Bayern Munich,Augsburg,1,2,1.14,12.00,20.00
+2026-01-24,Eintracht Frankfurt,Hoffenheim,1,3,3.20,3.72,2.30
+2026-01-24,Heidenheim,RB Leipzig,0,3,5.00,4.60,1.71
+2026-01-24,Mainz,Wolfsburg,3,1,2.40,3.47,3.21
+2026-01-23,St. Pauli,Hamburger SV,0,0,2.95,3.05,2.88
+2026-01-18,Augsburg,Freiburg,2,2,2.70,3.33,2.90
+2026-01-18,Stuttgart,Union Berlin,1,1,1.64,4.30,5.71
+2026-01-18,RB Leipzig,Bayern Munich,1,5,4.50,4.50,1.75
+2026-01-18,FC Koln,Mainz,2,1,2.20,3.55,3.60
+2026-01-18,Dortmund,St. Pauli,3,2,1.37,5.40,12.00
+2026-01-18,Hamburger SV,B. Monchengladbach,0,0,2.50,3.57,3.00
+2026-01-18,Hoffenheim,Bayer Leverkusen,1,0,2.41,3.85,2.88
+2026-01-18,Wolfsburg,Heidenheim,1,1,1.71,4.19,5.10
+2026-01-16,Werder Bremen,Eintracht Frankfurt,3,3,2.87,3.70,2.71
+2026-01-15,Augsburg,Union Berlin,1,1,2.75,3.30,3.00
+2026-01-14,FC Koln,Bayern Munich,1,3,12.20,7.75,1.27
+2026-01-14,Hoffenheim,B. Monchengladbach,5,1,2.00,4.00,3.82
+2026-01-14,RB Leipzig,Freiburg,2,0,1.76,4.10,5.20
+2026-01-14,Wolfsburg,St. Pauli,2,1,1.90,3.67,4.56
+2026-01-13,Dortmund,Werder Bremen,3,0,1.46,5.20,8.00
+2026-01-13,Mainz,Heidenheim,2,1,1.82,3.92,4.85
+2026-01-13,Stuttgart,Eintracht Frankfurt,3,2,1.77,4.50,4.82
+2026-01-11,Bayern Munich,Wolfsburg,8,1,1.17,12.00,22.00
+2026-01-11,B. Monchengladbach,Augsburg,4,0,2.00,3.80,4.10
+2026-01-10,Bayer Leverkusen,Stuttgart,1,4,2.30,3.87,3.37
+2026-01-10,Freiburg,Hamburger SV,2,1,1.84,3.75,5.00
+2026-01-10,Heidenheim,FC Koln,2,2,2.95,3.58,2.60
+2026-01-10,Union Berlin,Mainz,2,2,2.25,3.30,4.33
+2026-01-09,Eintracht Frankfurt,Dortmund,3,3,3.60,3.85,2.15
+2025-12-21,Heidenheim,Bayern Munich,0,4,17.76,10.40,1.18
+2025-12-21,Mainz,St. Pauli,0,0,2.10,3.52,4.44
+2025-12-20,RB Leipzig,Bayer Leverkusen,1,3,2.27,4.00,3.45
+2025-12-20,FC Koln,Union Berlin,0,1,2.65,3.37,2.97
+2025-12-20,Augsburg,Werder Bremen,0,0,2.36,3.60,3.30
+2025-12-20,Hamburger SV,Eintracht Frankfurt,1,1,2.59,3.65,3.05
+2025-12-20,Stuttgart,Hoffenheim,0,0,2.10,4.00,3.75
+2025-12-20,Wolfsburg,Freiburg,3,4,2.58,3.60,3.05
+2025-12-19,Dortmund,B. Monchengladbach,2,0,1.55,4.90,6.52
+2025-12-14,Werder Bremen,Stuttgart,0,4,2.88,3.85,2.45
+2025-12-14,Bayern Munich,Mainz,2,2,1.10,14.00,35.00
+2025-12-14,Freiburg,Dortmund,1,1,4.09,3.69,2.05
+2025-12-13,Bayer Leverkusen,FC Koln,2,0,1.83,4.30,4.40
+2025-12-13,B. Monchengladbach,Wolfsburg,1,3,2.06,3.86,3.80
+2025-12-13,Eintracht Frankfurt,Augsburg,1,0,1.95,3.93,4.20
+2025-12-13,Hoffenheim,Hamburger SV,4,1,1.75,4.31,4.68
+2025-12-13,St. Pauli,Heidenheim,2,1,1.94,3.55,4.60
+2025-12-12,Union Berlin,RB Leipzig,3,1,3.26,3.50,2.39
+2025-12-07,Dortmund,Hoffenheim,2,0,1.66,4.64,5.60
+2025-12-07,Hamburger SV,Werder Bremen,3,2,2.50,3.57,3.00
+2025-12-06,RB Leipzig,Eintracht Frankfurt,6,0,1.79,4.25,4.50
+2025-12-06,FC Koln,St. Pauli,1,1,2.12,3.62,3.90
+2025-12-06,Augsburg,Bayer Leverkusen,2,0,3.60,3.77,2.18
+2025-12-06,Heidenheim,Freiburg,2,1,5.10,3.70,1.83
+2025-12-06,Stuttgart,Bayern Munich,0,5,4.90,4.95,1.63
+2025-12-06,Wolfsburg,Union Berlin,3,1,2.10,3.60,3.92
+2025-12-05,Mainz,B. Monchengladbach,0,1,2.79,3.60,2.66
+2025-11-30,Freiburg,Mainz,4,0,1.83,3.88,5.00
+2025-11-30,Eintracht Frankfurt,Wolfsburg,1,1,2.00,4.00,3.81
+2025-11-30,Hamburger SV,Stuttgart,2,1,2.97,3.61,2.56
+2025-11-29,Bayer Leverkusen,Dortmund,1,2,2.76,3.69,2.63
+2025-11-29,Bayern Munich,St. Pauli,3,1,1.13,12.00,24.00
+2025-11-29,Hoffenheim,Augsburg,3,0,1.77,4.30,4.55
+2025-11-29,Union Berlin,Heidenheim,1,2,1.63,4.04,6.50
+2025-11-29,Werder Bremen,FC Koln,1,1,2.27,3.91,3.40
+2025-11-28,B. Monchengladbach,RB Leipzig,0,0,3.06,3.90,2.35
+2025-11-23,St. Pauli,Union Berlin,0,1,2.72,3.30,3.05
+2025-11-23,RB Leipzig,Werder Bremen,2,0,1.56,5.30,6.37
+2025-11-22,FC Koln,Eintracht Frankfurt,3,4,3.08,3.95,2.50
+2025-11-22,Augsburg,Hamburger SV,1,0,2.55,3.75,2.95
+2025-11-22,Bayern Munich,Freiburg,6,2,1.20,8.68,18.50
+2025-11-22,Dortmund,Stuttgart,3,3,1.90,4.20,4.40
+2025-11-22,Heidenheim,B. Monchengladbach,0,3,3.68,3.82,2.23
+2025-11-22,Wolfsburg,Bayer Leverkusen,1,3,3.70,3.96,2.11
+2025-11-21,Mainz,Hoffenheim,1,1,2.60,3.68,2.85
+2025-11-09,Eintracht Frankfurt,Mainz,1,0,1.90,4.08,4.09
+2025-11-09,Stuttgart,Augsburg,3,2,1.59,4.80,6.25
+2025-11-09,Freiburg,St. Pauli,2,1,1.83,3.70,5.20
+2025-11-08,B. Monchengladbach,FC Koln,3,1,2.15,3.81,3.58
+2025-11-08,Bayer Leverkusen,Heidenheim,6,0,1.46,5.40,7.75
+2025-11-08,Hamburger SV,Dortmund,1,1,4.14,4.00,1.95
+2025-11-08,Hoffenheim,RB Leipzig,3,1,2.82,3.99,2.45
+2025-11-08,Union Berlin,Bayern Munich,2,2,13.00,7.50,1.24
+2025-11-07,Werder Bremen,Wolfsburg,2,1,2.22,3.75,3.40
+2025-11-02,Wolfsburg,Hoffenheim,2,3,2.95,3.89,2.79
+2025-11-02,FC Koln,Hamburger SV,4,1,2.50,3.85,3.77
+2025-11-01,Bayern Munich,Bayer Leverkusen,3,0,1.30,6.90,10.72
+2025-11-01,Heidenheim,Eintracht Frankfurt,1,1,4.37,4.25,1.97
+2025-11-01,Mainz,Werder Bremen,1,1,2.00,4.10,4.02
+2025-11-01,RB Leipzig,Stuttgart,3,1,2.15,4.15,3.35
+2025-11-01,St. Pauli,B. Monchengladbach,0,4,2.40,3.60,3.65
+2025-11-01,Union Berlin,Freiburg,0,0,2.75,3.35,2.91
+2025-10-31,Augsburg,Dortmund,0,1,5.72,4.60,1.87
+2025-10-26,Stuttgart,Mainz,2,1,2.17,4.20,4.34
+2025-10-26,Bayer Leverkusen,Freiburg,2,0,2.02,3.95,4.20
+2025-10-25,Dortmund,FC Koln,1,0,1.45,5.40,7.90
+2025-10-25,Augsburg,RB Leipzig,0,6,3.40,4.09,2.12
+2025-10-25,B. Monchengladbach,Bayern Munich,0,3,12.00,7.40,1.26
+2025-10-25,Eintracht Frankfurt,St. Pauli,2,0,1.70,4.54,4.87
+2025-10-25,Hamburger SV,Wolfsburg,0,1,2.38,3.80,3.21
+2025-10-25,Hoffenheim,Heidenheim,3,1,1.63,4.60,5.34
+2025-10-24,Werder Bremen,Union Berlin,1,0,2.38,3.60,3.15
+2025-10-19,St. Pauli,Hoffenheim,0,3,2.82,3.52,2.81
+2025-10-19,Freiburg,Eintracht Frankfurt,2,2,2.58,3.76,2.88
+2025-10-18,Bayern Munich,Dortmund,2,1,1.41,5.80,8.25
+2025-10-18,Mainz,Bayer Leverkusen,3,4,2.90,3.59,2.85
+2025-10-18,RB Leipzig,Hamburger SV,2,1,1.50,5.20,6.55
+2025-10-18,Wolfsburg,Stuttgart,0,3,3.00,3.65,2.50
+2025-10-18,FC Koln,Augsburg,1,1,2.09,3.95,3.64
+2025-10-18,Heidenheim,Werder Bremen,2,2,2.85,3.58,2.64
+2025-10-17,Union Berlin,B. Monchengladbach,3,1,2.36,3.50,3.34
+2025-10-05,B. Monchengladbach,Freiburg,0,0,2.78,3.40,2.85
+2025-10-05,Hamburger SV,Mainz,4,0,3.40,3.83,2.25
+2025-10-05,Stuttgart,Heidenheim,1,0,1.42,5.40,7.90
+2025-10-04,Eintracht Frankfurt,Bayern Munich,0,3,8.20,6.20,1.40
+2025-10-04,Augsburg,Wolfsburg,3,1,2.63,3.60,2.85
+2025-10-04,Bayer Leverkusen,Union Berlin,2,0,1.74,4.15,5.10
+2025-10-04,Dortmund,RB Leipzig,1,1,1.80,4.83,4.38
+2025-10-04,Werder Bremen,St. Pauli,1,0,2.42,3.65,3.09
+2025-10-03,Hoffenheim,FC Koln,0,1,2.02,3.95,3.92
+2025-09-28,Union Berlin,Hamburger SV,0,0,2.02,3.72,3.89
+2025-09-28,FC Koln,Stuttgart,1,2,2.70,3.85,2.68
+2025-09-28,Freiburg,Hoffenheim,1,1,2.38,3.50,3.25
+2025-09-27,B. Monchengladbach,Eintracht Frankfurt,4,6,3.27,3.75,2.40
+2025-09-27,Heidenheim,Augsburg,2,1,3.01,3.61,2.46
+2025-09-27,Mainz,Dortmund,0,2,3.80,3.96,2.08
+2025-09-27,St. Pauli,Bayer Leverkusen,1,2,3.14,3.55,2.42
+2025-09-27,Wolfsburg,RB Leipzig,0,1,2.70,3.80,2.58
+2025-09-26,Bayern Munich,Werder Bremen,4,0,1.11,13.00,26.00
+2025-09-21,Dortmund,Wolfsburg,1,0,1.60,4.80,5.71
+2025-09-21,Bayer Leverkusen,B. Monchengladbach,1,1,1.60,4.70,6.36
+2025-09-21,Eintracht Frankfurt,Union Berlin,3,4,1.68,4.40,5.90
+2025-09-20,RB Leipzig,FC Koln,3,1,1.95,4.20,3.99
+2025-09-20,Augsburg,Mainz,1,4,2.70,3.59,2.80
+2025-09-20,Hamburger SV,Heidenheim,2,1,1.81,4.05,4.60
+2025-09-20,Hoffenheim,Bayern Munich,1,4,8.18,6.00,1.40
+2025-09-20,Werder Bremen,Freiburg,0,3,2.50,3.70,2.93
+2025-09-19,Stuttgart,St. Pauli,2,0,1.88,4.05,4.30
+2025-09-14,B. Monchengladbach,Werder Bremen,0,4,2.15,4.15,3.45
+2025-09-14,St. Pauli,Augsburg,2,1,2.20,3.58,3.68
+2025-09-13,Bayern Munich,Hamburger SV,5,0,1.08,18.28,31.48
+2025-09-13,Freiburg,Stuttgart,3,1,2.88,3.75,2.80
+2025-09-13,Heidenheim,Dortmund,0,2,5.37,4.65,1.63
+2025-09-13,Mainz,RB Leipzig,0,1,2.58,3.81,2.86
+2025-09-13,Union Berlin,Hoffenheim,2,4,2.92,3.55,2.62
+2025-09-13,Wolfsburg,FC Koln,3,3,2.02,3.75,4.20
+2025-09-12,Bayer Leverkusen,Eintracht Frankfurt,3,1,2.20,3.85,3.35
+2025-08-31,FC Koln,Freiburg,4,1,2.67,3.45,2.81
+2025-08-31,Dortmund,Union Berlin,3,0,1.50,5.09,7.40
+2025-08-31,Wolfsburg,Mainz,1,1,2.25,3.65,3.32
+2025-08-30,Augsburg,Bayern Munich,2,3,9.82,6.40,1.31
+2025-08-30,Hoffenheim,Eintracht Frankfurt,1,3,2.80,3.95,2.52
+2025-08-30,RB Leipzig,Heidenheim,2,0,1.52,5.04,6.50
+2025-08-30,Stuttgart,B. Monchengladbach,1,0,1.65,4.90,5.10
+2025-08-30,Werder Bremen,Bayer Leverkusen,3,3,3.90,4.30,2.00
+2025-08-29,Hamburger SV,St. Pauli,0,2,2.50,3.37,3.20
+2025-08-24,B. Monchengladbach,Hamburger SV,0,0,2.02,4.10,3.95
+2025-08-24,Mainz,FC Koln,0,1,2.04,3.75,3.90
+2025-08-24,St. Pauli,Dortmund,3,3,4.44,3.75,1.95
+2025-08-24,Bayer Leverkusen,Hoffenheim,1,2,1.80,4.32,5.00
+2025-08-24,Eintracht Frankfurt,Werder Bremen,4,1,1.62,4.85,5.58
+2025-08-24,Freiburg,Augsburg,1,3,2.00,3.69,4.10
+2025-08-24,Heidenheim,Wolfsburg,1,3,2.87,3.50,2.61
+2025-08-24,Union Berlin,Stuttgart,2,1,4.40,3.95,1.90
+2025-08-22,Bayern Munich,RB Leipzig,6,0,1.28,7.20,11.30
