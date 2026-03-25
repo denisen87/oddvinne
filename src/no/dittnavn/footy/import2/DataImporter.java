@@ -1,3 +1,4 @@
+package no.dittnavn.footy.import2;
 import java.io.File;
 import java.sql.Connection;
 import java.util.List;
