@@ -28,7 +28,8 @@ public class DataImporter {
                 "NOR", "eliteserien",
                 "SP2", "laliga2",
                 "E2", "league one",
-                "N1", "Eredivisie"
+                "N1", "Eredivisie",
+                "ENL", "National League"
         );
 
         try (Connection conn = DatabaseManager.getConnection()) {
