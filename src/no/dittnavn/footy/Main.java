@@ -4,7 +4,7 @@ import no.dittnavn.footy.analysis.ProbabilityAnalysis;
 import no.dittnavn.footy.analysis.OddsAnalyzer;
 import no.dittnavn.footy.analysis.SimulationResult;
 import java.util.Scanner;
-import no.dittnavn.footy.service.MatchService;
+import service.MatchService;
 import no.dittnavn.footy.model.Match;
 import no.dittnavn.footy.model.Outcome;
 import no.dittnavn.footy.stats.StatsIndeks;
@@ -24,9 +24,9 @@ import no.dittnavn.footy.analysis.bet.FullAutoSimulator;
 import no.dittnavn.footy.analysis.simulation.ManualBettingSimulator;
 
 import no.dittnavn.footy.model.MatchRecord;
-import no.dittnavn.footy.analysis.calibration.ProbabilityCalibrator;
+import no.dittnavn.footy.analysis.ProbabilityCalibrator;
 import no.dittnavn.footy.analysis.bet.KellyCalculator;
-import no.dittnavn.footy.analysis.team.TeamDNA;
+import no.dittnavn.footy.analysis.Team.TeamDNA;
 import no.dittnavn.footy.analysis.learning.AutoDataTrainer;
 import java.util.List;
 
@@ -35,7 +35,7 @@ import no.dittnavn.footy.integration.playars.FootballDataPlayerClient;
 
 import no.dittnavn.footy.integration.playars.TeamIdMapper;
 import no.dittnavn.footy.stats.StatsRepository;
-import no.dittnavn.footy.analysis.elo.EloPredictor;
+import no.dittnavn.footy.analysis.EloPredictor;
 import no.dittnavn.footy.analysis.odds.OddsConverter;
 import no.dittnavn.footy.analysis.ensemble.EnsemblePredictor;
 
@@ -57,6 +57,7 @@ import no.dittnavn.footy.loader.OddsCsvLoader;
 import no.dittnavn.footy.loader.CsvHistoricalLoader;
 import no.dittnavn.footy.loader.FootballDataLoader;
 import no.dittnavn.footy.loader.CsvMatchLoader;
+import no.dittnavn.footy.stats.GlobalStats;
 
 
 import java.sql.Connection;
@@ -69,12 +70,15 @@ public class Main {
 
 
         StatsRepository repo = new StatsRepository();
-        StatsIndeks indeks = new StatsIndeks();
+        DatabaseManager.init();
+        GlobalStats.stats = buildStatsFromDB();
+        StatsIndeks indeks = GlobalStats.stats;
+        System.out.println("Teams loaded: " + GlobalStats.stats.getAllTeams().size());
         NeuralModel neural = new NeuralModel();
         PredictionTracker tracker = new PredictionTracker();
         EnsemblePredictor ensemble = new EnsemblePredictor();
 
-        DatabaseManager.init();
+
 
         Scanner scanner = new Scanner(System.in);
 
@@ -110,9 +114,23 @@ public class Main {
 
         ModelWeights weights = new ModelWeights();
 
-        StatsIndeks stats = buildStatsFromDB();
 
-        MatchService matchService = new MatchService(stats);
+        System.out.println("=== TEAMS ===");
+
+        GlobalStats.stats.getAllTeams().stream()
+                .limit(20)
+                .forEach(t -> System.out.println(t.getName()));
+
+        System.out.println("LOOKUP argentinos jrs: " +
+                GlobalStats.stats.getTeam("argentinos jrs"));
+
+        GlobalStats.stats.getAllTeams().stream()
+                .filter(t -> t.getName().contains("argent"))
+                .forEach(t -> System.out.println("FOUND: " + t.getName()));
+
+        StatsIndeks stats = GlobalStats.stats;
+
+        MatchService matchService = new MatchService(GlobalStats.stats);
 
         Map<String, PredictionRecord> pending = new HashMap<>();
         Map<String, MatchFeatures> pendingFeatures = new HashMap<>();
@@ -133,6 +151,7 @@ public class Main {
                 new AutoDataTrainer(indeks);
         AutoUpdater autoUpdater =
                 new AutoUpdater(indeks, autoTrainer);
+
 
 
 
@@ -173,6 +192,8 @@ public class Main {
         File dataFolder = new File("data");
 
         for (File file : dataFolder.listFiles()) {
+
+            System.out.println("FILE: " + file.getName());
 
             if (file.getName().endsWith(".csv")
                     && !file.getName().contains("odds")) {
@@ -1079,7 +1100,7 @@ public class Main {
 
         StatsIndeks stats = new StatsIndeks();
 
-        List<Match> matches = DatabaseManager.getAllMatches();
+        List<Match> matches = DatabaseManager.getHistoricalMatchesOrdered();
 
         for (Match m : matches) {
             stats.update(m);
@@ -1087,5 +1108,6 @@ public class Main {
 
         return stats;
     }
+
 
 }
