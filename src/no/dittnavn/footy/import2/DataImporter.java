@@ -33,7 +33,8 @@ public class DataImporter {
                 Map.entry("ENL", "National League"),
                 Map.entry("ARG", "Primera LPF"),
                 Map.entry("SC1", "Championship"),
-                Map.entry("EL2", "League two")
+                Map.entry("EL2", "League two"),
+                Map.entry("BRA", "Brasil Serie A")
         );
 
         try (Connection conn = DatabaseManager.getConnection()) {

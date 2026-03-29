@@ -9,6 +9,7 @@ import no.dittnavn.footy.stats.TeamStats;
 import no.dittnavn.footy.analysis.learning.PredictionTracker;
 import no.dittnavn.footy.analysis.learning.PredictionRecord;
 import no.dittnavn.footy.model.MatchRecord;
+import no.dittnavn.footy.config.StrategyConfig;
 
 import java.util.List;
 
@@ -40,6 +41,7 @@ public class AutoBetEngine {
             double pAway = calc.awayWinProbability(homeStats, awayStats);
 
 // 🔧 Draw correction (Poisson undervurderer draw)
+            pHome *= StrategyConfig.HOME_BIAS;
             double drawBoost = 1.6;
             pDraw *= drawBoost;
 
@@ -62,25 +64,36 @@ public class AutoBetEngine {
             double vAway = pAway - bAway;
 
             double bestValue = Math.max(vHome, Math.max(vDraw, vAway));
-            if (bestValue <= 0.06) continue;
+            if (bestValue <= StrategyConfig.EDGE) continue;
+
+            double maxProb = Math.max(pHome, Math.max(pDraw, pAway));
+            if (maxProb < StrategyConfig.MAX_PROB) continue;
 
             String bet;
             double odds;
             double probability;
 
-            if (bestValue == vHome) {
+
+            if (vHome >= vDraw && vHome >= vAway) {
                 bet = "HOME";
                 odds = m.getHomeOdds();
                 probability = pHome;
-            } else if (bestValue == vDraw) {
+            }
+            else if (vDraw >= vHome && vDraw >= vAway) {
                 bet = "DRAW";
                 odds = m.getDrawOdds();
                 probability = pDraw;
-            } else {
+            }
+            else {
                 bet = "AWAY";
                 odds = m.getAwayOdds();
                 probability = pAway;
             }
+
+            if (probability < StrategyConfig.PROB) continue;
+
+            double confidence = Math.abs(pHome - pAway);
+            if (confidence < StrategyConfig.CONFIDENCE) continue;
 
             // 🧮 Kelly (flat bankroll = 100 units for now)
             double bankroll = 100;

@@ -61,6 +61,7 @@ import no.dittnavn.footy.stats.GlobalStats;
 import no.dittnavn.footy.engine.ThresholdOptimizer;
 import no.dittnavn.footy.loader.CsvFixtureLoader;
 import service.ResultUpdater;
+import no.dittnavn.footy.config.StrategyConfig;
 
 import java.sql.Connection;
 

@@ -28,10 +28,14 @@ public class BacktestRunner {
         };
     }
 
-    public static BacktestResult run(List<Match> matches,
-                                     double maxProbThreshold,
-                                     double probThreshold,
-                                     double edgeThreshold) {
+    public static BacktestResult run(
+            List<Match> matches,
+            double maxProb,
+            double prob,
+            double edge,
+            double homeBias,
+            double confidence
+    ){
 
         StatsIndeks stats = new StatsIndeks();
         PoissonPredictor predictor = new PoissonPredictor();
@@ -73,15 +77,17 @@ public class BacktestRunner {
             double pAway = poisson[2] * wModel + market[2] * wMarket;
 
             // normalize
+
+            pHome *= homeBias ;
             double sum = pHome + pDraw + pAway;
             pHome /= sum;
             pDraw /= sum;
             pAway /= sum;
 
-            double maxProb = Math.max(pHome, Math.max(pDraw, pAway));
+            double maxProbValue = Math.max(pHome, Math.max(pDraw, pAway));
 
             // 🔥 FILTERS (fra optimizer)
-            if (maxProb < maxProbThreshold) {
+            if (maxProbValue < maxProb) {
                 stats.update(m);
                 continue;
             }
@@ -96,7 +102,7 @@ public class BacktestRunner {
             String bet = null;
 
             if (m.getHomeOdds() > 0) {
-                double edge = (pHome * 0.95) - (1.0 / m.getHomeOdds());
+                edge = (pHome * 0.95) - (1.0 / m.getHomeOdds());
                 if (edge > bestEdge) {
                     bestEdge = edge;
                     bet = "HOME";
@@ -104,22 +110,22 @@ public class BacktestRunner {
             }
 
             if (m.getAwayOdds() > 0) {
-                double edge = (pAway * 0.95) - (1.0 / m.getAwayOdds());
+                edge = (pAway * 0.95) - (1.0 / m.getAwayOdds());
                 if (edge > bestEdge) {
                     bestEdge = edge;
                     bet = "AWAY";
                 }
             }
 
-            if (bet == null || bestEdge < edgeThreshold) {
+            if (bet == null || bestEdge < edge) {
                 stats.update(m);
                 continue;
             }
 
-            double prob =
+            double probValue =
                     bet.equals("HOME") ? pHome : pAway;
 
-            if (prob < probThreshold) {
+            if (probValue < prob) {
                 stats.update(m);
                 continue;
             }
@@ -128,6 +134,13 @@ public class BacktestRunner {
                     bet.equals("HOME") ? m.getHomeOdds() : m.getAwayOdds();
 
             if (odds > 3.5) {
+                stats.update(m);
+                continue;
+            }
+
+            double confidenceScore = Math.abs(pHome - pAway);
+
+            if (confidenceScore < confidence) {
                 stats.update(m);
                 continue;
             }
@@ -143,7 +156,7 @@ public class BacktestRunner {
 
             // 💰 Kelly
             double implied = 1.0 / odds;
-            double kelly = (prob - implied) / (odds - 1.0);
+            double kelly = (probValue - implied) / (odds - 1.0);
             double stake = Math.max(0, kelly * 0.5);
 
             if (stake > 0) {
@@ -164,6 +177,9 @@ public class BacktestRunner {
             roi = (totalProfit / bets) * 100.0;
         }
 
+
         return new BacktestResult(roi, bets);
     }
+
+
 }
