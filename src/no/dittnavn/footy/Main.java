@@ -58,7 +58,9 @@ import no.dittnavn.footy.loader.CsvHistoricalLoader;
 import no.dittnavn.footy.loader.FootballDataLoader;
 import no.dittnavn.footy.loader.CsvMatchLoader;
 import no.dittnavn.footy.stats.GlobalStats;
-
+import no.dittnavn.footy.engine.ThresholdOptimizer;
+import no.dittnavn.footy.loader.CsvFixtureLoader;
+import service.ResultUpdater;
 
 import java.sql.Connection;
 
@@ -77,7 +79,6 @@ public class Main {
         NeuralModel neural = new NeuralModel();
         PredictionTracker tracker = new PredictionTracker();
         EnsemblePredictor ensemble = new EnsemblePredictor();
-
 
 
         Scanner scanner = new Scanner(System.in);
@@ -103,9 +104,10 @@ public class Main {
             return; // STOPPER HER
         }
 
-        List<Match> matches = CsvMatchLoader.load("data/E0.csv");
-
+/*
         System.out.println("DEBUG matches loaded: " + matches.size());
+
+ */
 
         // =========================
         // LIVE MODUS FORTSETTER
@@ -149,19 +151,32 @@ public class Main {
 
         AutoDataTrainer autoTrainer =
                 new AutoDataTrainer(indeks);
+
         AutoUpdater autoUpdater =
                 new AutoUpdater(indeks, autoTrainer);
 
+        boolean runOptimizer = false; // 👈 sett til false for at OptimizerMain skal kjøre,
 
+        List<Match> matches;
 
+        if (runOptimizer) {
 
-/*
-// 1️⃣ hent historikk + tren modeller
-        autoUpdater.run();
+            matches =
+                    DatabaseManager.getHistoricalMatchesOrdered();
 
-// 2️⃣ tren neural ferdig etter data er lastet
-        learning.trainFromReality(neural);
-        */
+            ThresholdOptimizer.runOptimization(matches);
+
+            return;
+
+        } else {
+
+            // 1️⃣ hent historikk + tren modeller
+            autoUpdater.run();
+
+            // 2️⃣ tren neural ferdig etter data er lastet
+            learning.trainFromReality(neural);
+        }
+
 
 
 
@@ -259,7 +274,7 @@ public class Main {
         FlashscoreFixtureFetcher.fetchE1Fixtures();
         */
 
-/*
+
 // LAST fixtures FRA CSV
         System.out.println("Leser fra: " +
                 new java.io.File("data/E1_fixtures.csv").getAbsolutePath());
@@ -278,12 +293,14 @@ public class Main {
         upcoming.addAll(e1);
         upcoming.addAll(b1);
         upcoming.addAll(sc0);
-        */
+
 
         List<String> leagues = List.of("europa-league");
-
+/*
         List<Match> upcoming =
                 OddsCsvLoader.load("data/odds_today.csv");
+
+ */
 
         System.out.println("Totale upcoming fixtures: " + upcoming.size());
 
@@ -301,9 +318,9 @@ public class Main {
                     r.awayGoals
             );
         }
-        ResultUpdater.updateResults();
-        */
 
+ */
+        ResultUpdater.updateResults();
 
         AutoPredictionEngine.run(indeks, neural, tracker, upcoming);
 
@@ -552,11 +569,13 @@ public class Main {
                 System.out.println("DEBUG home: " + homeInput);
                 System.out.println("DEBUG away: " + awayInput);
 
-/*
+
                 System.out.println("=== ALLE LAG I INDEKS ===");
                 indeks.printAllTeams();
 
- */
+
+
+
 
                 if (homeStats == null) {
                     System.out.println("Oppretter nytt lag i indeks: " + homeInput);
@@ -1008,7 +1027,7 @@ public class Main {
 
         return stake;   // ⚠️ SKAL være 0.00–0.03
     }
-    /*
+
     private static void importHistoricalCsv() {
 
         importLeague("seriea");
@@ -1028,7 +1047,7 @@ public class Main {
             return;
         }
 
-        List<Match> matches = CsvHistoricalLoader.load(file.getPath());
+        List<Match> matches = CsvHistoricalLoader.load(file.getPath(), leagueName);
         System.out.println("Loaded from CSV (" + leagueName + "): " + matches.size());
 
         try (Connection conn = DatabaseManager.getConnection()) {
@@ -1052,7 +1071,7 @@ public class Main {
     }
 
 
-     */
+
 
     private static void importFootballData() {
 
@@ -1107,7 +1126,8 @@ public class Main {
         }
 
         return stats;
-    }
 
+
+    }
 
 }
