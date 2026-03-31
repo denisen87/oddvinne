@@ -48,6 +48,17 @@ public class PoissonPredictor {
         pDraw /= sum;
         pAway /= sum;
 
+// 🔥 KALIBRERING
+        pHome = 0.5 + (pHome - 0.5) * 0.7;
+        pDraw = 0.5 + (pDraw - 0.5) * 0.7;
+        pAway = 0.5 + (pAway - 0.5) * 0.7;
+
+// 🔒 NORMALISER IGJEN
+        double newSum = pHome + pDraw + pAway;
+        pHome /= newSum;
+        pDraw /= newSum;
+        pAway /= newSum;
+
 
 
 // 🔥 HER!

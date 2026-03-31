@@ -39,6 +39,21 @@ public class TeamStats {
 
     public int homeShotsOnTarget = 0;
     public int awayShotsOnTarget = 0;
+    private double shotsPerMatch;
+    private double shotsAgainstPerMatch;
+    private double possession;
+    private double cornersFor;
+    private double cornersAgainst;
+
+    // LAST MATCH FEATURES
+    private double lastMatchShots;
+    private double lastMatchShotsAgainst;
+
+    private double lastMatchSOT;
+    private double lastMatchSOTAgainst;
+
+    private double lastMatchCorners;
+    private double lastMatchCornersAgainst;
 
 
 
@@ -68,11 +83,13 @@ public class TeamStats {
 
         if(!home.equals(name) && !away.equals(name)){
             return;
+
         }
 
         games++;
 
         if(home.equals(name)){
+
 
             homeGames++;
 
@@ -86,6 +103,20 @@ public class TeamStats {
             shotsOnTarget += match.getHomeShotsTarget();
             shotsOnTargetAgainst += match.getAwayShotsTarget();
             homeShotsOnTarget += match.getHomeShotsTarget();
+
+
+
+            // SHOTS
+
+            this.lastMatchShots = match.getHomeShots();
+            this.lastMatchShotsAgainst = match.getAwayShots();
+
+            this.lastMatchSOT = match.getHomeShotsTarget();
+            this.lastMatchSOTAgainst = match.getAwayShotsTarget();
+
+            this.lastMatchCorners = match.getHomeCorners();
+            this.lastMatchCornersAgainst = match.getAwayCorners();
+// SHOTS
 
 
             updateForm(match.getHomeGoals(), match.getAwayGoals(), true);
@@ -102,6 +133,15 @@ public class TeamStats {
             }
 
         } else if(away.equals(name)){
+
+            this.lastMatchShots = match.getAwayShots();
+            this.lastMatchShotsAgainst = match.getHomeShots();
+
+            this.lastMatchSOT = match.getAwayShotsTarget();
+            this.lastMatchSOTAgainst = match.getHomeShotsTarget();
+
+            this.lastMatchCorners = match.getAwayCorners();
+            this.lastMatchCornersAgainst = match.getHomeCorners();
 
             awayGames++;
 
@@ -349,6 +389,59 @@ public class TeamStats {
         if (games == 0) return 4.0;
         return (double) shotsOnTargetAgainst / games;
     }
+
+    public double getShotsPerMatch() {
+        return shotsPerMatch;
+    }
+
+    public double getShotsAgainstPerMatch() {
+        return shotsAgainstPerMatch;
+    }
+
+    public double getPossession() {
+        return possession;
+    }
+
+    public double getCornersFor() {
+        return cornersFor;
+    }
+
+    public double getCornersAgainst() {
+        return cornersAgainst;
+    }
+
+    public double getLastMatchShots() {
+        return lastMatchShots;
+    }
+
+    public double getLastMatchShotsAgainst() {
+        return lastMatchShotsAgainst;
+    }
+
+    public double getLastMatchSOT() {
+        return lastMatchSOT;
+    }
+
+    public double getLastMatchSOTAgainst() {
+        return lastMatchSOTAgainst;
+    }
+
+    public double getLastMatchCorners() {
+        return lastMatchCorners;
+    }
+
+    public double getLastMatchCornersAgainst() {
+        return lastMatchCornersAgainst;
+    }
+
+    public void setLastMatchShots(double v) { lastMatchShots = v; }
+    public void setLastMatchShotsAgainst(double v) { lastMatchShotsAgainst = v; }
+
+    public void setLastMatchSOT(double v) { lastMatchSOT = v; }
+    public void setLastMatchSOTAgainst(double v) { lastMatchSOTAgainst = v; }
+
+    public void setLastMatchCorners(double v) { lastMatchCorners = v; }
+    public void setLastMatchCornersAgainst(double v) { lastMatchCornersAgainst = v; }
 
 
 

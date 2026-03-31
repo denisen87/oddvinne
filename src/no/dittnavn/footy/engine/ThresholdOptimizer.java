@@ -7,11 +7,11 @@ public class ThresholdOptimizer {
 
     public static void runOptimization(List<Match> matches) {
 
-        double[] maxProbVals = {0.50, 0.55, 0.60};
-        double[] probVals = {0.48, 0.52, 0.56};
-        double[] edgeVals = {0.15, 0.20, 0.25, 0.30};
-        double[] homeBiasVals = {0.90, 1.0, 1.05};
-        double[] confidenceVals = {0.45, 0.55, 0.65};
+        double[] maxProbVals = {0.38, 0.40, 0.42};
+        double[] probVals = {0.42, 0.45, 0.48, 0.50};
+        double [] edgeVals = {0.03, 0.04, 0.05};
+        double[] homeBiasVals = {0.90, 0.95, 1.0};
+        double[] confidenceVals = {0.30, 0.35, 0.40, 0.45};
 
         double bestROI = -999;
         String bestConfig = "";
@@ -35,7 +35,7 @@ public class ThresholdOptimizer {
                                             " bets=" + result.bets);
 
 
-                            if (result.roi > bestROI && result.bets > 5) {
+                            if (result.roi > bestROI && result.bets > 100 && result.bets < 500){
                                 bestROI = result.roi;
                                 bestConfig =
                                         "maxProb=" + maxProb +

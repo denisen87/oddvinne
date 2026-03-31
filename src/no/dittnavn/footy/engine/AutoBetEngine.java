@@ -41,7 +41,22 @@ public class AutoBetEngine {
             double pAway = calc.awayWinProbability(homeStats, awayStats);
 
 // 🔧 Draw correction (Poisson undervurderer draw)
-            pHome *= StrategyConfig.HOME_BIAS;
+            double homeAvg = homeStats.getGoalsScored() / (double) homeStats.getGames();
+            double awayAvg = awayStats.getGoalsScored() / (double) awayStats.getGames();
+
+            double homeAdvantage = homeAvg - awayAvg;
+
+// juster bias basert på lagstyrke
+            double dynamicBias = StrategyConfig.HOME_BIAS;
+
+            if (homeAdvantage < -0.3) {
+                dynamicBias -= 0.10; // dårlig hjemmelag → mindre bias
+            }
+            else if (homeAdvantage > 0.5) {
+                dynamicBias += 0.05; // sterkt hjemmelag → litt boost
+            }
+
+            pHome *= dynamicBias;
             double drawBoost = 1.6;
             pDraw *= drawBoost;
 
@@ -59,12 +74,16 @@ public class AutoBetEngine {
             double bAway = 1.0 / m.getAwayOdds();
 
             // 💰 Value
-            double vHome = pHome - bHome;
-            double vDraw = pDraw - bDraw;
-            double vAway = pAway - bAway;
+// 💰 EDGE (riktig betting edge)
+            double edgeHome = (pHome * m.getHomeOdds()) - 1;
+            double edgeDraw = (pDraw * m.getDrawOdds()) - 1;
+            double edgeAway = (pAway * m.getAwayOdds()) - 1;
 
-            double bestValue = Math.max(vHome, Math.max(vDraw, vAway));
-            if (bestValue <= StrategyConfig.EDGE) continue;
+// finn beste edge
+            double bestEdge = Math.max(edgeHome, Math.max(edgeDraw, edgeAway));
+
+// filter
+            if (bestEdge <= StrategyConfig.EDGE) continue;
 
             double maxProb = Math.max(pHome, Math.max(pDraw, pAway));
             if (maxProb < StrategyConfig.MAX_PROB) continue;
@@ -74,12 +93,13 @@ public class AutoBetEngine {
             double probability;
 
 
-            if (vHome >= vDraw && vHome >= vAway) {
+
+            if (edgeHome >= edgeDraw && edgeHome >= edgeAway) {
                 bet = "HOME";
                 odds = m.getHomeOdds();
                 probability = pHome;
             }
-            else if (vDraw >= vHome && vDraw >= vAway) {
+            else if (edgeDraw >= edgeHome && edgeDraw >= edgeAway) {
                 bet = "DRAW";
                 odds = m.getDrawOdds();
                 probability = pDraw;
@@ -89,6 +109,8 @@ public class AutoBetEngine {
                 odds = m.getAwayOdds();
                 probability = pAway;
             }
+
+            if (odds < 1.5 || odds > 3.5) continue;
 
             if (probability < StrategyConfig.PROB) continue;
 
@@ -120,9 +142,9 @@ public class AutoBetEngine {
 
             pr.bet = bet;
             pr.stake = stake;
-            pr.valueHome = vHome;
-            pr.valueDraw = vDraw;
-            pr.valueAway = vAway;
+            pr.valueHome = edgeHome;
+            pr.valueDraw = edgeDraw;
+            pr.valueAway = edgeAway;
 
             tracker.addPrediction(pr);
 

@@ -62,7 +62,7 @@ import no.dittnavn.footy.engine.ThresholdOptimizer;
 import no.dittnavn.footy.loader.CsvFixtureLoader;
 import service.ResultUpdater;
 import no.dittnavn.footy.config.StrategyConfig;
-
+import no.dittnavn.footy.engine.BacktestRunner;
 import java.sql.Connection;
 
 
@@ -92,15 +92,18 @@ public class Main {
         // BACKTEST MODUS
         // =========================
         if (mode == 2) {
-/*
-            importHistoricalCsv();
-
- */
 
             List<Match> historicalMatches =
                     DatabaseManager.getHistoricalMatchesOrdered();
 
-            no.dittnavn.footy.engine.BacktestEngine.run();
+            BacktestRunner.run(
+                    historicalMatches,
+                    StrategyConfig.MAX_PROB,
+                    StrategyConfig.PROB,
+                    StrategyConfig.EDGE,
+                    StrategyConfig.HOME_BIAS,
+                    StrategyConfig.CONFIDENCE
+            );
 
             return; // STOPPER HER
         }
@@ -303,6 +306,8 @@ public class Main {
 
  */
 
+
+
         System.out.println("Totale upcoming fixtures: " + upcoming.size());
 
         System.out.println("Totale upcoming fixtures: " + upcoming.size());
@@ -326,10 +331,10 @@ public class Main {
         AutoPredictionEngine.run(indeks, neural, tracker, upcoming);
 
         AutoBetEngine.run(indeks, neural, tracker, upcoming);
+/*
+        no.dittnavn.footy.engine.BacktestEngine.run(); // bruker backtestrunner nå istede,
 
-        no.dittnavn.footy.engine.BacktestEngine.run();
-
-
+ */
 
         int valg = -1;
 
@@ -506,11 +511,14 @@ public class Main {
 
             else if (valg == 2) {
 
-
                 System.out.print("Hvilket lag: ");
+                scanner.nextLine(); // 🔥 VIKTIG
+
                 String input = scanner.nextLine();
 
-                input = input.replaceAll("[^a-zA-Z ]", "").toLowerCase().trim();
+                input = input.replaceAll("[^a-zA-Z ]", "")
+                        .toLowerCase()
+                        .trim();
 
                 TeamStats team = indeks.getTeam(input);
 

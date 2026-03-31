@@ -44,6 +44,13 @@ public class Match {
     private double avgDraw;
     private double avgAway;
 
+    private double PSCH;
+    private double PSCA;
+    private double AvgCH;
+    private double AvgCA;
+    private double MaxCH;
+    private double MaxCA;
+
 
     public Match() {
     }
@@ -379,6 +386,15 @@ public class Match {
     public void setAvgAway(double avgAway) {
         this.avgAway = avgAway;
     }
+
+    public double getPSCH() { return PSCH; }
+    public double getPSCA() { return PSCA; }
+
+    public double getAvgCH() { return AvgCH; }
+    public double getAvgCA() { return AvgCA; }
+
+    public double getMaxCH() { return MaxCH; }
+    public double getMaxCA() { return MaxCA; }
 
 
 }

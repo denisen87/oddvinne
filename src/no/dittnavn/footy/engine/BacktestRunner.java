@@ -35,7 +35,7 @@ public class BacktestRunner {
             double edge,
             double homeBias,
             double confidence
-    ){
+    ) {
 
         StatsIndeks stats = new StatsIndeks();
         PoissonPredictor predictor = new PoissonPredictor();
@@ -48,15 +48,44 @@ public class BacktestRunner {
 
         for (Match m : matches) {
 
+            System.out.println(
+                    m.getHomeTeam() + " vs " + m.getAwayTeam() +
+                            " | HS=" + m.getHomeShots() +
+                            " AS=" + m.getAwayShots() +
+                            " | HST=" + m.getHomeShotsTarget() +
+                            " AST=" + m.getAwayShotsTarget()
+            );
+
             TeamStats homeStats = stats.getTeam(m.getHomeTeam());
             TeamStats awayStats = stats.getTeam(m.getAwayTeam());
+
 
             if (homeStats == null || awayStats == null) {
                 stats.update(m);
                 continue;
             }
 
+            boolean hasData =
+                    homeStats.getShotsOnTargetPerMatch() > 0 &&
+                            awayStats.getShotsOnTargetPerMatch() > 0;
+
             if (homeStats.getGames() < 5 || awayStats.getGames() < 5) {
+                stats.update(m);
+                continue;
+            }
+
+            // 🔥 SOT FILTER (HER!)
+            if (hasData &&
+                    (
+                            (homeStats.getShotsOnTargetPerMatch() < 2 &&
+                                    awayStats.getShotsOnTargetPerMatch() < 2)
+
+                                    ||
+
+                                    (homeStats.getLastMatchSOT() < 2 &&
+                                            awayStats.getLastMatchSOT() < 2)
+                    )
+            ) {
                 stats.update(m);
                 continue;
             }
@@ -68,7 +97,7 @@ public class BacktestRunner {
                 continue;
             }
 
-            // 🔮 predict
+            // 🔮 prediction
             double[] poisson = predictor.predict(homeStats, awayStats);
             double[] market = marketProbs(m);
 
@@ -77,8 +106,7 @@ public class BacktestRunner {
             double pAway = poisson[2] * wModel + market[2] * wMarket;
 
             // normalize
-
-            pHome *= homeBias ;
+            pHome *= homeBias;
             double sum = pHome + pDraw + pAway;
             pHome /= sum;
             pDraw /= sum;
@@ -86,52 +114,124 @@ public class BacktestRunner {
 
             double maxProbValue = Math.max(pHome, Math.max(pDraw, pAway));
 
-            // 🔥 FILTERS (fra optimizer)
-            if (maxProbValue < maxProb) {
-                stats.update(m);
-                continue;
-            }
-
-            if (Math.abs(pHome - pAway) < 0.18) {
-                stats.update(m);
-                continue;
-            }
-
-            // 🎯 EDGE
+            // 🎯 EDGE + BET SELECTION
             double bestEdge = 0.0;
             String bet = null;
 
+
             if (m.getHomeOdds() > 0) {
-                edge = (pHome * 0.95) - (1.0 / m.getHomeOdds());
-                if (edge > bestEdge) {
-                    bestEdge = edge;
+                double edgeHome = (pHome * 0.95) - (1.0 / m.getHomeOdds());
+                if (edgeHome > bestEdge) {
+                    bestEdge = edgeHome;
                     bet = "HOME";
                 }
             }
 
             if (m.getAwayOdds() > 0) {
-                edge = (pAway * 0.95) - (1.0 / m.getAwayOdds());
-                if (edge > bestEdge) {
-                    bestEdge = edge;
+                double edgeAway = (pAway * 0.95) - (1.0 / m.getAwayOdds());
+                if (edgeAway > bestEdge) {
+                    bestEdge = edgeAway;
                     bet = "AWAY";
                 }
             }
 
-            if (bet == null || bestEdge < edge) {
+            System.out.println("EDGE DEBUG: " + bestEdge);
+            System.out.println("MAXPROB DEBUG: " + maxProbValue);
+
+// 🔥 DATA-AWARE EDGE FILTER
+            if (hasData) {
+
+                if (bestEdge < 0.02) {
+                    stats.update(m);
+                    continue;
+                }
+
+            } else {
+
+                if (bestEdge < 0.035) {
+                    stats.update(m);
+                    continue;
+                }
+            }
+
+
+            // 🔥 MARKET FILTERS (KORREKT PLASSERING)
+
+            double lineMoveHome = m.getPSCH() - m.getAvgCH();
+            double lineMoveAway = m.getPSCA() - m.getAvgCA();
+
+// ❌ odds går feil vei (sharp money imot deg)
+            if (bet != null && bet.equals("HOME") && lineMoveHome < -0.02) {
                 stats.update(m);
                 continue;
             }
+
+            if (bet != null && bet.equals("AWAY") && lineMoveAway < -0.02) {
+                stats.update(m);
+                continue;
+            }
+
+// 🔥 NYTT: spread (market disagreement)
+            double spreadHome = m.getMaxCH() - m.getAvgCH();
+            double spreadAway = m.getMaxCA() - m.getAvgCA();
+
+// ❌ marked uenig → skip
+            if (bet != null && bet.equals("HOME") && spreadHome > 0.3) {
+                stats.update(m);
+                continue;
+            }
+
+            if (bet != null && bet.equals("AWAY") && spreadAway > 0.3) {
+                stats.update(m);
+                continue;
+            }
+
+
+            System.out.println("EDGE DEBUG: " + bestEdge);
+            System.out.println("MAXPROB DEBUG: " + maxProbValue);
+
+
+            // 🔥 FILTERS
+
+            if (maxProbValue < maxProb) {
+                stats.update(m);
+                continue;
+            }
+
+            if (Math.abs(pHome - pAway) < 0.05) {
+                stats.update(m);
+                continue;
+            }
+
+            if (bet == null) {
+                stats.update(m);
+                continue;
+            }
+
 
             double probValue =
                     bet.equals("HOME") ? pHome : pAway;
 
-            if (probValue < prob) {
+// 🔥 KALIBRERING
+            double adjustedProb = 0.5 + (probValue - 0.5) * 0.85;
+
+// 🔥 FILTER (fortsatt på raw prob!)
+            if (probValue < 0.58) {
                 stats.update(m);
                 continue;
             }
 
+            // (midlertidig fjernet streng prob-filter)
+
             double odds =
                     bet.equals("HOME") ? m.getHomeOdds() : m.getAwayOdds();
+
+            // 🔥 ODDS FILTER (HER!)
+            if (hasData) {
+                if (odds < 1.5 || odds > 3.2) continue;
+            } else {
+                if (odds < 1.7 || odds > 2.8) continue;
+            }
 
             if (odds > 3.5) {
                 stats.update(m);
@@ -145,7 +245,7 @@ public class BacktestRunner {
                 continue;
             }
 
-            // 🧾 resultat
+            // 🧾 RESULT
             String actual =
                     m.getHomeGoals() > m.getAwayGoals() ? "HOME" :
                             m.getHomeGoals() < m.getAwayGoals() ? "AWAY" : "DRAW";
@@ -154,9 +254,9 @@ public class BacktestRunner {
                     (bet.equals("HOME") && actual.equals("HOME")) ||
                             (bet.equals("AWAY") && actual.equals("AWAY"));
 
-            // 💰 Kelly
+            // 💰 KELLY
             double implied = 1.0 / odds;
-            double kelly = (probValue - implied) / (odds - 1.0);
+            double kelly = (adjustedProb - implied) / (odds - 1.0);
             double stake = Math.max(0, kelly * 0.5);
 
             if (stake > 0) {
@@ -172,14 +272,12 @@ public class BacktestRunner {
             stats.update(m);
         }
 
-        double roi = 0;
-        if (bets > 0) {
-            roi = (totalProfit / bets) * 100.0;
-        }
+        double roi = bets > 0 ? (totalProfit / bets) * 100.0 : 0;
 
+        System.out.println("Bets: " + bets);
+        System.out.println("Total profit: " + totalProfit);
+        System.out.println("ROI: " + roi);
 
         return new BacktestResult(roi, bets);
     }
-
-
 }
