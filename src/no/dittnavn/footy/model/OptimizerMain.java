@@ -1,7 +1,7 @@
 package no.dittnavn.footy.model;
 
 import no.dittnavn.footy.db.DatabaseManager;
-import no.dittnavn.footy.engine.ThresholdOptimizer;
+import no.dittnavn.footy.engine.FullAutoOptimizer;
 import no.dittnavn.footy.model.Match;
 
 import java.util.List;
@@ -19,7 +19,7 @@ public class OptimizerMain {
 
         System.out.println("Matches loaded: " + matches.size());
 
-        ThresholdOptimizer.runOptimization(matches);
+        FullAutoOptimizer.run(matches);
 
         System.out.println("=== DONE ===");
     }

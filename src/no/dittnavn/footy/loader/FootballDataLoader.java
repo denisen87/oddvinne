@@ -16,7 +16,9 @@ public class FootballDataLoader {
 
             // Les header
             String header = br.readLine().replace("\uFEFF", "");
+
             String delimiter = header.contains(";") ? ";" : ",";
+            boolean isNorwayFormat = delimiter.equals(";");
             String[] columns = header.split(delimiter);
 
             // map kolonnenavn -> indeks

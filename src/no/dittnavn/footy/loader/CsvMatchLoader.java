@@ -22,24 +22,42 @@ public class CsvMatchLoader {
 
                 if (line.trim().isEmpty()) continue;
 
-                String[] cols = line.split(",", -1); // viktig!
+                String delimiter = line.contains(";") ? ";" : ",";
+                String[] cols = line.split(delimiter, -1);
 
-                if (cols.length < 7) continue;
+                if (cols.length < 9) {
+                    System.out.println("FOR KORT RAD -> " + line);
+                    continue;
+                }
 
                 try {
 
-                    String date = cols[1].trim();
+                    String date = cols[3].trim();
 
-                    String home = TeamNameNormalizer.normalize(cols[3]);
-                    String away = TeamNameNormalizer.normalize(cols[4]);
+                    String home = TeamNameNormalizer.normalize(cols[5]);
+                    String away = TeamNameNormalizer.normalize(cols[6]);
 
-                    String homeGoalsStr = cols[5].trim();
-                    String awayGoalsStr = cols[6].trim();
+                    if (cols[7].isEmpty() || cols[8].isEmpty()) continue;
 
-                    if (homeGoalsStr.isEmpty() || awayGoalsStr.isEmpty()) continue;
+                    int homeGoals;
+                    int awayGoals;
 
-                    int homeGoals = Integer.parseInt(homeGoalsStr);
-                    int awayGoals = Integer.parseInt(awayGoalsStr);
+                    if (delimiter.equals(";")) { // Norway
+                        if (cols.length < 9) continue;
+
+                        if (cols[7].isEmpty() || cols[8].isEmpty()) continue;
+
+                        homeGoals = safeInt(cols[7]);
+                        awayGoals = safeInt(cols[8]);
+
+                    } else { // EU
+                        if (cols.length < 7) continue;
+
+                        if (cols[5].isEmpty() || cols[6].isEmpty()) continue;
+
+                        homeGoals = safeInt(cols[5]);
+                        awayGoals = safeInt(cols[6]);
+                    }
 
                     String id =
                             date + "_" +
@@ -80,34 +98,45 @@ public class CsvMatchLoader {
 
                 if (line.trim().isEmpty()) continue;
 
-                String[] cols = line.split(",", -1);
+                String delimiter = line.contains(";") ? ";" : ",";
+                String[] cols = line.split(delimiter, -1);
 
                 if (cols.length < 7) continue;
 
-                String date = cols[1].trim();
+                try {
 
-                String home = TeamNameNormalizer.normalize(cols[3]);
-                String away = TeamNameNormalizer.normalize(cols[4]);
+                    String date = cols[1].trim();
 
-                // upcoming kamp = ingen mål
-                if (!cols[5].isEmpty() || !cols[6].isEmpty()) continue;
+                    String home = TeamNameNormalizer.normalize(cols[3]);
+                    String away = TeamNameNormalizer.normalize(cols[4]);
 
-                String id =
-                        date + "_" +
-                                home + "_" +
-                                away;
+                    // upcoming = ingen mål
+                    if (!cols[5].isEmpty() || !cols[6].isEmpty()) continue;
 
-                matches.add(new Match(id, home, away, 0, 0));
+                    String id =
+                            date + "_" +
+                                    home + "_" +
+                                    away;
+
+                    matches.add(new Match(id, home, away, 0, 0));
+
+                } catch (Exception e) {
+                    System.out.println("Row parse error: " + e.getMessage() + " | " + line);
+                }
             }
 
         } catch (Exception e) {
-
             System.out.println("CSV upcoming load error: " + e.getMessage());
-
         }
 
-        System.out.println("Totale upcoming fixtures: " + matches.size());
-
         return matches;
+    }
+    private static int safeInt(String s) {
+        try {
+            if (s == null || s.trim().isEmpty()) return 0;
+            return Integer.parseInt(s.trim());
+        } catch (Exception e) {
+            return 0;
+        }
     }
 }

@@ -34,10 +34,15 @@ public class MatchFeatures {
     public double comebackDiff;
     public double chokeDiff;
 
+    public double shotDiff;
+    public double sotDiff;
+    public double cornerDiff;
+
 
     // 🔥 HOVED KONSTRUKTØR
     public MatchFeatures(TeamStats home, TeamStats away,
                          double oddsHome, double oddsDraw, double oddsAway) {
+
 
         this.homeStats = home;
         this.awayStats = away;
@@ -102,5 +107,21 @@ public class MatchFeatures {
     // getters (valgfritt men nyttig senere)
     public TeamStats getHomeStats() { return homeStats; }
     public TeamStats getAwayStats() { return awayStats; }
+
+    public void setMatchStats(int homeShots, int awayShots,
+                              int homeSOT, int awaySOT,
+                              int homeCorners, int awayCorners) {
+
+        this.shotDiff = safeDiff(homeShots, awayShots);
+        this.sotDiff = safeDiff(homeSOT, awaySOT);
+        this.cornerDiff = safeDiff(homeCorners, awayCorners);
+    }
+
+    private double safeDiff(int a, int b) {
+        if (a < 0 || b < 0) return 0;
+        return a - b;
+    }
+
+
 
 }

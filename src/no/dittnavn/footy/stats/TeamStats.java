@@ -39,8 +39,6 @@ public class TeamStats {
 
     public int homeShotsOnTarget = 0;
     public int awayShotsOnTarget = 0;
-    private double shotsPerMatch;
-    private double shotsAgainstPerMatch;
     private double possession;
     private double cornersFor;
     private double cornersAgainst;
@@ -54,6 +52,12 @@ public class TeamStats {
 
     private double lastMatchCorners;
     private double lastMatchCornersAgainst;
+
+    private double totalShots = 0;
+    private double totalShotsAgainst = 0;
+
+    private double shotsPerMatch = 0;
+    private double shotsAgainstPerMatch = 0;
 
 
 
@@ -73,11 +77,6 @@ public class TeamStats {
 
     public void updateFromMatch(Match match){
 
-        System.out.println(
-                "HOME SOT: " + match.getHomeShotsTarget() +
-                        " | AWAY SOT: " + match.getAwayShotsTarget()
-        );
-
         String home = TeamNameNormalizer.normalize(match.getHomeTeam()).toLowerCase();
         String away = TeamNameNormalizer.normalize(match.getAwayTeam()).toLowerCase();
 
@@ -85,6 +84,33 @@ public class TeamStats {
             return;
 
         }
+
+        boolean isHome = home.equals(name);
+
+        int sot = isHome ? match.getHomeShotsTarget() : match.getAwayShotsTarget();
+        int sotAgainst = isHome ? match.getAwayShotsTarget() : match.getHomeShotsTarget();
+
+// 🔥 FIX
+
+        if (sot == 0 && sotAgainst == 0) {
+            // tell kampen, men ikke legg til shots
+            games++;
+            return;
+        }
+
+
+
+
+
+/*
+        System.out.println(
+                "HOME SOT: " + match.getHomeShotsTarget() +
+                        " | AWAY SOT: " + match.getAwayShotsTarget()
+        );
+
+ */
+
+
 
         games++;
 
@@ -103,6 +129,9 @@ public class TeamStats {
             shotsOnTarget += match.getHomeShotsTarget();
             shotsOnTargetAgainst += match.getAwayShotsTarget();
             homeShotsOnTarget += match.getHomeShotsTarget();
+
+            totalShots += match.getHomeShots();
+            totalShotsAgainst += match.getAwayShots();
 
 
 
@@ -156,6 +185,9 @@ public class TeamStats {
             shotsOnTargetAgainst += match.getHomeShotsTarget();
             awayShotsOnTarget += match.getAwayShotsTarget();
 
+            totalShots += match.getAwayShots();
+            totalShotsAgainst += match.getHomeShots();
+
             updateForm(match.getAwayGoals(), match.getHomeGoals(), false);
 
             if(match.getAwayGoals() > match.getHomeGoals()){
@@ -170,13 +202,25 @@ public class TeamStats {
             }
         }
 
+        /*
         if (games % 10 == 0) {
             System.out.println(
                     name +
                             " SOT=" + getShotsOnTargetPerMatch() +
                             " | Against=" + getShotsOnTargetAgainstPerMatch()
             );
+
         }
+
+         */
+
+        if (games > 0) {
+            shotsPerMatch = totalShots / games;
+            shotsAgainstPerMatch = totalShotsAgainst / games;
+        }
+
+
+
     }
 
 
@@ -390,13 +434,6 @@ public class TeamStats {
         return (double) shotsOnTargetAgainst / games;
     }
 
-    public double getShotsPerMatch() {
-        return shotsPerMatch;
-    }
-
-    public double getShotsAgainstPerMatch() {
-        return shotsAgainstPerMatch;
-    }
 
     public double getPossession() {
         return possession;
@@ -443,6 +480,14 @@ public class TeamStats {
     public void setLastMatchCorners(double v) { lastMatchCorners = v; }
     public void setLastMatchCornersAgainst(double v) { lastMatchCornersAgainst = v; }
 
+
+    public double getShotsPerMatch() {
+        return shotsPerMatch;
+    }
+
+    public double getShotsAgainstPerMatch() {
+        return shotsAgainstPerMatch;
+    }
 
 
 }

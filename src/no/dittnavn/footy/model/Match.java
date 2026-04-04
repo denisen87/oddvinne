@@ -50,6 +50,8 @@ public class Match {
     private double AvgCA;
     private double MaxCH;
     private double MaxCA;
+    private int homeFouls = -1;
+    private int awayFouls = -1;
 
 
     public Match() {
@@ -397,4 +399,18 @@ public class Match {
     public double getMaxCA() { return MaxCA; }
 
 
+    public void setHomeFouls(int v) { this.homeFouls = v; }
+    public void setAwayFouls(int v) { this.awayFouls = v; }
+
+    public int getHomeFouls() {
+        return homeFouls;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public int getAwayFouls() {
+        return awayFouls;
+    }
 }

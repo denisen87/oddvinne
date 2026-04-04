@@ -58,12 +58,15 @@ import no.dittnavn.footy.loader.CsvHistoricalLoader;
 import no.dittnavn.footy.loader.FootballDataLoader;
 import no.dittnavn.footy.loader.CsvMatchLoader;
 import no.dittnavn.footy.stats.GlobalStats;
-import no.dittnavn.footy.engine.ThresholdOptimizer;
+import no.dittnavn.footy.engine.FullAutoOptimizer;
 import no.dittnavn.footy.loader.CsvFixtureLoader;
 import service.ResultUpdater;
 import no.dittnavn.footy.config.StrategyConfig;
 import no.dittnavn.footy.engine.BacktestRunner;
 import java.sql.Connection;
+import no.dittnavn.footy.engine.FeatureConfig;
+
+
 
 
 public class Main {
@@ -74,12 +77,15 @@ public class Main {
 
         StatsRepository repo = new StatsRepository();
         DatabaseManager.init();
-        GlobalStats.stats = buildStatsFromDB();
+
+        StatsIndeks stats = new StatsIndeks();
+        GlobalStats.stats = stats;
         StatsIndeks indeks = GlobalStats.stats;
         System.out.println("Teams loaded: " + GlobalStats.stats.getAllTeams().size());
         NeuralModel neural = new NeuralModel();
         PredictionTracker tracker = new PredictionTracker();
         EnsemblePredictor ensemble = new EnsemblePredictor();
+
 
 
         Scanner scanner = new Scanner(System.in);
@@ -93,25 +99,117 @@ public class Main {
         // =========================
         if (mode == 2) {
 
-            List<Match> historicalMatches =
-                    DatabaseManager.getHistoricalMatchesOrdered();
+            List<Match> historicalMatches = new ArrayList<>();
 
+            String[] leagues = {
+                    "E0", "E1", "D1", "D2", "I1", "I2", "SP1", "SP2", "F1", "F2", "B1", "P1", "T1"
+            };
+
+            for (String league : leagues) {
+
+                String path = "data/" + league + ".csv";
+
+                File file = new File(path);
+                if (!file.exists()) {
+                    System.out.println("Missing file: " + path);
+                    continue;
+                }
+
+                List<Match> loaded = CsvHistoricalLoader.load(path, league);
+
+                System.out.println("Loaded " + league + ": " + loaded.size());
+
+                historicalMatches.addAll(loaded);
+            }
+
+
+
+// 🔍 DEBUG
+            System.out.println("After odds filter: " + historicalMatches.size());
+
+            System.out.println("TOTAL MATCHES: " + historicalMatches.size());
+
+            // 🔥 FILTER BORT KAMPER UTEN ODDS
+            historicalMatches = historicalMatches.stream()
+                    .filter(m -> m.getHomeOdds() > 1.01 && m.getAwayOdds() > 1.01)
+                    .toList();
+
+// 🔍 DEBUG
+            System.out.println("After odds filter: " + historicalMatches.size());
+
+// 🔥 KUN TESTDATA
+            historicalMatches = historicalMatches.subList(0, 300);
+
+            FeatureConfig config = new FeatureConfig();
+            config.useSOT = true;
+            config.useConfidence = true;
+            config.useHomeBias = true;
+
+            // 🔥 BYGG STATS FRA CSV (IKKE DB)
+            stats = new StatsIndeks();
+
+            for (Match m : historicalMatches) {
+                stats.update(m);
+            }
+
+            GlobalStats.stats = stats;
+
+            System.out.println("Teams loaded from CSV: " + stats.getAllTeams().size());
+
+            BacktestRunner.run(
+                    historicalMatches,
+                    0.60,
+                    0.55,
+                    0.05,
+                    1.0,
+                    0.02,
+                    1.6,
+                    2.4,
+                    0.50,
+                    config
+            );
+/*
+            BacktestRunner.run(
+                    historicalMatches,
+                    0.60,
+                    0.55,
+                    0.10,   // 🔥 enda strengere
+                    1.0,
+                    0.03,
+                    1.6,
+                    2.4,
+                    0.50
+            );
+/*
+            ThresholdOptimizer.runOptimization(historicalMatches);
+
+ */
+/*
             BacktestRunner.run(
                     historicalMatches,
                     StrategyConfig.MAX_PROB,
                     StrategyConfig.PROB,
                     StrategyConfig.EDGE,
                     StrategyConfig.HOME_BIAS,
-                    StrategyConfig.CONFIDENCE
+                    StrategyConfig.CONFIDENCE,
+                    StrategyConfig.MIN_ODDS,
+                    StrategyConfig.MAX_ODDS,
+                    StrategyConfig.PROB_THRESHOLD
             );
 
+ */
+
             return; // STOPPER HER
+
+
         }
 
-/*
-        System.out.println("DEBUG matches loaded: " + matches.size());
 
- */
+
+
+
+
+
 
         // =========================
         // LIVE MODUS FORTSETTER
@@ -122,19 +220,27 @@ public class Main {
 
 
         System.out.println("=== TEAMS ===");
-
+/*
         GlobalStats.stats.getAllTeams().stream()
                 .limit(20)
                 .forEach(t -> System.out.println(t.getName()));
 
+ */
+
+
         System.out.println("LOOKUP argentinos jrs: " +
                 GlobalStats.stats.getTeam("argentinos jrs"));
+        /*
 
         GlobalStats.stats.getAllTeams().stream()
                 .filter(t -> t.getName().contains("argent"))
                 .forEach(t -> System.out.println("FOUND: " + t.getName()));
 
-        StatsIndeks stats = GlobalStats.stats;
+         */
+
+
+
+        stats = GlobalStats.stats;
 
         MatchService matchService = new MatchService(GlobalStats.stats);
 
@@ -161,6 +267,8 @@ public class Main {
 
         boolean runOptimizer = false; // 👈 sett til false for at OptimizerMain skal kjøre,
 
+
+
         List<Match> matches;
 
         if (runOptimizer) {
@@ -168,7 +276,17 @@ public class Main {
             matches =
                     DatabaseManager.getHistoricalMatchesOrdered();
 
-            ThresholdOptimizer.runOptimization(matches);
+            System.out.println("Matches BEFORE filter: " + matches.size());
+
+            matches = matches.stream()
+                    .filter(m -> m.getHomeOdds() > 1.01 && m.getAwayOdds() > 1.01)
+                    .toList();
+
+            System.out.println("Matches AFTER filter: " + matches.size());
+
+            FullAutoOptimizer.run(matches);
+
+
 
             return;
 
@@ -237,7 +355,6 @@ public class Main {
 
         }
 
-        System.out.println("Totale kamper lest fra CSV: " + matches.size());
 
         System.out.println("Totale kamper lest fra CSV: " + matches.size());
 
@@ -578,9 +695,11 @@ public class Main {
                 System.out.println("DEBUG home: " + homeInput);
                 System.out.println("DEBUG away: " + awayInput);
 
-
+/*
                 System.out.println("=== ALLE LAG I INDEKS ===");
                 indeks.printAllTeams();
+
+ */
 
 
 
@@ -1102,7 +1221,7 @@ public class Main {
                 continue;
             }
 
-            List<Match> matches = FootballDataLoader.load(file.getPath(), leagueName);
+            List<Match> matches = CsvHistoricalLoader.load(file.getPath(), leagueName);
             System.out.println("Loaded (" + leagueName + "): " + matches.size());
 
             try (Connection conn = DatabaseManager.getConnection()) {
@@ -1112,11 +1231,18 @@ public class Main {
                 for (Match m : matches) {
                     m.setLeague(leagueName);
                     DatabaseManager.saveHistoricalMatch(conn, m);
+
+                    System.out.println(
+                            "IMPORT -> " +
+                                    m.getHomeTeam() + " vs " + m.getAwayTeam() +
+                                    " | odds=" + m.getHomeOdds()
+                    );
                 }
 
                 conn.commit();
 
                 System.out.println("Import ferdig: " + leagueName);
+
 
             } catch (Exception e) {
                 e.printStackTrace();

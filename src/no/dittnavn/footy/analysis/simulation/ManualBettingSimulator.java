@@ -110,67 +110,77 @@ public class ManualBettingSimulator {
 
         System.out.println("AI anbefaler: " + bet);
 
-        KellyCalculator kelly = new KellyCalculator();
+        if ((bet == Outcome.HOME && (oddsH < 1.6 || oddsH > 3.0)) ||
+                (bet == Outcome.AWAY && (oddsB < 1.6 || oddsB > 3.0)) ||
+                (bet == Outcome.DRAW && (oddsU < 1.6 || oddsU > 3.0))) {
 
-        double fraction = kelly.calculateStake(2, 1, 1);
-
-        double stake = bankroll.getBankroll() * fraction;
-
-
-        System.out.println("AI spiller Hjemmeseier");
-        System.out.println("Stake: " + stake);
-
-        // resultat
-        System.out.print("Resultat (H/U/B): ");
-        String res = scanner.nextLine();
-
-        double actual;
-
-        if (res.equalsIgnoreCase("H")) actual = 1;
-        else if (res.equalsIgnoreCase("B")) actual = 0;
-        else actual = 0.5;
-
-        // bankroll
-        if (res.equalsIgnoreCase("H")) {
-            bankroll.win(stake * (oddsH - 1));
-        } else {
-            bankroll.lose(stake);
+            System.out.println("Skipper (odds/filter)");
+            return;
         }
 
-        double profit;
 
-        if (res.equalsIgnoreCase("H")) {
-            profit = stake * (oddsH - 1);
-        } else {
-            profit = -stake;
-        }
+            KellyCalculator kelly = new KellyCalculator();
 
-        double signal = profit / stake;
+            double fraction = kelly.calculateStake(2, 1, 1);
+
+            double stake = bankroll.getBankroll() * fraction;
 
 
-        // læring
+            System.out.println("AI spiller Hjemmeseier");
+            System.out.println("Stake: " + stake);
+
+            // resultat
+            System.out.print("Resultat (H/U/B): ");
+            String res = scanner.nextLine();
+
+            double actual;
+
+            if (res.equalsIgnoreCase("H")) actual = 1;
+            else if (res.equalsIgnoreCase("B")) actual = 0;
+            else actual = 0.5;
+
+            // bankroll
+            if (res.equalsIgnoreCase("H")) {
+                bankroll.win(stake * (oddsH - 1));
+            } else {
+                bankroll.lose(stake);
+            }
+
+            double profit;
+
+            if (res.equalsIgnoreCase("H")) {
+                profit = stake * (oddsH - 1);
+            } else {
+                profit = -stake;
+            }
+
+            double signal = profit / stake;
+
+
+            // læring
 // læring
-        Outcome actualOutcome;
+            Outcome actualOutcome;
 
-        if (res.equalsIgnoreCase("H")) actualOutcome = Outcome.HOME;
-        else if (res.equalsIgnoreCase("B")) actualOutcome = Outcome.AWAY;
-        else actualOutcome = Outcome.DRAW;
+            if (res.equalsIgnoreCase("H")) actualOutcome = Outcome.HOME;
+            else if (res.equalsIgnoreCase("B")) actualOutcome = Outcome.AWAY;
+            else actualOutcome = Outcome.DRAW;
 
-        double actualHome = actualOutcome == Outcome.HOME ? 1.0 : 0.0;
+            double actualHome = actualOutcome == Outcome.HOME ? 1.0 : 0.0;
 
-        double profitSignal = profit / stake;
+            double profitSignal = profit / stake;
 
 // tren modellen
-        neural.train(
-                features,
-                actualHome,
-                profit,
-                0.0
-        );
+            neural.train(
+                    features,
+                    actualHome,
+                    profit,
+                    0.0
+            );
 
 
-        System.out.println("Ny bankroll: " + bankroll);
-    }
+            System.out.println("Ny bankroll: " + bankroll);
+        }
+
 
     public void simulateMatch(
             TeamStats home,
@@ -242,6 +252,12 @@ public class ManualBettingSimulator {
                 bet.equals("HOME") ? oddsHome :
                         bet.equals("AWAY") ? oddsAway :
                                 oddsDraw;
+
+        // 🔥 ODDS FILTER (HER!)
+// 🔥 ODDS FILTER (KORREKT HER)
+        if (odds < 1.6 || odds > 3.0) {
+            return;
+        }
 
         double profit = win ? stake * (odds - 1) : -stake;
 

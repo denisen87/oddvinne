@@ -3,6 +3,7 @@ import java.io.File;
 import java.sql.Connection;
 import java.util.List;
 import java.util.Map;
+import no.dittnavn.footy.loader.CsvHistoricalLoader;
 
 import no.dittnavn.footy.model.Match;
 import no.dittnavn.footy.loader.FootballDataLoader;
@@ -28,7 +29,7 @@ public class DataImporter {
                 Map.entry("F1", "ligue1"),
                 Map.entry("NOR", "eliteserien"),
                 Map.entry("SP2", "laliga2"),
-                Map.entry("E2", "league one"),
+                Map.entry("EL1", "league one"),
                 Map.entry("N1", "Eredivisie"),
                 Map.entry("ENL", "National League"),
                 Map.entry("ARG", "Primera LPF"),
@@ -51,7 +52,7 @@ public class DataImporter {
                     continue;
                 }
 
-                List<Match> matches = FootballDataLoader.load(file.getPath(), leagueName);
+                List<Match> matches = CsvHistoricalLoader.load(file.getPath(), leagueName);
 
                 System.out.println("Loaded (" + leagueName + "): " + matches.size());
 

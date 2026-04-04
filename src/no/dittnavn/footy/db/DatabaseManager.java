@@ -66,6 +66,9 @@ CREATE TABLE IF NOT EXISTS historical_matches (
 
     homeYellow INTEGER,
     awayYellow INTEGER,
+    
+    homeFouls INTEGER,
+    awayFouls INTEGER,
 
     homeOdds REAL,
     drawOdds REAL,
@@ -224,6 +227,7 @@ DO UPDATE SET
             ps.setString(i++, r.getBet());
             ps.setDouble(i++, r.stake);
 
+
             ps.executeUpdate();
 
             // 🔥 hent id fra DB
@@ -378,8 +382,10 @@ DO UPDATE SET
 
     public static void saveHistoricalMatch(Connection conn, Match m) {
 
+
+
         String sql = """
-    INSERT OR IGNORE INTO historical_matches(
+INSERT INTO historical_matches(
     date, league, homeTeam, awayTeam,
     fthg, ftag,
     homeShots, awayShots,
@@ -389,15 +395,28 @@ DO UPDATE SET
     homeOdds, drawOdds, awayOdds,
     psHome, psDraw, psAway,
     maxHome, maxDraw, maxAway,
-    avgHome, avgDraw, avgAway
-    )
-    VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
-    """;
+    avgHome, avgDraw, avgAway,homeFouls, awayFouls
+)
+VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+ON CONFLICT(date, homeTeam, awayTeam, league)
+DO UPDATE SET
+    homeOdds = excluded.homeOdds,
+    drawOdds = excluded.drawOdds,
+    awayOdds = excluded.awayOdds,
+    psHome = excluded.psHome,
+    psDraw = excluded.psDraw,
+    psAway = excluded.psAway,
+    maxHome = excluded.maxHome,
+    maxDraw = excluded.maxDraw,
+    maxAway = excluded.maxAway,
+    avgHome = excluded.avgHome,
+    avgDraw = excluded.avgDraw,
+    avgAway = excluded.avgAway
+""";
 
         try (PreparedStatement ps = conn.prepareStatement(sql)) {
 
             int i = 1;
-
             if (m.getDate() == null || m.getDate().isBlank()) {
                 System.out.println("SKIPPER kamp uten dato: " + m.getHomeTeam() + " vs " + m.getAwayTeam());
                 return;
@@ -413,9 +432,10 @@ DO UPDATE SET
                     parsed = LocalDate.parse(rawDate, DateTimeFormatter.ofPattern("dd.MM.yyyy"));
                 } catch (Exception e2) {
                     System.out.println("FEIL DATO: " + rawDate);
-                    return; // SKIPP denne kampen
+                    return; // ✅ riktig her
                 }
             }
+
             ps.setString(i++, parsed.toString());
             ps.setString(i++, m.getLeague());
             ps.setString(i++, TeamNameNormalizer.normalize(m.getHomeTeam()));
@@ -452,6 +472,9 @@ DO UPDATE SET
             ps.setDouble(i++, m.getAvgDraw());
             ps.setDouble(i++, m.getAvgAway());
 
+            ps.setInt(i++, m.getHomeFouls());
+            ps.setInt(i++, m.getAwayFouls());
+
             ps.executeUpdate();
 
         } catch (SQLException e) {
@@ -464,14 +487,14 @@ DO UPDATE SET
         List<Match> list = new ArrayList<>();
 
         String sql = """
-        SELECT date, homeTeam, awayTeam,
+    SELECT date, homeTeam, awayTeam,
            fthg, ftag,
            homeShots, awayShots,
            homeShotsTarget, awayShotsTarget,
            homeOdds, drawOdds, awayOdds
-        FROM historical_matches
-        ORDER BY date ASC
-        """;
+    FROM historical_matches
+    ORDER BY date ASC
+    """;
 
         try (Connection conn = connect();
              PreparedStatement ps = conn.prepareStatement(sql);
@@ -487,15 +510,45 @@ DO UPDATE SET
                         rs.getInt("ftag")
                 );
 
+                // shots
                 m.setHomeShots(rs.getInt("homeShots"));
                 m.setAwayShots(rs.getInt("awayShots"));
 
-                m.setHomeShotsTarget(rs.getInt("homeShotsTarget"));
-                m.setAwayShotsTarget(rs.getInt("awayShotsTarget"));
+                // 🔥 SOT (med null-sjekk)
+                int hSOT = rs.getInt("homeShotsTarget");
+                if (rs.wasNull()) hSOT = -1;
 
-                m.setHomeOdds(rs.getDouble("homeOdds"));
-                m.setDrawOdds(rs.getDouble("drawOdds"));
-                m.setAwayOdds(rs.getDouble("awayOdds"));
+                int aSOT = rs.getInt("awayShotsTarget");
+                if (rs.wasNull()) aSOT = -1;
+
+                m.setHomeShotsTarget(hSOT);
+                m.setAwayShotsTarget(aSOT);
+
+                // 🔥 ODDS (KRITISK FIX)
+                double homeOdds = rs.getDouble("homeOdds");
+                if (rs.wasNull() || homeOdds <= 1.01) homeOdds = -1;
+
+                double drawOdds = rs.getDouble("drawOdds");
+                if (rs.wasNull() || drawOdds <= 1.01) drawOdds = -1;
+
+                double awayOdds = rs.getDouble("awayOdds");
+                if (rs.wasNull() || awayOdds <= 1.01) awayOdds = -1;
+
+                m.setHomeOdds(homeOdds);
+                m.setDrawOdds(drawOdds);
+                m.setAwayOdds(awayOdds);
+
+                // 🔥 DEBUG (VIKTIG)
+                System.out.println(
+                        "DB -> SOT: " + hSOT + "|" + aSOT +
+                                " | Odds: " + homeOdds + "/" + drawOdds + "/" + awayOdds
+                );
+                System.out.println(
+                        "DB CHECK -> odds: " +
+                                m.getHomeOdds() + " / " +
+                                m.getDrawOdds() + " / " +
+                                m.getAwayOdds()
+                );
 
                 list.add(m);
             }
@@ -503,6 +556,8 @@ DO UPDATE SET
         } catch (Exception e) {
             e.printStackTrace();
         }
+
+        System.out.println("TOTAL MATCHES LOADED: " + list.size());
 
         return list;
     }
