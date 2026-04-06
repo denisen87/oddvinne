@@ -10,6 +10,7 @@ import no.dittnavn.footy.loader.CsvMatchLoader;
 import java.io.File;
 import java.util.ArrayList;
 import no.dittnavn.footy.loader.CsvHistoricalLoader;
+import no.dittnavn.footy.model.BacktestResult;
 
 
 
@@ -51,10 +52,12 @@ public class BacktestEngine {
         List<Match> matches =
                 DatabaseManager.getHistoricalMatchesOrdered();
 
-        run(matches);
+        FeatureConfig config = new FeatureConfig(); // default
+
+        run(matches, config); // ✅ riktig metode
     }
 
-    public static void run(List<Match> matches) {
+    public static BacktestResult run(List<Match> matches, FeatureConfig config) {
         System.out.println("🔥 USING CSV BACKTEST 🔥");
 
         int debugCounter = 0;
@@ -151,9 +154,10 @@ public class BacktestEngine {
             double homeShotsOnTarget = homeStats.getShotsOnTargetPerMatch();
             double awayShotsOnTarget = awayStats.getShotsOnTargetPerMatch();
 
-            boolean missingSot = (homeShotsOnTarget == 0 && awayShotsOnTarget == 0);
+            boolean missingSot =
+                    homeShotsOnTarget <= 0 || awayShotsOnTarget <= 0;
 
-            double sotWeight = missingSot ? 0.35 : 1.0;
+            double sotWeight = missingSot ? 0.0 : 1.0;
 
             double homeGoals = homeStats.getGoalsScoredPerMatch();
             double awayGoals = awayStats.getGoalsScoredPerMatch();
@@ -559,6 +563,14 @@ public class BacktestEngine {
         System.out.println("Predicted max AWAY: " + predAway);
 
         System.out.println("=== BACKTEST DONE ===");
+
+// 🔥 RETURN HER (inne i metoden)
+        double roi = bets > 0 ? totalProfit / bets : 0.0;
+
+        return new BacktestResult(totalProfit, roi, bets);
+
+
+
     }
 
 }

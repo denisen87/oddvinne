@@ -22,6 +22,12 @@ public class CsvHistoricalLoader {
 
             String[] headers = header.split("[,;\t]");
 
+            int homeIdx = findIndex(headers, "HomeTeam");
+            int awayIdx = findIndex(headers, "AwayTeam");
+            int dateIdx = findIndex(headers, "Date");
+            int fthgIdx = findIndex(headers, "FTHG");
+            int ftagIdx = findIndex(headers, "FTAG");
+
             // 🔥 find odds columns (only used in standard format)
             int homeOddsIdx = findIndex(headers, "B365H", "PSH", "AvgH");
             int drawOddsIdx = findIndex(headers, "B365D", "PSD", "AvgD");
@@ -78,12 +84,18 @@ public class CsvHistoricalLoader {
 
                         if (parts.length < 7) continue;
 
-                        date = safeDate(parts);
-                        homeTeam = parts[3].trim();
-                        awayTeam = parts[4].trim();
+                        date = (dateIdx != -1) ? parts[dateIdx].trim() : safeDate(parts);
 
-                        homeGoals = safeInt(parts[5]);
-                        awayGoals = safeInt(parts[6]);
+                        homeTeam = (homeIdx != -1) ? parts[homeIdx].trim() : "";
+                        awayTeam = (awayIdx != -1) ? parts[awayIdx].trim() : "";
+
+                        homeGoals = (fthgIdx != -1) ? safeInt(parts[fthgIdx]) : 0;
+                        awayGoals = (ftagIdx != -1) ? safeInt(parts[ftagIdx]) : 0;
+
+                        if (homeTeam.isBlank() || awayTeam.isBlank()) continue;
+
+// skip garbage rows (det du så i loggen)
+                        if (homeTeam.matches("\\d+") || awayTeam.contains(":")) continue;
 
                         System.out.println("HEADERS CHECK:");
                         System.out.println("PSCH idx: " + findIndex(headers, "PSCH"));

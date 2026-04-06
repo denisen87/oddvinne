@@ -11,4 +11,16 @@ public class BacktestResult {
         this.roi = roi;
         this.bets = bets;
     }
+
+    public double getProfit() {
+        return profit;
+    }
+
+    public double getRoi() {
+        return roi;
+    }
+
+    public int getBets() {
+        return bets;
+    }
 }

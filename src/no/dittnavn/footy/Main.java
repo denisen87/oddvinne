@@ -65,6 +65,9 @@ import no.dittnavn.footy.config.StrategyConfig;
 import no.dittnavn.footy.engine.BacktestRunner;
 import java.sql.Connection;
 import no.dittnavn.footy.engine.FeatureConfig;
+import no.dittnavn.footy.engine.OptimizerResult;
+
+import no.dittnavn.footy.model.BacktestResult;
 
 
 
@@ -268,45 +271,9 @@ public class Main {
         boolean runOptimizer = false; // 👈 sett til false for at OptimizerMain skal kjøre,
 
 
-
-        List<Match> matches;
-
-        if (runOptimizer) {
-
-            matches =
-                    DatabaseManager.getHistoricalMatchesOrdered();
-
-            System.out.println("Matches BEFORE filter: " + matches.size());
-
-            matches = matches.stream()
-                    .filter(m -> m.getHomeOdds() > 1.01 && m.getAwayOdds() > 1.01)
-                    .toList();
-
-            System.out.println("Matches AFTER filter: " + matches.size());
-
-            FullAutoOptimizer.run(matches);
-
-
-
-            return;
-
-        } else {
-
-            // 1️⃣ hent historikk + tren modeller
-            autoUpdater.run();
-
-            // 2️⃣ tren neural ferdig etter data er lastet
-            learning.trainFromReality(neural);
-        }
-
-
-
-
-
         // =========================
         // 1️⃣ MERGE EVENTUELLE NYE CSV-FILER
         // =========================
-
         if (new File("import/T1_new.csv").exists()) {
             CsvMerger.merge("data/T1_2025.csv", "import/T1_new.csv");
         }
@@ -319,48 +286,107 @@ public class Main {
             CsvMerger.merge("data/SC0.csv", "import/SC0_new.csv");
         }
 
+// =========================
+// MODES
+// =========================
+        runOptimizer = false;
+        boolean runBacktest = false;
+        boolean runLive = true;
+
+
+// =========================
+// OPTIMIZER MODE
+// =========================
+        if (runOptimizer) {
+
+            List<Match> matches = loadMatches();
+
+            System.out.println("TOTAL MATCHES: " + matches.size());
+
+            OptimizerResult result = FullAutoOptimizer.run(matches);
+
+            System.out.println("\n🔥 BEST CONFIG:");
+            System.out.println(result.getBestConfig());
+            System.out.println("ROI = " + result.getBestRoi());
+
+            return;
+        }
+
+
+// =========================
+// BACKTEST MODE
+// =========================
+        if (runBacktest) {
+
+            List<Match> matches = loadMatches();
+
+            System.out.println("TOTAL MATCHES: " + matches.size());
+
+            // 👉 bruk config fra optimizer (eller default)
+            FeatureConfig config = new FeatureConfig();
+            config.useSOT = true;
+            config.useConfidence = true;
+            config.useHomeBias = true;
+
+            double maxProb = 0.52;
+            double prob = 0.5;
+            double edgeThreshold = 0.03;
+            double homeBias = 1.0;
+            double minConfidence = 0.02;
+            double minOdds = 1.4;
+            double maxOdds = 3.0;
+            double probThreshold = 0.5;
+
+            BacktestResult finalResult = BacktestRunner.run(
+                    matches,
+                    maxProb,
+                    prob,
+                    edgeThreshold,
+                    homeBias,
+                    minConfidence,
+                    minOdds,
+                    maxOdds,
+                    probThreshold,
+                    config
+            );
+
+            System.out.println("\n✅ BACKTEST RESULT:");
+            System.out.println("ROI = " + finalResult.getRoi());
+            System.out.println("Profit = " + finalResult.getProfit());
+
+            return;
+        }
+
+
+// =========================
+// LIVE MODE (DET DU VIL HA)
+// =========================
+        if (runLive) {
+
+            System.out.println("🔥 LIVE MODE");
+
+            autoUpdater.run();
+            learning.trainFromReality(neural);
+
+            // 👉 her kan du senere legge:
+            // - hent dagens kamper
+            // - kjør prediction
+            // - lagre bets
+
+        }
+
 
         // =========================
         // 2️⃣ LAST HISTORISKE CSV-KAMPER
         // =========================
 
-        matches = new ArrayList<>();
 
-        File dataFolder = new File("data");
-
-        for (File file : dataFolder.listFiles()) {
-
-            System.out.println("FILE: " + file.getName());
-
-            if (file.getName().endsWith(".csv")
-                    && !file.getName().contains("odds")) {
-
-                String fileName = file.getName();
-
-                String league = fileName
-                        .replace("historical_", "")
-                        .replace(".csv", "")
-                        .split("_")[0];
-
-                System.out.println("Laster: " + fileName + " | League: " + league);
-
-                List<Match> loaded = CsvHistoricalLoader.load(file.getPath(), league);
-
-                for (Match m : loaded) {
-                    m.setLeague(league);
-                }
-
-                matches.addAll(loaded);
-            }
-
-        }
-
-
-        System.out.println("Totale kamper lest fra CSV: " + matches.size());
 
         // =========================
         // 3️⃣ TRENE MODELL FRA CSV
         // =========================
+
+        List<Match> matches = loadMatches();
 
         autoTrainer.trainFromMatches(matches);
 
@@ -531,25 +557,25 @@ public class Main {
 
                     String predicted = lastPrediction.getBet();
 
-                    String result;
-                    if(homeGoals > awayGoals) result = "HOME";
-                    else if(homeGoals < awayGoals) result = "AWAY";
-                    else result = "DRAW";
+                    String Actualresult;
+                    if(homeGoals > awayGoals) Actualresult = "HOME";
+                    else if(homeGoals < awayGoals) Actualresult = "AWAY";
+                    else Actualresult = "DRAW";
 
-                    boolean wasCorrect = predicted.equals(result);
+                    boolean wasCorrect = predicted.equals(Actualresult);
 
                     double profit = 0;
 
 // beregn profit basert på bet
-                    if(predicted.equals(result)) {
+                    if(predicted.equals(Actualresult)) {
 
-                        if(result.equals("HOME"))
+                        if(Actualresult.equals("HOME"))
                             profit = lastPrediction.oddsHome * lastPrediction.stake - lastPrediction.stake;
 
-                        else if(result.equals("DRAW"))
+                        else if(Actualresult.equals("DRAW"))
                             profit = lastPrediction.oddsDraw * lastPrediction.stake - lastPrediction.stake;
 
-                        else if(result.equals("AWAY"))
+                        else if(Actualresult.equals("AWAY"))
                             profit = lastPrediction.oddsAway * lastPrediction.stake - lastPrediction.stake;
 
                     } else {
@@ -562,7 +588,7 @@ public class Main {
 // 🔥 OPPDATER SQLITE
                     DatabaseManager.updateResult(
                             lastPrediction.dbId,
-                            result,
+                            Actualresult,
                             profit
                     );
 
@@ -573,7 +599,7 @@ public class Main {
                     // =========================
 
                     // 1️⃣ ELO learning
-                    ModelTrainer.adaptElo(homeStats, awayStats, confidence, result);
+                    ModelTrainer.adaptElo(homeStats, awayStats, confidence, Actualresult);
 
                     // 2️⃣ GLOBAL confidence learning
                     if(!wasCorrect && confidence > 0.75){
@@ -891,7 +917,7 @@ public class Main {
                 predictionRecord.dbId = id;
 
 // 🔹 simulering
-                SimulationResult result =
+                SimulationResult Actualresult =
                         analysis.simulateMatch(
                                 finalHome,
                                 finalDraw,
@@ -900,7 +926,7 @@ public class Main {
                         );
 
                 System.out.println("\n=== SIMULERING 1000 KAMPER ===");
-                System.out.println(result);
+                System.out.println(Actualresult);
             }
 
 
@@ -1263,6 +1289,37 @@ public class Main {
         return stats;
 
 
+    }
+
+    private static List<Match> loadMatches() {
+
+        List<Match> matches = new ArrayList<>();
+
+        File dataFolder = new File("data");
+
+        for (File file : dataFolder.listFiles()) {
+
+            if (file.getName().endsWith(".csv")
+                    && !file.getName().contains("odds")) {
+
+                String fileName = file.getName();
+
+                String league = fileName
+                        .replace("historical_", "")
+                        .replace(".csv", "")
+                        .split("_")[0];
+
+                List<Match> loaded = CsvHistoricalLoader.load(file.getPath(), league);
+
+                for (Match m : loaded) {
+                    m.setLeague(league);
+                }
+
+                matches.addAll(loaded);
+            }
+        }
+
+        return matches;
     }
 
 }

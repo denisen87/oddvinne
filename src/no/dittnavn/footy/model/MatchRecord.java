@@ -32,6 +32,10 @@ public class MatchRecord {
     public double valueHome;
     public double valueDraw;
     public double valueAway;
+    public String date;
+
+    public int homeFouls;
+    public int awayFouls;
     public MatchRecord() {
     }
 
@@ -87,6 +91,11 @@ public class MatchRecord {
     public void setProfit(double profit) {
         this.profit = profit;
     }
+
+    public void setBet(String bet) {
+        this.bet = bet;
+    }
+
 
 
 }

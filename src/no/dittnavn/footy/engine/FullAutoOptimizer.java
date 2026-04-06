@@ -7,27 +7,30 @@ import java.util.*;
 
 public class FullAutoOptimizer {
 
-    public static void run(List<Match> matches) {
-        matches = matches.subList(0, Math.min(100, matches.size()));
+    public static OptimizerResult run(List<Match> matches) {
+
+        int sampleSize = 20; // 🔥 juster selv
+
         Collections.shuffle(matches);
+
+        // 🔥 bruk subset (ikke filter – bare utvalg)
+        matches = matches.subList(0, Math.min(sampleSize, matches.size()));
 
         int split = (int) (matches.size() * 0.7);
         List<Match> train = matches.subList(0, split);
         List<Match> test = matches.subList(split, matches.size());
 
         double bestROI = -999;
-        String bestConfig = "";
+        FeatureConfig bestConfig = null;
 
         Random rand = new Random();
 
         System.out.println("=== START OPTIMIZATION ===");
 
-        // 🔥 FEATURE TOGGLES
         boolean[] sotVals = {true, false};
         boolean[] confVals = {true, false};
         boolean[] biasVals = {true, false};
 
-        // 🔥 GRID SEARCH (grov)
         double[] edgeVals = range(0.0, 0.05, 0.01);
         double[] probVals = range(0.45, 0.60, 0.02);
         double[] minOddsVals = range(1.3, 2.0, 0.2);
@@ -41,16 +44,16 @@ public class FullAutoOptimizer {
             for (boolean useConf : confVals) {
                 for (boolean useBias : biasVals) {
 
-                    FeatureConfig config = new FeatureConfig();
-                    config.useSOT = useSOT;
-                    config.useConfidence = useConf;
-                    config.useHomeBias = useBias;
-
                     for (double edge : edgeVals) {
                         for (double probThr : probVals) {
                             for (double minOdds : minOddsVals) {
                                 for (double maxOdds : maxOddsVals) {
                                     for (double confThr : confThresholds) {
+
+                                        FeatureConfig config = new FeatureConfig();
+                                        config.useSOT = useSOT;
+                                        config.useConfidence = useConf;
+                                        config.useHomeBias = useBias;
 
                                         BacktestResult trainResult = BacktestRunner.run(
                                                 train,
@@ -64,8 +67,6 @@ public class FullAutoOptimizer {
                                                 probThr,
                                                 config
                                         );
-
-                                        if (trainResult.bets < 50) continue;
 
                                         BacktestResult testResult = BacktestRunner.run(
                                                 test,
@@ -82,9 +83,12 @@ public class FullAutoOptimizer {
 
                                         log(config, edge, probThr, confThr, minOdds, maxOdds, testResult);
 
-                                        if (testResult.roi > bestROI && testResult.bets > 50) {
+                                        // 🔥 KUN ROI – ingen filtering
+                                        if (testResult.roi > bestROI) {
                                             bestROI = testResult.roi;
-                                            bestConfig = buildConfigString(config, edge, probThr, confThr, minOdds, maxOdds, testResult);
+                                            bestConfig = config;
+
+                                            System.out.println("🔥 NEW BEST -> ROI=" + bestROI);
                                         }
                                     }
                                 }
@@ -96,7 +100,7 @@ public class FullAutoOptimizer {
         }
 
         // =========================
-        // RANDOM SEARCH (finjustering)
+        // RANDOM SEARCH
         // =========================
         System.out.println("\n=== RANDOM SEARCH ===");
 
@@ -126,8 +130,6 @@ public class FullAutoOptimizer {
                     config
             );
 
-            if (trainResult.bets < 50) continue;
-
             BacktestResult testResult = BacktestRunner.run(
                     test,
                     0.52,
@@ -143,15 +145,19 @@ public class FullAutoOptimizer {
 
             log(config, edge, probThr, confThr, minOdds, maxOdds, testResult);
 
-            if (testResult.roi > bestROI && testResult.bets > 50) {
+            if (testResult.roi > bestROI) {
                 bestROI = testResult.roi;
-                bestConfig = buildConfigString(config, edge, probThr, confThr, minOdds, maxOdds, testResult);
+                bestConfig = config;
+
+                System.out.println("🔥 NEW BEST -> ROI=" + bestROI);
             }
         }
 
         System.out.println("\n🔥 BEST CONFIG FOUND:");
         System.out.println(bestConfig + " ROI=" + bestROI);
         System.out.println("=== DONE ===");
+
+        return new OptimizerResult(bestConfig, bestROI);
     }
 
     // =========================
@@ -182,19 +188,6 @@ public class FullAutoOptimizer {
                         " ROI=" + round(result.roi) +
                         " bets=" + result.bets
         );
-    }
-
-    private static String buildConfigString(FeatureConfig config, double edge, double prob,
-                                            double conf, double minOdds, double maxOdds,
-                                            BacktestResult result) {
-
-        return config +
-                " edge=" + round(edge) +
-                " prob=" + round(prob) +
-                " conf=" + round(conf) +
-                " minOdds=" + round(minOdds) +
-                " maxOdds=" + round(maxOdds) +
-                " bets=" + result.bets;
     }
 
     private static double round(double v) {
