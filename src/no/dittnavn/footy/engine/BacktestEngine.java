@@ -103,7 +103,6 @@ public class BacktestEngine {
             // ❗ Første gang lag dukker opp
             if (homeStats == null || awayStats == null) {
                 stats.update(m);
-                continue;
             }
 
             // ❗ Ikke nok historikk enda

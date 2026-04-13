@@ -16,19 +16,45 @@ public class StatsIndeks {
     private Map<String, String> lastUpdateDates = new HashMap<>();
 
     // ===============================
-    // 🔑 ENESTE KILDE TIL SANNHET
+    // 🔑 NORMALIZE (VIKTIGSTE DEL)
     // ===============================
-
     private String key(String name) {
         if (name == null) return null;
+        return normalize(name);
+    }
 
-        return TeamNameNormalizer.normalize(name)
-                .toLowerCase()
-                .replaceAll("\\s*\\(.*?\\)", "")   // 🔥 FJERNER (srb), (gre), (cze) osv
-                .trim()
-                .replace(".", "")
+    public static String normalize(String name) {
+        if (name == null) return "";
+
+        String n = name.toLowerCase().trim();
+
+        // fjern suffix
+        n = n.replace(" fk", "")
+                .replace(" fc", "")
+                .replace(" afc", "")
+                .replace(" bk", "")
+                .replace(" il", "");
+
+        // norske tegn
+        n = n.replace("å", "a")
+                .replace("ø", "o")
+                .replace("æ", "ae");
+
+        // spesialtegn
+        n = n.replace(".", "")
                 .replace("-", " ")
-                .replaceAll("\\s+", " ");          // rydder doble spaces
+                .replace("/", " ")
+                .replaceAll("\\s+", " ")
+                .trim();
+
+        // 🔥 aliases (kritisk!)
+        if (n.equals("aalesund")) return "alesund";
+        if (n.equals("aalborg")) return "aalborg";
+        if (n.equals("man utd")) return "manchester united";
+        if (n.equals("man city")) return "manchester city";
+        if (n.equals("psg")) return "paris sg";
+
+        return n;
     }
 
     // ===============================

@@ -31,6 +31,11 @@ public class TeamNameNormalizer {
         NAME_MAP.put("man city", "manchester city");
         NAME_MAP.put("man utd", "manchester united");
 
+        NAME_MAP.put("nottingham", "nottingham forest");
+        NAME_MAP.put("forrest", "nottingham forest");
+        NAME_MAP.put("nottm forest", "nottingham forest");
+
+
 
         // Add more mappings as necessary
     }
@@ -87,6 +92,10 @@ public class TeamNameNormalizer {
             Map.entry("independiente rivadavia", "ind rivadavia"),
 
             Map.entry("huracan", "huracan"),
-            Map.entry("barracas", "barracas central")
+            Map.entry("barracas", "barracas central"),
+
+            Map.entry("nottingham", "nottingham forest"),
+            Map.entry("forrest", "nottingham forest"),
+            Map.entry("nottm forest", "nottingham forest")
     );
 }

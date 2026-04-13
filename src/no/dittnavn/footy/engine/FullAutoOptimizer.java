@@ -9,7 +9,7 @@ public class FullAutoOptimizer {
 
     public static OptimizerResult run(List<Match> matches) {
 
-        int sampleSize = 20; // 🔥 juster selv
+        int sampleSize = 400; // 🔥 juster selv
 
         Collections.shuffle(matches);
 
@@ -120,7 +120,7 @@ public class FullAutoOptimizer {
             BacktestResult trainResult = BacktestRunner.run(
                     train,
                     0.52,
-                    0.5,
+                    probThr,
                     edge,
                     1.0,
                     confThr,
@@ -133,7 +133,7 @@ public class FullAutoOptimizer {
             BacktestResult testResult = BacktestRunner.run(
                     test,
                     0.52,
-                    0.5,
+                    probThr,
                     edge,
                     1.0,
                     confThr,

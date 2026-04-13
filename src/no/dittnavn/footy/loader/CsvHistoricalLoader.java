@@ -18,9 +18,20 @@ public class CsvHistoricalLoader {
             String header = br.readLine();
             if (header == null) return matches;
 
-            boolean isStandardFormat = !league.equalsIgnoreCase("eliteserien");
+            String l = league.toLowerCase();
+
+            boolean isCustomFormat =
+                    l.contains("nor")
+                            || l.contains("bra")
+                            || l.contains("brazil")
+                            || l.contains("arg")
+                            || l.contains("argentina");
+
+            boolean isStandardFormat = !isCustomFormat;
 
             String[] headers = header.split("[,;\t]");
+            System.out.println("HEADERS: " + String.join("|", headers));
+
 
             int homeIdx = findIndex(headers, "HomeTeam");
             int awayIdx = findIndex(headers, "AwayTeam");
@@ -115,9 +126,13 @@ public class CsvHistoricalLoader {
                         if (maxch != -1) System.out.println("MaxCH: " + parts[maxch]);
                         if (avgch != -1) System.out.println("AvgCH: " + parts[avgch]);
 
+
                         double p = parse(parts, psch);
                         double m = parse(parts, maxch);
                         double a = parse(parts, avgch);
+
+                        System.out.println("LEAGUE: " + league);
+                        System.out.println("CUSTOM FORMAT: " + isCustomFormat);
 
                         System.out.println("PARSED -> PSCH=" + p + " MaxCH=" + m + " AvgCH=" + a);
 
@@ -182,9 +197,7 @@ public class CsvHistoricalLoader {
                     }
 
                     // 🔥 skip if no valid odds found
-                    if (homeOdds <= 1.01 || drawOdds <= 1.01 || awayOdds <= 1.01) {
-                        continue;
-                    }
+                    boolean hasOdds = homeOdds > 1.01 && drawOdds > 1.01 && awayOdds > 1.01;
 
                     Match match = new Match(
                             date,

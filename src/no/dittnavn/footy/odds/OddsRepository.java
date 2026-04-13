@@ -26,7 +26,7 @@ public class OddsRepository {
 
                 if (line.trim().isEmpty()) continue;
 
-                String[] parts = line.split(",");
+                String[] parts = line.split(";",-1);
 
                 // football-data CSV trenger minst 26 kolonner
                 if (parts.length < 26) continue;

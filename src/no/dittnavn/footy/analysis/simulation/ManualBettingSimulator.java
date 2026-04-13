@@ -86,6 +86,11 @@ public class ManualBettingSimulator {
         double valueDraw = pDraw * oddsU - 1;
         double valueAway = pAway * oddsB - 1;
 
+// justering av value
+        valueHome *= 1.2;
+        valueDraw *= 1.2;
+        valueAway *= 0.6; // 🔥 juster bortelag
+// value regnes ut slik; sannsynlighet*(det du kan vinne)-sannsynlughet*(det kun tape)
         System.out.println("Value H: " + valueHome);
         System.out.println("Value U: " + valueDraw);
         System.out.println("Value B: " + valueAway);

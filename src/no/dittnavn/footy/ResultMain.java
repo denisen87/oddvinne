@@ -1,7 +1,7 @@
 package no.dittnavn.footy;
 
 import no.dittnavn.footy.db.DatabaseManager;
-import service.ResultUpdater;
+import no.dittnavn.footy.service.ResultUpdater;
 
 public class ResultMain {
 

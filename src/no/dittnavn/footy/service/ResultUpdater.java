@@ -1,4 +1,4 @@
-package service;
+package no.dittnavn.footy.service;
 
 import no.dittnavn.footy.db.DatabaseManager;
 import no.dittnavn.footy.integration.FlashscoreResultFetcher;

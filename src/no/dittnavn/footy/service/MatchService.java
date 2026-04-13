@@ -1,4 +1,4 @@
-package service;
+package no.dittnavn.footy.service;
 
 import no.dittnavn.footy.model.Match;
 import no.dittnavn.footy.model.Outcome;

@@ -23,6 +23,9 @@ public class HistoricalOddsConverter {
                 .replace(".txt", "")
                 .split("_")[0];
 
+        league = mapLeague(league);
+
+
         System.out.println("Konverterer liga: " + league);
 
         List<String> lines = readLines(inputFile.getPath());
@@ -169,5 +172,18 @@ public class HistoricalOddsConverter {
         String year = parts[2];
 
         return year + "-" + month + "-" + String.format("%02d", Integer.parseInt(day));
+    }
+
+    private static String mapLeague(String league) {
+
+        return switch (league.toLowerCase()) {
+            case "championsleague" -> "CL";
+            case "premierleague" -> "E0";
+            case "laliga" -> "SP1";
+            case "bundesliga" -> "D1";
+            case "seriea" -> "I1";
+            case "ligue1" -> "F1";
+            default -> league.toUpperCase(); // fallback
+        };
     }
 }

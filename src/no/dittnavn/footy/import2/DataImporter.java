@@ -35,7 +35,9 @@ public class DataImporter {
                 Map.entry("ARG", "Primera LPF"),
                 Map.entry("SC1", "Championship"),
                 Map.entry("EL2", "League two"),
-                Map.entry("BRA", "Brasil Serie A")
+                Map.entry("BRA", "Brasil Serie A"),
+                Map.entry("E1", "Engelsk Championship"),
+                Map.entry("F2", "Ligue2")
         );
 
         try (Connection conn = DatabaseManager.getConnection()) {
@@ -52,7 +54,7 @@ public class DataImporter {
                     continue;
                 }
 
-                List<Match> matches = CsvHistoricalLoader.load(file.getPath(), leagueName);
+                List<Match> matches = CsvHistoricalLoader.load(file.getPath(), code);
 
                 System.out.println("Loaded (" + leagueName + "): " + matches.size());
 

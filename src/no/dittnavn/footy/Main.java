@@ -4,7 +4,7 @@ import no.dittnavn.footy.analysis.ProbabilityAnalysis;
 import no.dittnavn.footy.analysis.OddsAnalyzer;
 import no.dittnavn.footy.analysis.SimulationResult;
 import java.util.Scanner;
-import service.MatchService;
+import no.dittnavn.footy.service.MatchService;
 import no.dittnavn.footy.model.Match;
 import no.dittnavn.footy.model.Outcome;
 import no.dittnavn.footy.stats.StatsIndeks;
@@ -53,35 +53,38 @@ import no.dittnavn.footy.analysis.NeuralTrainer;
 import no.dittnavn.footy.engine.AutoPredictionEngine;
 import no.dittnavn.footy.engine.AutoBetEngine;
 import no.dittnavn.footy.analysis.learning.PredictionTracker;
-import no.dittnavn.footy.loader.OddsCsvLoader;
 import no.dittnavn.footy.loader.CsvHistoricalLoader;
-import no.dittnavn.footy.loader.FootballDataLoader;
-import no.dittnavn.footy.loader.CsvMatchLoader;
 import no.dittnavn.footy.stats.GlobalStats;
 import no.dittnavn.footy.engine.FullAutoOptimizer;
 import no.dittnavn.footy.loader.CsvFixtureLoader;
-import service.ResultUpdater;
-import no.dittnavn.footy.config.StrategyConfig;
+import no.dittnavn.footy.service.ResultUpdater;
 import no.dittnavn.footy.engine.BacktestRunner;
 import java.sql.Connection;
 import no.dittnavn.footy.engine.FeatureConfig;
 import no.dittnavn.footy.engine.OptimizerResult;
 
 import no.dittnavn.footy.model.BacktestResult;
-
+import no.dittnavn.footy.loader.Preoddsloader;
+import no.dittnavn.footy.loader.OddsRow;
+import java.util.Scanner;
 
 
 
 public class Main {
 
 
+
     public static void main(String[] args) throws Exception {
+
 
 
         StatsRepository repo = new StatsRepository();
         DatabaseManager.init();
 
         StatsIndeks stats = new StatsIndeks();
+        stats.loadFromFile();
+        System.out.println("=== TEAMS INDEKS ===");
+        stats.printAllTeams();
         GlobalStats.stats = stats;
         StatsIndeks indeks = GlobalStats.stats;
         System.out.println("Teams loaded: " + GlobalStats.stats.getAllTeams().size());
@@ -105,7 +108,7 @@ public class Main {
             List<Match> historicalMatches = new ArrayList<>();
 
             String[] leagues = {
-                    "E0", "E1", "D1", "D2", "I1", "I2", "SP1", "SP2", "F1", "F2", "B1", "P1", "T1"
+                    "E0", "E1", "D1", "D2", "I1", "I2", "SP1", "SP2", "F1", "F2", "B1", "P1", "T1","NOR"
             };
 
             for (String league : leagues) {
@@ -300,6 +303,9 @@ public class Main {
         if (runOptimizer) {
 
             List<Match> matches = loadMatches();
+            for (Match m : matches) {
+                indeks.update(m);
+            }
 
             System.out.println("TOTAL MATCHES: " + matches.size());
 
@@ -322,20 +328,38 @@ public class Main {
 
             System.out.println("TOTAL MATCHES: " + matches.size());
 
+            // 🔥 finn beste config først
+            OptimizerResult result = FullAutoOptimizer.run(matches);
+
+            FeatureConfig config = result.getBestConfig();
+
+            System.out.println("🔥 USING BEST CONFIG: " + config);
+
+/*
+
             // 👉 bruk config fra optimizer (eller default)
             FeatureConfig config = new FeatureConfig();
             config.useSOT = true;
             config.useConfidence = true;
             config.useHomeBias = true;
 
+ */
+
             double maxProb = 0.52;
-            double prob = 0.5;
-            double edgeThreshold = 0.03;
+            //double prob = 0.5;
+            //double edgeThreshold = 0.03;
             double homeBias = 1.0;
-            double minConfidence = 0.02;
-            double minOdds = 1.4;
-            double maxOdds = 3.0;
+            //double minConfidence = 0.02;
+            //double minOdds = 1.4;
+            //double maxOdds = 3.0;
             double probThreshold = 0.5;
+
+            double prob = result.getProb();
+            double edgeThreshold = result.getEdge();
+            double minConfidence = result.getConfidence();
+            double minOdds = result.getMinOdds();
+            double maxOdds = result.getMaxOdds();
+
 
             BacktestResult finalResult = BacktestRunner.run(
                     matches,
@@ -365,15 +389,25 @@ public class Main {
 
             System.out.println("🔥 LIVE MODE");
 
+            // 🔥 BYGG STATS FRA CSV/DB
+            List<Match> matches = loadMatches();
+
+            for (Match m : matches) {
+                indeks.update(m);
+            }
+
+            System.out.println("Teams loaded: " + indeks.teamCount());
+
             autoUpdater.run();
             learning.trainFromReality(neural);
+        }
 
             // 👉 her kan du senere legge:
             // - hent dagens kamper
             // - kjør prediction
             // - lagre bets
 
-        }
+
 
 
         // =========================
@@ -478,9 +512,26 @@ public class Main {
         no.dittnavn.footy.engine.BacktestEngine.run(); // bruker backtestrunner nå istede,
 
  */
+        ResultUpdater.updateResults();
+
+        AutoPredictionEngine.run(indeks, neural, tracker, upcoming);
+
+        AutoBetEngine.run(indeks, neural, tracker, upcoming);
+
+        List<OddsRow> odds = Preoddsloader.load("data/1pre.csv");
+
+        for (OddsRow o : odds) {
+            System.out.println(o.home + " vs " + o.away + " | " + o.label + " @ " + o.price);
+        }
+/*
+        no.dittnavn.footy.engine.BacktestEngine.run(); // bruker backtestrunner nå istede,
+
+ */
+
+        System.out.println("TEAMS INDEKS: " + indeks.teamCount());
+
 
         int valg = -1;
-
         while (valg != 0) {
 // skriver ut de ulike menyvalgene
             System.out.println("=== FOTBALLANALYSE ===");
@@ -496,6 +547,7 @@ public class Main {
             System.out.println("10. ROI analyse");
             System.out.println("11. ROI per bet-type");
             System.out.println("12. Auto pre-match predictions");
+            System.out.println("13. Auto preodds (CSV)");
             System.out.println("0. Avslutt");
             System.out.print("Velg: ");
 
@@ -659,9 +711,8 @@ public class Main {
 
                 String input = scanner.nextLine();
 
-                input = input.replaceAll("[^a-zA-Z ]", "")
-                        .toLowerCase()
-                        .trim();
+                input = TeamNameNormalizer.normalize(input);
+
 
                 TeamStats team = indeks.getTeam(input);
 
@@ -670,35 +721,52 @@ public class Main {
                 } else {
                     System.out.println(team);
                 }
+
+                System.out.println("INPUT RAW: " + input);
+
+                String normalized = TeamNameNormalizer.normalize(input);
+                System.out.println("INPUT NORMALIZED: " + normalized);
+
+                team = indeks.getTeam(normalized);
             }
 
 
             else if (valg == 3) {
 
-                scanner.nextLine();
+                String homeInput = "";
+                String awayInput = "";
 
-                System.out.print("Hjemmelag: ");
-                String homeInput = scanner.nextLine();
+                TeamStats homeStats;
+                TeamStats awayStats;
 
-                System.out.print("Bortelag: ");
-                String awayInput = scanner.nextLine();
+                while (true) {
 
-// 👉 rens + normaliser input først
-                homeInput = TeamNameNormalizer.normalize(homeInput.trim().toLowerCase());
-                awayInput = TeamNameNormalizer.normalize(awayInput.trim().toLowerCase());
+                    System.out.print("Hjemmelag: ");
+                    homeInput = scanner.nextLine();
 
-                System.out.println("DEBUG home: " + homeInput);
-                System.out.println("DEBUG away: " + awayInput);
+                    System.out.print("Bortelag: ");
+                    awayInput = scanner.nextLine();
 
-// 👉 hent stats
-                TeamStats homeStats = indeks.getTeam(homeInput);
-                TeamStats awayStats = indeks.getTeam(awayInput);
+                    homeInput = TeamNameNormalizer.normalize(homeInput.trim().toLowerCase());
+                    awayInput = TeamNameNormalizer.normalize(awayInput.trim().toLowerCase());
 
-// 👉 valider
-                if (homeStats == null || awayStats == null) {
-                    System.out.println("❌ Unknown team(s) – finnes ikke i datasettet");
+                    System.out.println("DEBUG home: " + homeInput);
+                    System.out.println("DEBUG away: " + awayInput);
+
+                    homeStats = indeks.getTeam(homeInput);
+                    awayStats = indeks.getTeam(awayInput);
+
+                    if (homeStats == null || awayStats == null) {
+                        System.out.println("❌ Unknown team(s) – prøv igjen\n");
+                        continue;
+                    }
+
                     break;
                 }
+
+                // ✅ HER FUNKER DET NÅ
+
+                // 👉 resten av koden din fortsetter her
                 System.out.println("DEBUG home: " + homeInput);
                 System.out.println("DEBUG away: " + awayInput);
 
@@ -788,8 +856,36 @@ public class Main {
 
                 // 🔥 4) Ensemble
 
-                double[] finalProbs = ensemble.combine(neuralProbs, eloProbs, poissonProbs, oddsProbs);
+                double finalHome =
+                        0.45 * oddsProbs[0] +
+                                0.20 * poissonProbs[0] +
+                                0.20 * eloProbs[0] +
+                                0.15 * neuralProbs[0];
 
+                double finalDraw =
+                        0.45 * oddsProbs[1] +
+                                0.20 * poissonProbs[1] +
+                                0.20 * eloProbs[1] +
+                                0.15 * neuralProbs[1];
+
+                double finalAway =
+                        0.45 * oddsProbs[2] +
+                                0.20 * poissonProbs[2] +
+                                0.20 * eloProbs[2] +
+                                0.15 * neuralProbs[2];
+
+                double[] finalProbs = {finalHome, finalDraw, finalAway};
+
+                finalDraw *= 0.92;
+
+                double sum = finalHome + finalDraw + finalAway;
+
+                finalHome /= sum;
+                finalDraw /= sum;
+                finalAway /= sum;
+
+                finalProbs = new double[]{finalHome, finalDraw, finalAway};
+/*
                 double finalHome = finalProbs[0];
                 double finalDraw = finalProbs[1];
                 double finalAway = finalProbs[2];
@@ -801,6 +897,8 @@ public class Main {
                     finalProbs[i] = finalProbs[i] * shrink + (1.0 / 3.0) * (1 - shrink);
                 }
 
+ */
+
 
                 System.out.println("\n=== ENSEMBLE (FINAL) ===");
                 printProbs("Final", finalProbs);
@@ -809,7 +907,7 @@ public class Main {
                 finalProbs[1] *= 0.92;   // reduser draw med 8%
 
 // re-normaliser slik at summen = 1
-                double sum = finalProbs[0] + finalProbs[1] + finalProbs[2];
+                sum = finalProbs[0] + finalProbs[1] + finalProbs[2];
                 finalProbs[0] /= sum;
                 finalProbs[1] /= sum;
                 finalProbs[2] /= sum;
@@ -1056,6 +1154,79 @@ public class Main {
                 System.out.println("Ferdig.\n");
             }
 
+            else if (valg == 13) {
+
+                System.out.println("\n=== AUTO PREODDS ===");
+
+                odds = Preoddsloader.load("data/I1pre.csv");
+                List<no.dittnavn.footy.model.MatchOdds> matchesOdds =
+                        no.dittnavn.footy.loader.OddsGrouper.group(odds);
+
+                System.out.println("TOTAL MATCHES: " + matchesOdds.size());
+
+                for (no.dittnavn.footy.model.MatchOdds mo : matchesOdds) {
+
+                    String homeInput = TeamNameNormalizer.normalize(mo.home);
+                    String awayInput = TeamNameNormalizer.normalize(mo.away);
+
+                    double oddsHome = mo.homeOdds;
+                    double oddsDraw = mo.drawOdds;
+                    double oddsAway = mo.awayOdds;
+
+                    // 🔥 hent stats
+                    TeamStats homeStats = indeks.getTeam(homeInput);
+                    TeamStats awayStats = indeks.getTeam(awayInput);
+
+// 🔥 SKIPP hvis mangler data
+                    if (homeStats == null || awayStats == null) {
+                        continue;
+                    }
+
+                    // 🔥 ELO
+                    EloPredictor elo = new EloPredictor();
+                    double[] eloProbs = elo.predict(homeStats, awayStats);
+
+                    // 🔥 odds → prob
+                    OddsConverter oddsConv = new OddsConverter();
+                    double[] oddsProbs = oddsConv.fromOdds(oddsHome, oddsDraw, oddsAway);
+
+                    // 🔥 enkel ensemble (kan forbedres senere)
+                    double finalHome = 0.6 * oddsProbs[0] + 0.4 * eloProbs[0];
+                    double finalDraw = 0.6 * oddsProbs[1] + 0.4 * eloProbs[1];
+                    double finalAway = 0.6 * oddsProbs[2] + 0.4 * eloProbs[2];
+
+                    double sum = finalHome + finalDraw + finalAway;
+                    finalHome /= sum;
+                    finalDraw /= sum;
+                    finalAway /= sum;
+
+                    // 🔥 value
+                    OddsAnalyzer analyzer = new OddsAnalyzer();
+
+                    double valueHome = analyzer.calculateValue(finalHome, oddsHome);
+                    double valueDraw = analyzer.calculateValue(finalDraw, oddsDraw);
+                    double valueAway = analyzer.calculateValue(finalAway, oddsAway);
+
+                    // 🔥 PRINT (clean)
+                    System.out.printf(
+                            "%s vs %s | H=%.2f D=%.2f A=%.2f%n",
+                            mo.home, mo.away, oddsHome, oddsDraw, oddsAway
+                    );
+
+                    // kun vis gode bets
+                    if (valueHome > 0.10)
+                        System.out.printf("   👉 H VALUE=%.2f%%%n", valueHome * 100);
+
+                    if (valueDraw > 0.10)
+                        System.out.printf("   👉 D VALUE=%.2f%%%n", valueDraw * 100);
+
+                    if (valueAway > 0.10)
+                        System.out.printf("   👉 A VALUE=%.2f%%%n", valueAway * 100);
+                }
+
+                System.out.println("\n=== FERDIG ===\n");
+            }
+
         }
         scanner.close();
     }
@@ -1297,6 +1468,20 @@ public class Main {
 
         File dataFolder = new File("data");
 
+        // 🔥 DEBUG START
+        System.out.println("ABS PATH: " + dataFolder.getAbsolutePath());
+
+        File[] files = dataFolder.listFiles();
+
+        if (files == null) {
+            System.out.println("❌ listFiles() er NULL");
+        } else {
+            for (File f : files) {
+                System.out.println("FOUND FILE: " + f.getName());
+            }
+        }
+        // 🔥 DEBUG SLUTT
+
         for (File file : dataFolder.listFiles()) {
 
             if (file.getName().endsWith(".csv")
@@ -1307,6 +1492,7 @@ public class Main {
                 String league = fileName
                         .replace("historical_", "")
                         .replace(".csv", "")
+                        .toLowerCase()
                         .split("_")[0];
 
                 List<Match> loaded = CsvHistoricalLoader.load(file.getPath(), league);
@@ -1316,7 +1502,21 @@ public class Main {
                 }
 
                 matches.addAll(loaded);
+
+                System.out.println("FILE: " + file.getName());
+                System.out.println("LOADED: " + loaded.size());
+
+                if (file.getName().contains("NOR")) {
+                    System.out.println("NOR LOADED: " + loaded.size());
+                }
+
+                if (file.getName().contains("NOR")) {
+                    System.out.println("🔥 TESTER NOR:");
+                    List<Match> test = CsvHistoricalLoader.load(file.getPath(), "NOR");
+                    System.out.println("NOR SIZE: " + test.size());
+                }
             }
+
         }
 
         return matches;

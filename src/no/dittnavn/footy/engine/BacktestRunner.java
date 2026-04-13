@@ -30,34 +30,88 @@ public class BacktestRunner {
         for (Match match : matches) {
 
             double odds;
-            boolean betHome;
 
             // 🔥 SOT-basert valg (din modell)
 
-            double probHome = estimateProbability(match, homeBias);
+            double probHome = estimateProbability(match, homeBias, probThreshold);
 
-            betHome = probHome > 0.5;
+            if (probHome < 0) continue;
 
-            String predicted = betHome ? "HOME" : "AWAY";
+// -------------------------
+// 🔥 DRAW + 3-WAY MODEL
+// -------------------------
 
-            double probValue = betHome ? probHome : (1.0 - probHome);
+            int h = match.getHomeShotsTarget();
+            int a = match.getAwayShotsTarget();
 
-            if (betHome) {
-                odds = match.getHomeOdds();
+            double total = h + a;
+            if (total == 0) continue;
+
+            double diff = Math.abs(h - a);
+
+// draw sannsynlighet
+            double pDraw = Math.max(0.15, 1.0 - (diff / total));
+            pDraw = Math.min(0.30, pDraw);
+
+// 🔥 HER du lurte på
+            double remaining = 1.0 - pDraw;
+
+            double pHome = probHome * remaining;
+            double pAway = (1.0 - probHome) * remaining;
+
+            double oHome = match.getHomeOdds();
+            double oDraw = match.getDrawOdds();
+            double oAway = match.getAwayOdds();
+
+            double edgeHome = pHome - (1.0 / oHome);
+            double edgeDraw = pDraw - (1.0 / oDraw);
+            double edgeAway = pAway - (1.0 / oAway);
+
+            double maxEdge = Math.max(edgeHome, Math.max(edgeDraw, edgeAway));
+
+// 🔥 la draw slippe gjennom
+
+            String predicted;
+            double probValue;
+
+            if (maxEdge == edgeHome) {
+                predicted = "HOME";
+                probValue = pHome;
+                odds = oHome;
+            } else if (maxEdge == edgeDraw) {
+                predicted = "DRAW";
+                probValue = pDraw;
+                odds = oDraw;
             } else {
-                odds = match.getAwayOdds();
+                predicted = "AWAY";
+                probValue = pAway;
+                odds = oAway;
             }
+
+            double confidence = calculateConfidence(match);
+
+// 🔥 NY VALUE
+            double value = (probValue * odds - 1.0) * confidence;
+
+// 🔥 AWAY straff
+            if (predicted.equals("AWAY")) {
+                value *= 1;
+
+            }
+
+// 🔥 FILTER
+            if (value < edgeThreshold) continue;
 
             if (odds <= 1.01) {
                 odds = 1.8;
             }
+
 
             if (!config.useHomeBias) {
                 homeBias = 1.0;
             }
 
             // 🔥 probability
-            probValue = estimateProbability(match, homeBias);
 
 
             if (probValue == 0.5) {
@@ -65,16 +119,8 @@ public class BacktestRunner {
                         + match.getHomeTeam() + " vs " + match.getAwayTeam());
             }
 
-            if (!betHome) {
-                probValue = 1.0 - probValue;
-            }
 
             // 🔥 lag pseudo probs for debug
-            double pHome = betHome ? probValue : (1 - probValue);
-            double pAway = betHome ? (1 - probValue) : probValue;
-            double pDraw = 0.0; // du bruker ikke draw her
-
-            predicted = betHome ? "HOME" : "AWAY";
 
             String actual =
                     match.getHomeGoals() > match.getAwayGoals() ? "HOME" :
@@ -83,7 +129,7 @@ public class BacktestRunner {
 
             double implied = 1.0 / odds;
             double edge = probValue - implied;
-            double confidence = calculateConfidence(match);
+
 
             // 🔥 PRINT (Riktig!)
             System.out.println(
@@ -103,9 +149,10 @@ public class BacktestRunner {
             bets++;
             double stake = 1.0;
 
-            boolean win = betHome
-                    ? match.getHomeGoals() > match.getAwayGoals()
-                    : match.getAwayGoals() > match.getHomeGoals();
+            boolean win =
+                    (predicted.equals("HOME") && match.getHomeGoals() > match.getAwayGoals()) ||
+                            (predicted.equals("AWAY") && match.getAwayGoals() > match.getHomeGoals()) ||
+                            (predicted.equals("DRAW") && match.getHomeGoals() == match.getAwayGoals());
 
             if (win) {
                 totalProfit += (odds - 1.0) * stake;
@@ -127,7 +174,8 @@ public class BacktestRunner {
         return new BacktestResult(totalProfit, roi, bets);
     }
 
-    private static double estimateProbability(Match m, double homeBias) {
+    private static double estimateProbability(Match m, double homeBias, double probThreshold) {
+
 
         int h = m.getHomeShotsTarget();
         int a = m.getAwayShotsTarget();
@@ -135,11 +183,20 @@ public class BacktestRunner {
         if (h <= 0 && a <= 0) return -1;
 
         double total = h + a;
+
+        double diff = Math.abs(h - a);
+
+// jevn kamp → høy draw
+        double pDraw = Math.max(0.15, 1.0 - (diff / total));
+        pDraw = Math.min(0.30, pDraw); // litt lavere cap enn før
+
         if (total == 0) return -1;
 
         double base = (double) h / total;
 
         double prob = base * homeBias;
+
+        prob = prob * probThreshold + 0.5 * (1 - probThreshold);
 
         // clamp
         if (prob < 0.10) prob = 0.10;
