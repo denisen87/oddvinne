@@ -7,7 +7,7 @@ import no.dittnavn.footy.analysis.OddsAnalyzer;
 import no.dittnavn.footy.analysis.ProbabilityAnalysis;
 import no.dittnavn.footy.stats.StatsIndeks;
 import no.dittnavn.footy.stats.TeamStats;
-import no.dittnavn.footy.scanner.MatchOdds;
+import no.dittnavn.footy.model.MatchOdds;
 import no.dittnavn.footy.analysis.learning.ModelWeights;
 
 public class ValueScanner {
@@ -34,8 +34,8 @@ public class ValueScanner {
 
         for (MatchOdds m : kamper) {
 
-            TeamStats home = indeks.getTeam(m.getHome());
-            TeamStats away = indeks.getTeam(m.getAway());
+            TeamStats home = indeks.getTeam(m.home);
+            TeamStats away = indeks.getTeam(m.away);
 
             if (home == null || away == null) continue;
 
@@ -43,11 +43,11 @@ public class ValueScanner {
             double pDraw = prob.drawProbability(home, away);
             double pAway = prob.awayWinProbability(home, away);
 
-            double vHome = odds.calculateValue(pHome, m.getHomeOdds());
-            double vDraw = odds.calculateValue(pDraw, m.getDrawOdds());
-            double vAway = odds.calculateValue(pAway, m.getAwayOdds());
+            double vHome = odds.calculateValue(pHome, m.homeOdds);
+            double vDraw = odds.calculateValue(pDraw, m.drawOdds);
+            double vAway = odds.calculateValue(pAway, m.awayOdds);
 
-            System.out.println("\n" + m.getHome() + " vs " + m.getAway());
+            System.out.println("\n" + m.home + " vs " + m.away);
 
             if (vHome > 0.1)
                 System.out.printf("🔥 VALUE HJEMME: %.3f%n", vHome);

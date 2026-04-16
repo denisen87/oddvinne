@@ -18,10 +18,17 @@ public class OddsGrouper {
             String key = r.home + "|" + r.away;
 
             // opprett hvis ikke finnes
-            map.putIfAbsent(key, new MatchOdds(r.home, r.away));
+            if (!map.containsKey(key)) {
+
+                MatchOdds m = new MatchOdds(r.home, r.away);
+
+                // 🔥 SETT DATO HER
+                m.matchDate = r.commenceTime;
+
+                map.put(key, m);
+            }
 
             MatchOdds m = map.get(key);
-
             String home = r.home.toLowerCase().trim();
             String away = r.away.toLowerCase().trim();
             String label = r.label.toLowerCase().trim();

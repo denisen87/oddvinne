@@ -8,28 +8,26 @@ import java.util.ArrayList;
 import no.dittnavn.footy.model.Match;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
+import no.dittnavn.footy.model.ValueBetRecord;
 
 public class DatabaseManager {
 
-    private static final String DB_URL = "jdbc:sqlite:betting.db";
+    private static final String DB_URL =
+            "jdbc:sqlite:C:/Users/denis/IdeaProjects/oddvinne/betting.db";
 
     public static Connection getConnection() throws SQLException {
         return connect();
     }
 
     // 🔵 CONNECT
-    private static Connection connection;
 
     public static Connection connect() throws SQLException {
+        Connection connection = DriverManager.getConnection(DB_URL);
 
-        if (connection == null || connection.isClosed()) {
-            connection = DriverManager.getConnection(DB_URL);
-
-            Statement stmt = connection.createStatement();
+        try (Statement stmt = connection.createStatement()) {
             stmt.execute("PRAGMA journal_mode=WAL;");
             stmt.execute("PRAGMA synchronous=NORMAL;");
             stmt.execute("PRAGMA busy_timeout=5000;");
-            System.out.println("DB path: " + new java.io.File("betting.db").getAbsolutePath());
         }
 
         return connection;
@@ -132,6 +130,22 @@ CREATE TABLE IF NOT EXISTS predictions (
     timestamp DATETIME DEFAULT CURRENT_TIMESTAMP,
 
     UNIQUE(date, homeTeam, awayTeam)
+)
+""");
+
+            stmt.executeUpdate("""
+CREATE TABLE IF NOT EXISTS value_bets (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    home TEXT,
+    away TEXT,
+    bet_type TEXT,
+    value REAL,
+    odds_home REAL,
+    odds_draw REAL,
+    odds_away REAL,
+    timestamp TEXT,
+    timestamp TEXT
+    UNIQUE(home, away, match_date, bet_type)
 )
 """);
 
@@ -598,4 +612,29 @@ DO UPDATE SET
     }
 
  */
+
+    public static void saveValueBet(Connection conn, ValueBetRecord v) {
+
+        String sql = "INSERT OR IGNORE INTO value_bets " +
+                "(home, away, bet_type, value, odds_home, odds_draw, odds_away, timestamp, match_date) " +
+                "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
+
+        try (PreparedStatement ps = conn.prepareStatement(sql)) {
+
+            ps.setString(1, v.home);
+            ps.setString(2, v.away);
+            ps.setString(3, v.betType);
+            ps.setDouble(4, v.value);
+            ps.setDouble(5, v.oddsHome);
+            ps.setDouble(6, v.oddsDraw);
+            ps.setDouble(7, v.oddsAway);
+            ps.setString(8, v.timestamp.toString());
+            ps.setString(9, v.matchDate);
+
+            ps.executeUpdate();
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
 }

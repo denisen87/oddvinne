@@ -11,7 +11,6 @@ import no.dittnavn.footy.stats.StatsIndeks;
 import no.dittnavn.footy.stats.TeamStats;
 import no.dittnavn.footy.model.TeamProfile;
 import no.dittnavn.footy.scanner.ValueScanner;
-import no.dittnavn.footy.scanner.MatchOdds;
 import no.dittnavn.footy.analysis.learning.LearningEngine;
 import no.dittnavn.footy.analysis.learning.PredictionRecord;
 import java.util.Map;
@@ -66,8 +65,11 @@ import no.dittnavn.footy.engine.OptimizerResult;
 import no.dittnavn.footy.model.BacktestResult;
 import no.dittnavn.footy.loader.Preoddsloader;
 import no.dittnavn.footy.loader.OddsRow;
-import java.util.Scanner;
-
+import no.dittnavn.footy.model.ValueBetRecord;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import no.dittnavn.footy.loader.OddsGrouper;
+import no.dittnavn.footy.model.MatchOdds;
 
 
 public class Main {
@@ -1091,7 +1093,13 @@ public class Main {
                 System.out.print("Odds B: ");
                 double ob = Double.parseDouble(scanner.nextLine());
 
-                scannerAI.addMatch(new MatchOdds(h,b,oh,od,ob));
+                MatchOdds m = new MatchOdds(h, b);
+
+                m.homeOdds = oh;
+                m.drawOdds = od;
+                m.awayOdds = ob;
+
+                scannerAI.addMatch(m);
 
                 System.out.println("Kamp lagt til scanner.\n");
             }
@@ -1158,9 +1166,22 @@ public class Main {
 
                 System.out.println("\n=== AUTO PREODDS ===");
 
-                odds = Preoddsloader.load("data/I1pre.csv");
-                List<no.dittnavn.footy.model.MatchOdds> matchesOdds =
-                        no.dittnavn.footy.loader.OddsGrouper.group(odds);
+                System.out.println("\n=== AUTO PREODDS ===");
+
+                odds.clear(); // viktig!
+
+                odds.addAll(Preoddsloader.load("data/I1pre.csv"));
+                odds.addAll(Preoddsloader.load("data/E0pre.csv"));
+                odds.addAll(Preoddsloader.load("data/E1pre.csv"));
+                odds.addAll(Preoddsloader.load("data/SP1pre.csv"));
+                odds.addAll(Preoddsloader.load("data/NORpre.csv"));
+                odds.addAll(Preoddsloader.load("data/F1pre.csv"));
+                odds.addAll(Preoddsloader.load("data/D1pre.csv"));
+
+
+                List<MatchOdds> matchesOdds = OddsGrouper.group(odds);
+
+                Connection conn = DatabaseManager.getConnection();
 
                 System.out.println("TOTAL MATCHES: " + matchesOdds.size());
 
@@ -1208,26 +1229,63 @@ public class Main {
                     double valueAway = analyzer.calculateValue(finalAway, oddsAway);
 
                     // 🔥 PRINT (clean)
+// 🔥 PRINT
                     System.out.printf(
                             "%s vs %s | H=%.2f D=%.2f A=%.2f%n",
                             mo.home, mo.away, oddsHome, oddsDraw, oddsAway
                     );
 
-                    // kun vis gode bets
-                    if (valueHome > 0.10)
-                        System.out.printf("   👉 H VALUE=%.2f%%%n", valueHome * 100);
+// =====================
+// HOME
+// =====================
+// 🔥 konverter dato EN gang
+                    DateTimeFormatter input = DateTimeFormatter.ofPattern("dd.MM.yyyy");
+                    DateTimeFormatter output = DateTimeFormatter.ofPattern("yyyy-MM-dd");
 
-                    if (valueDraw > 0.10)
-                        System.out.printf("   👉 D VALUE=%.2f%%%n", valueDraw * 100);
+                    LocalDate date = LocalDate.parse(mo.matchDate, input);
+                    String matchDate = date.format(output);
 
-                    if (valueAway > 0.10)
-                        System.out.printf("   👉 A VALUE=%.2f%%%n", valueAway * 100);
+// 🔥 finn beste value
+                    double bestValue = valueHome;
+                    String bestType = "HOME";
+
+                    if (valueDraw > bestValue) {
+                        bestValue = valueDraw;
+                        bestType = "DRAW";
+                    }
+
+                    if (valueAway > bestValue) {
+                        bestValue = valueAway;
+                        bestType = "AWAY";
+                    }
+
+// 🔥 kun hvis faktisk value
+                    if (bestValue > 0.01) {
+
+                        System.out.printf(
+                                "   👉 %s VALUE=%.2f%%%n",
+                                bestType,
+                                bestValue * 100
+                        );
+
+                        ValueBetRecord v = new ValueBetRecord(
+                                mo.home, mo.away,
+                                oddsHome, oddsDraw, oddsAway,
+                                bestType,
+                                bestValue
+                        );
+
+                        v.matchDate = matchDate;
+
+                        DatabaseManager.saveValueBet(conn, v);
+                    }
                 }
+
 
                 System.out.println("\n=== FERDIG ===\n");
             }
 
-        }
+            }
         scanner.close();
     }
 

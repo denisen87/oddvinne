@@ -34,6 +34,7 @@ public class Preoddsloader {
                 }
 
                 try {
+                    String commence = parts[1];
                     String home = parts[5].trim();
                     String away = parts[6].trim();
                     String market = parts[7].trim();
@@ -59,7 +60,7 @@ public class Preoddsloader {
                     // 🔥 filter kun h2h
                     if (!market.toLowerCase().contains("h2h")) continue;
 
-                    list.add(new OddsRow(home, away, label, price));
+                    list.add(new OddsRow(home, away, label, price, commence));
 
                 } catch (Exception e) {
                     System.out.println("SKIP (parse error): " + line);
