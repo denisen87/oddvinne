@@ -25,7 +25,9 @@ public class CsvHistoricalLoader {
                             || l.contains("bra")
                             || l.contains("brazil")
                             || l.contains("arg")
-                            || l.contains("argentina");
+                            || l.contains("argentina")
+                            || l.contains("fin")
+                            || l.contains("finland");
 
             boolean isStandardFormat = !isCustomFormat;
 

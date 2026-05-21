@@ -41,11 +41,31 @@ public class Preoddsloader {
                     String label = parts[8].trim();
 
                     // 🔥 håndter ødelagt price (2;39 case)
-                    String priceRaw = parts[10].trim();
+                    String priceRaw = "";
 
-                    if (priceRaw.isEmpty() && parts.length > 11) {
-                        priceRaw = parts[10] + "." + parts[11];
+// prøv flere mulige kolonner
+                    if (parts.length > 10 && !parts[10].trim().isEmpty()) {
+                        priceRaw = parts[10].trim();
                     }
+                    else if (parts.length > 9 && !parts[9].trim().isEmpty()) {
+                        priceRaw = parts[9].trim();
+                    }
+                    else if (parts.length > 11 && !parts[10].trim().isEmpty() && !parts[11].trim().isEmpty()) {
+                        priceRaw = parts[10].trim() + "." + parts[11].trim();
+                    }
+
+// clean
+                    priceRaw = priceRaw
+                            .replace("\"", "")
+                            .replace(",", ".")
+                            .trim();
+
+                    if (priceRaw.isEmpty()) {
+                        System.out.println("SKIP (no price): " + line);
+                        continue;
+                    }
+
+
 
                     // 🔥 clean price
                     priceRaw = priceRaw

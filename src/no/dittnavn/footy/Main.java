@@ -36,7 +36,6 @@ import no.dittnavn.footy.integration.playars.TeamIdMapper;
 import no.dittnavn.footy.stats.StatsRepository;
 import no.dittnavn.footy.analysis.EloPredictor;
 import no.dittnavn.footy.analysis.odds.OddsConverter;
-import no.dittnavn.footy.analysis.ensemble.EnsemblePredictor;
 
 import java.util.ArrayList;
 
@@ -70,6 +69,7 @@ import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import no.dittnavn.footy.loader.OddsGrouper;
 import no.dittnavn.footy.model.MatchOdds;
+import no.dittnavn.footy.analysis.EnsemblePredictor;
 
 
 public class Main {
@@ -671,7 +671,7 @@ public class Main {
 
                     // 5️⃣ AI lærer av realiteten
                     learning.learnFromReality(lastPrediction.toMatchRecord());
-
+/*
                     ensemble.updatePerformance(
                             lastPrediction.neuralProbs,
                             lastPrediction.eloProbs,
@@ -681,6 +681,8 @@ public class Main {
                             actualDraw,
                             actualAway
                     );
+
+ */
                 }
 
                 // oppdater tracker
@@ -778,14 +780,9 @@ public class Main {
                 String homeJson = FootballDataPlayerClient.getTeamPlayers(homeId);
                 String awayJson = FootballDataPlayerClient.getTeamPlayers(awayId);
 
-                System.out.print("Odds hjemmeseier: ");
-                double oddsHome = Double.parseDouble(scanner.nextLine());
-
-                System.out.print("Odds uavgjort: ");
-                double oddsDraw = Double.parseDouble(scanner.nextLine());
-
-                System.out.print("Odds borteseier: ");
-                double oddsAway = Double.parseDouble(scanner.nextLine());
+                double oddsHome = readDouble(scanner, "Odds hjemmeseier: ");
+                double oddsDraw = readDouble(scanner, "Odds uavgjort: ");
+                double oddsAway = readDouble(scanner, "Odds borteseier: ");
 
 
                 System.out.println("DEBUG home: " + homeInput);
@@ -857,7 +854,7 @@ public class Main {
                 printProbs("Bookmaker", oddsProbs);
 
                 // 🔥 4) Ensemble
-
+/*
                 double finalHome =
                         0.45 * oddsProbs[0] +
                                 0.20 * poissonProbs[0] +
@@ -878,6 +875,9 @@ public class Main {
 
                 double[] finalProbs = {finalHome, finalDraw, finalAway};
 
+
+
+
                 finalDraw *= 0.92;
 
                 double sum = finalHome + finalDraw + finalAway;
@@ -886,11 +886,26 @@ public class Main {
                 finalDraw /= sum;
                 finalAway /= sum;
 
+
                 finalProbs = new double[]{finalHome, finalDraw, finalAway};
-/*
+
+ */
+
+                double[] finalProbs = EnsemblePredictor.calculateFinalProbs(
+                        homeStats,
+                        awayStats,
+                        oddsHome,
+                        oddsDraw,
+                        oddsAway,
+                        weights,
+                        neural
+                );
+
                 double finalHome = finalProbs[0];
                 double finalDraw = finalProbs[1];
                 double finalAway = finalProbs[2];
+
+/*
 
                 double shrink = 0.85;
 
@@ -906,13 +921,6 @@ public class Main {
                 printProbs("Final", finalProbs);
 
                 // --- DRAW CALIBRATION ---
-                finalProbs[1] *= 0.92;   // reduser draw med 8%
-
-// re-normaliser slik at summen = 1
-                sum = finalProbs[0] + finalProbs[1] + finalProbs[2];
-                finalProbs[0] /= sum;
-                finalProbs[1] /= sum;
-                finalProbs[2] /= sum;
 
                 double confidence = modelAgreementScore(
                         poissonProbs,
@@ -944,6 +952,7 @@ public class Main {
                 double valueHome = analyzer.calculateValue(finalHome, oddsHome);
                 double valueDraw = analyzer.calculateValue(finalDraw, oddsDraw);
                 double valueAway = analyzer.calculateValue(finalAway, oddsAway);
+
 
                 System.out.println("\n=== VALUE ANALYSE ===");
                 System.out.printf("Hjemmeseier value: %.3f\n", valueHome);
@@ -978,6 +987,7 @@ public class Main {
                 homeInput = TeamNameNormalizer.normalize(homeInput);
                 awayInput = TeamNameNormalizer.normalize(awayInput);
 
+
 // 🔹 3️⃣ Opprett record
 
 // 🔹 4️⃣ Lag PredictionRecord (learning)
@@ -994,6 +1004,7 @@ public class Main {
                         bet,        // ← STRING først
                         stake,      // ← double etter
                         confidence
+
                 );
 
                 predictionRecord.neuralProbs = neuralProbs;
@@ -1016,6 +1027,7 @@ public class Main {
                 int id = DatabaseManager.savePrediction(dbRecord);
                 predictionRecord.dbId = id;
 
+
 // 🔹 simulering
                 SimulationResult Actualresult =
                         analysis.simulateMatch(
@@ -1027,7 +1039,13 @@ public class Main {
 
                 System.out.println("\n=== SIMULERING 1000 KAMPER ===");
                 System.out.println(Actualresult);
+/*
+                System.out.println("FINAL PROBS NOW:");
+                System.out.println(finalHome + " " + finalDraw + " " + finalAway);
+
+ */
             }
+
 
 
             else if (valg == 4) {
@@ -1177,6 +1195,14 @@ public class Main {
                 odds.addAll(Preoddsloader.load("data/NORpre.csv"));
                 odds.addAll(Preoddsloader.load("data/F1pre.csv"));
                 odds.addAll(Preoddsloader.load("data/D1pre.csv"));
+                odds.addAll(Preoddsloader.load("data/EL1pre.csv"));
+                odds.addAll(Preoddsloader.load("data/EL2pre.csv"));
+                odds.addAll(Preoddsloader.load("data/SP2pre.csv"));
+                odds.addAll(Preoddsloader.load("data/SC1pre.csv"));
+                odds.addAll(Preoddsloader.load("data/Belpre.csv"));
+                odds.addAll(Preoddsloader.load("data/FINpre.csv"));
+                odds.addAll(Preoddsloader.load("data/N1pre.csv"));
+
 
 
                 List<MatchOdds> matchesOdds = OddsGrouper.group(odds);
@@ -1204,22 +1230,33 @@ public class Main {
                     }
 
                     // 🔥 ELO
+                    /*
                     EloPredictor elo = new EloPredictor();
                     double[] eloProbs = elo.predict(homeStats, awayStats);
 
+                     */
+
                     // 🔥 odds → prob
-                    OddsConverter oddsConv = new OddsConverter();
-                    double[] oddsProbs = oddsConv.fromOdds(oddsHome, oddsDraw, oddsAway);
+
 
                     // 🔥 enkel ensemble (kan forbedres senere)
-                    double finalHome = 0.6 * oddsProbs[0] + 0.4 * eloProbs[0];
-                    double finalDraw = 0.6 * oddsProbs[1] + 0.4 * eloProbs[1];
-                    double finalAway = 0.6 * oddsProbs[2] + 0.4 * eloProbs[2];
+                    if (homeStats == null || awayStats == null) {
+                        continue;
+                    }
+                    double[] finalProbs = EnsemblePredictor.calculateFinalProbs(
+                            homeStats,
+                            awayStats,
+                            oddsHome,
+                            oddsDraw,
+                            oddsAway,
+                            weights,
+                            neural
+                    );
 
-                    double sum = finalHome + finalDraw + finalAway;
-                    finalHome /= sum;
-                    finalDraw /= sum;
-                    finalAway /= sum;
+                    double finalHome = finalProbs[0];
+                    double finalDraw = finalProbs[1];
+                    double finalAway = finalProbs[2];
+
 
                     // 🔥 value
                     OddsAnalyzer analyzer = new OddsAnalyzer();
@@ -1287,6 +1324,7 @@ public class Main {
 
             }
         scanner.close();
+
     }
 
 
@@ -1303,9 +1341,11 @@ public class Main {
         }
     }
 
-    private static double readDouble(Scanner scanner){
+    private static double readDouble(Scanner scanner, String message){
         while(true){
             try{
+                System.out.print(message);
+
                 String input = scanner.nextLine().trim();
 
                 if(input.isEmpty()){

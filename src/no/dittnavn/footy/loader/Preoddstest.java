@@ -19,6 +19,15 @@ public class Preoddstest {
         odds.addAll(Preoddsloader.load("data/NORpre.csv")); // Eliteserien
         odds.addAll(Preoddsloader.load("data/F1pre.csv")); // Ligue1
         odds.addAll(Preoddsloader.load("data/D1pre.csv")); // Bundesliga
+        odds.addAll(Preoddsloader.load("data/EL1pre.csv")); // League one
+        odds.addAll(Preoddsloader.load("data/EL2pre.csv")); // League two
+        odds.addAll(Preoddsloader.load("data/SP2pre.csv")); // segunda league
+        odds.addAll(Preoddsloader.load("data/SC1pre.csv")); // skotsk premierleague
+        odds.addAll(Preoddsloader.load("data/Belpre.csv")); // JupilerLeague
+        odds.addAll(Preoddsloader.load("data/N1pre.csv")); // Eresdivisjon2
+        odds.addAll(Preoddsloader.load("data/FINpre.csv")); // veikausligaen
+
+
 
         // ✅ LAG MATCHES HER
         List<MatchOdds> matches = OddsGrouper.group(odds);
