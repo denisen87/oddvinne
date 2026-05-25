@@ -40,7 +40,7 @@ public class DatabaseManager {
 
             Connection conn = connect();
             Statement stmt = conn.createStatement();
-
+// oppretter de ulike sql tabellene med ulike typer formater,
             stmt.executeUpdate("""
 CREATE TABLE IF NOT EXISTS historical_matches (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -143,7 +143,6 @@ CREATE TABLE IF NOT EXISTS value_bets (
     odds_home REAL,
     odds_draw REAL,
     odds_away REAL,
-    timestamp TEXT,
     timestamp TEXT
     UNIQUE(home, away, match_date, bet_type)
 )
@@ -632,6 +631,29 @@ DO UPDATE SET
             ps.setString(9, v.matchDate);
 
             ps.executeUpdate();
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static void removeDuplicateValueBets() {
+
+        String sql = """
+        DELETE FROM value_bets
+        WHERE id NOT IN (
+            SELECT MIN(id)
+            FROM value_bets
+            GROUP BY home, away, match_date, bet_type
+        )
+    """;
+
+        try (Connection conn = connect();
+             PreparedStatement ps = conn.prepareStatement(sql)) {
+
+            int deleted = ps.executeUpdate();
+
+            System.out.println("Slettet duplikater: " + deleted);
 
         } catch (Exception e) {
             e.printStackTrace();

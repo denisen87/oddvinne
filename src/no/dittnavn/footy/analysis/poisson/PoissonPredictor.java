@@ -27,6 +27,22 @@ public class PoissonPredictor {
         double lambdaAway =
                 LEAGUE_AWAY_AVG * awayAttack * homeDefense;
 
+
+// 🔥 bruker ADVANCED FORM
+        double homeForm =
+                home.getAdvancedFormScore(true);
+
+        double awayForm =
+                away.getAdvancedFormScore(false);
+
+// 🔥 form boost
+        double formBoost =
+                1 + ((homeForm - awayForm) * 0.15);
+
+// 🔥 juster expected goals
+        lambdaHome *= formBoost;
+        lambdaAway /= formBoost;
+
         double pHome = 0.0;
         double pDraw = 0.0;
         double pAway = 0.0;

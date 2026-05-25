@@ -1,6 +1,6 @@
 package no.dittnavn.footy.loader;
 
-import no.dittnavn.footy.model.MatchOdds;
+import no.dittnavn.footy.scanner.MatchOdds;
 
 import java.util.*;
 
@@ -20,7 +20,14 @@ public class OddsGrouper {
             // opprett hvis ikke finnes
             if (!map.containsKey(key)) {
 
-                MatchOdds m = new MatchOdds(r.home, r.away);
+                MatchOdds m = new MatchOdds(
+                        r.commenceTime,
+                        r.home,
+                        r.away,
+                        0,
+                        0,
+                        0
+                );
 
                 // 🔥 SETT DATO HER
                 m.matchDate = r.commenceTime;

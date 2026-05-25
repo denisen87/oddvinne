@@ -1,14 +1,13 @@
 package no.dittnavn.footy.import2;
+
 import java.io.File;
 import java.sql.Connection;
 import java.util.List;
 import java.util.Map;
+
 import no.dittnavn.footy.loader.CsvHistoricalLoader;
-
 import no.dittnavn.footy.model.Match;
-import no.dittnavn.footy.loader.FootballDataLoader;
 import no.dittnavn.footy.db.DatabaseManager;
-
 
 public class DataImporter {
 
@@ -16,7 +15,7 @@ public class DataImporter {
 
         DatabaseManager.init();
 
-        importFootballData();   // 👈 start importen her
+        importFootballData();
     }
 
     private static void importFootballData() {
@@ -40,7 +39,9 @@ public class DataImporter {
                 Map.entry("F2", "Ligue2"),
                 Map.entry("SC2", "SkotskPremierchip"),
                 Map.entry("FIN", "FinskVeikausliga"),
-                Map.entry("Bel", "Jupilerleague")
+                Map.entry("Bel", "Jupilerleague"),
+                Map.entry("SWE", "Allsvenskan"),
+                Map.entry("Ire", "Premierchip")
         );
 
         try (Connection conn = DatabaseManager.getConnection()) {
@@ -50,28 +51,58 @@ public class DataImporter {
             for (String code : leagues.keySet()) {
 
                 String leagueName = leagues.get(code);
+
                 File file = new File("data/" + code + ".csv");
 
                 if (!file.exists()) {
-                    System.out.println("Fant ikke fil: " + file.getAbsolutePath());
+
+                    System.out.println(
+                            "Fant ikke fil: "
+                                    + file.getAbsolutePath()
+                    );
+
                     continue;
                 }
 
-                List<Match> matches = CsvHistoricalLoader.load(file.getPath(), code);
+                // 🔥 VIKTIG:
+                // send CODE inn til loader
+                List<Match> matches =
+                        CsvHistoricalLoader.load(
+                                file.getPath(),
+                                code
+                        );
 
-                System.out.println("Loaded (" + leagueName + "): " + matches.size());
+                System.out.println(
+                        "Loaded (" + leagueName + "): "
+                                + matches.size()
+                );
 
                 for (Match m : matches) {
+
+                    System.out.println(
+                            "SAVING -> "
+                                    + m.getHomeTeam()
+                                    + " vs "
+                                    + m.getAwayTeam()
+                                    + " | league="
+                                    + leagueName
+                    );
+
                     m.setLeague(leagueName);
+
                     DatabaseManager.saveHistoricalMatch(conn, m);
                 }
 
-                System.out.println("Import ferdig: " + leagueName);
+                System.out.println(
+                        "Import ferdig: "
+                                + leagueName
+                );
             }
 
             conn.commit();
 
         } catch (Exception e) {
+
             e.printStackTrace();
         }
     }

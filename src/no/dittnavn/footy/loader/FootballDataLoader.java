@@ -124,19 +124,74 @@ public class FootballDataLoader {
                 ));
 
                 // Pinnacle odds
-                m.setPsHome(parseDouble(get(row, index, "PSH")));
-                m.setPsDraw(parseDouble(get(row, index, "PSD")));
-                m.setPsAway(parseDouble(get(row, index, "PSA")));
+// Pinnacle odds
+                m.setPsHome(parseDouble(
+                        get(row, index, "PSH").isEmpty()
+                                ? get(row, index, "PSCH")
+                                : get(row, index, "PSH")
+                ));
+
+                m.setPsDraw(parseDouble(
+                        get(row, index, "PSD").isEmpty()
+                                ? get(row, index, "PSCD")
+                                : get(row, index, "PSD")
+                ));
+
+                m.setPsAway(parseDouble(
+                        get(row, index, "PSA").isEmpty()
+                                ? get(row, index, "PSCA")
+                                : get(row, index, "PSA")
+                ));
+
+                m.setPsDraw(parseDouble(
+                        get(row, index, "PSD").isEmpty()
+                                ? get(row, index, "PSCD")
+                                : get(row, index, "PSD")
+                ));
+
+                m.setPsAway(parseDouble(
+                        get(row, index, "PSA").isEmpty()
+                                ? get(row, index, "PSCA")
+                                : get(row, index, "PSA")
+                ));
 
                 // max odds
-                m.setMaxHome(parseDouble(get(row, index, "MaxH")));
-                m.setMaxDraw(parseDouble(get(row, index, "MaxD")));
-                m.setMaxAway(parseDouble(get(row, index, "MaxA")));
+                m.setMaxHome(parseDouble(
+                        get(row, index, "MaxH").isEmpty()
+                                ? get(row, index, "MaxCH")
+                                : get(row, index, "MaxH")
+                ));
+
+                m.setMaxDraw(parseDouble(
+                        get(row, index, "MaxD").isEmpty()
+                                ? get(row, index, "MaxCD")
+                                : get(row, index, "MaxD")
+                ));
+
+                m.setMaxAway(parseDouble(
+                        get(row, index, "MaxA").isEmpty()
+                                ? get(row, index, "MaxCA")
+                                : get(row, index, "MaxA")
+                ));
 
                 // average odds
-                m.setAvgHome(parseDouble(get(row, index, "AvgH")));
-                m.setAvgDraw(parseDouble(get(row, index, "AvgD")));
-                m.setAvgAway(parseDouble(get(row, index, "AvgA")));
+                m.setAvgHome(parseDouble(
+                        get(row, index, "AvgH").isEmpty()
+                                ? get(row, index, "AvgCH")
+                                : get(row, index, "AvgH")
+                ));
+
+                m.setAvgDraw(parseDouble(
+                        get(row, index, "AvgD").isEmpty()
+                                ? get(row, index, "AvgCD")
+                                : get(row, index, "AvgD")
+                ));
+
+                m.setAvgAway(parseDouble(
+                        get(row, index, "AvgA").isEmpty()
+                                ? get(row, index, "AvgCA")
+                                : get(row, index, "AvgA")
+                ));
 
                 matches.add(m);
             }

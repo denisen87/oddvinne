@@ -296,21 +296,155 @@ public class TeamStats {
                 ", elo=" + elo +
                 "]";
     }
-    public double getFormScore(){
+    public double getFormScore(){ // kan justere betydning av siste formutvikling
 
-        if(lastResults.isEmpty()) return 1.5;
+        if(lastResults.isEmpty()) return 0.5;
 
         double score = 0;
+        double totalWeight = 0;
 
+        double weight = 0.9; // bestemme hvor mye gamle kamper har å si, lavere weight dess mindre -
+// betydning gamle kamper har å si, men motsatt dess større betydning har nyere kamper å si
         for(TeamOutcome r : lastResults){
+
+            double points = 0;
+
             switch(r){
-                case WIN: score += 3; break;
-                case DRAW: score += 1; break;
-                case LOSS: score += 0; break;
+                case WIN: points = 3; break;
+                case DRAW: points = 1; break;
+                case LOSS: points = 0; break;
             }
+
+            score += points * weight;
+            totalWeight += 3 * weight;
+
+            // nyere kamper teller mer
+            weight *= 0.8;
         }
 
-        return score / (lastResults.size() * 3.0);
+        return score / totalWeight;
+    }
+
+    // bergene og justere betydning av et lags utvikling basert på prestasjoner,
+    public double getAdvancedFormScore(boolean isHome) {
+
+        // =========================
+        // BASE FORM
+        // =========================
+
+        double form = getFormScore();
+
+        double venueForm =
+                isHome
+                        ? getHomeFormScore()
+                        : getAwayFormScore();
+
+        // =========================
+        // SHOTS / PRESSURE
+        // =========================
+
+        double sotDiff =
+                getShotsOnTargetPerMatch()
+                        - getShotsOnTargetAgainstPerMatch();
+
+        double shotDiff =
+                getShotsPerMatch()
+                        - getShotsAgainstPerMatch();
+
+        double cornerDiff =
+                getCornersFor()
+                        - getCornersAgainst();
+
+        // =========================
+        // RECENT MOMENTUM
+        // =========================
+
+        double recentMomentum =
+                (getLastMatchSOT() - getLastMatchSOTAgainst()) * 0.6 +
+                        (getLastMatchShots() - getLastMatchShotsAgainst()) * 0.4;
+
+        // =========================
+        // GOAL MOMENTUM
+        // =========================
+
+        double goalDiff =
+                getGoalsScoredPerMatch()
+                        - getGoalsConcededPerMatch();
+
+        // =========================
+        // POSSESSION
+        // =========================
+
+        double possessionScore =
+                (getPossession() - 50.0) / 50.0;
+
+        // =========================
+        // TEAM DNA
+        // =========================
+
+        double dnaScore =
+                dna.getAttackIndex() * 0.30 +
+                        dna.getDefenseIndex() * 0.30 +
+                        dna.getTempoIndex() * 0.15 +
+                        dna.getComebackAbility() * 0.15 -
+                        dna.getChokeFactor() * 0.10;
+
+        // =========================
+        // TEAM PROFILE
+        // =========================
+
+        double profileScore =
+                profile.getCoachRating() * 0.30 +
+                        profile.getMotivation() * 0.30 -
+                        profile.getFatigue() * 0.20 -
+                        (profile.getInjuredPlayers() * 0.05) -
+                        (profile.getSuspendedPlayers() * 0.05);
+
+        // =========================
+        // ELO
+        // =========================
+
+        double eloScore =
+                (getElo() - 1500.0) / 1000.0;
+
+        // =========================
+        // NORMALIZATION
+        // =========================
+
+        sotDiff /= 5.0;
+        shotDiff /= 10.0;
+        cornerDiff /= 5.0;
+        recentMomentum /= 5.0;
+        goalDiff /= 3.0;
+
+        // =========================
+        // FINAL SCORE
+        // =========================
+
+        double score =
+
+                form * 0.20 +
+                        venueForm * 0.10 +
+
+                        sotDiff * 0.15 +
+                        shotDiff * 0.10 +
+                        cornerDiff * 0.05 +
+
+                        recentMomentum * 0.10 +
+                        goalDiff * 0.10 +
+
+                        possessionScore * 0.05 +
+
+                        dnaScore * 0.05 +
+                        profileScore * 0.05 +
+
+                        eloScore * 0.05;
+
+        // clamp
+        if(score < 0) score = 0;
+        if(score > 1) score = 1;
+
+        return score;
     }
 
     // =========================

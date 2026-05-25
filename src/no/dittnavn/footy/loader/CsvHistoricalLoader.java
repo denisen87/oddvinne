@@ -27,7 +27,12 @@ public class CsvHistoricalLoader {
                             || l.contains("arg")
                             || l.contains("argentina")
                             || l.contains("fin")
-                            || l.contains("finland");
+                            || l.contains("finland")
+                            || l.contains("swe")
+                            || l.contains("sweden")
+                            || l.contains("ire")
+                            || l.contains("ireland")
+                            || l.contains("Ire");
 
             boolean isStandardFormat = !isCustomFormat;
 
@@ -257,8 +262,14 @@ public class CsvHistoricalLoader {
     private static int findIndex(String[] headers, String... names) {
         for (String name : names) {
             for (int i = 0; i < headers.length; i++) {
-                if (headers[i].trim().equalsIgnoreCase(name)){
+                String clean =
+                        headers[i]
+                                .replace("\uFEFF", "")
+                                .trim();
+
+                if (clean.equalsIgnoreCase(name)){
                     return i;
+
                 }
             }
         }

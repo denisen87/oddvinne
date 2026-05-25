@@ -1,6 +1,6 @@
 package no.dittnavn.footy.service;
 
-import no.dittnavn.footy.model.MatchOdds;
+import no.dittnavn.footy.scanner.MatchOdds;
 
 public class ProbabilityModel {
 

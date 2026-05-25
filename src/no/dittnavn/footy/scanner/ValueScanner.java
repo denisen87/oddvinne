@@ -7,7 +7,7 @@ import no.dittnavn.footy.analysis.OddsAnalyzer;
 import no.dittnavn.footy.analysis.ProbabilityAnalysis;
 import no.dittnavn.footy.stats.StatsIndeks;
 import no.dittnavn.footy.stats.TeamStats;
-import no.dittnavn.footy.model.MatchOdds;
+import no.dittnavn.footy.scanner.MatchOdds;
 import no.dittnavn.footy.analysis.learning.ModelWeights;
 
 public class ValueScanner {
