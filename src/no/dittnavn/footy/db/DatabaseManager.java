@@ -84,6 +84,11 @@ CREATE TABLE IF NOT EXISTS historical_matches (
     avgDraw REAL,
     avgAway REAL,
     UNIQUE(date, homeTeam, awayTeam, league)
+    
+    homePossession,
+    awayPossession,
+    homeDangerous
+    awayDangerous
 )
 """);
 
@@ -393,6 +398,7 @@ DO UPDATE SET
         }
     }
 
+
     public static void saveHistoricalMatch(Connection conn, Match m) {
 
 
@@ -408,9 +414,16 @@ INSERT INTO historical_matches(
     homeOdds, drawOdds, awayOdds,
     psHome, psDraw, psAway,
     maxHome, maxDraw, maxAway,
-    avgHome, avgDraw, avgAway,homeFouls, awayFouls
+    avgHome, avgDraw, avgAway,
+                    homeFouls, awayFouls,
+                
+                    homePossession,
+                    awayPossession,
+                
+                    homeDangerous,
+                    awayDangerous
 )
-VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
 ON CONFLICT(date, homeTeam, awayTeam, league)
 DO UPDATE SET
     homeOdds = excluded.homeOdds,
@@ -487,6 +500,12 @@ DO UPDATE SET
 
             ps.setInt(i++, m.getHomeFouls());
             ps.setInt(i++, m.getAwayFouls());
+
+            ps.setInt(i++, m.getHomePossession());
+            ps.setInt(i++, m.getAwayPossession());
+
+            ps.setInt(i++, m.getHomeDangerous());
+            ps.setInt(i++, m.getAwayDangerous());
 
             ps.executeUpdate();
 

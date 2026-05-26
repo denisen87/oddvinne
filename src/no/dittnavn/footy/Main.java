@@ -1294,8 +1294,9 @@ public class Main {
                         //"NOR",
                         //"F1",
                         //"SWE",
-                          "BRA",
-                          "IRE"
+                          //"BRA",
+                          //"IRE",
+                           "FIN",
                 };
 
                 // ===== SCRAPE =====
@@ -1356,6 +1357,9 @@ public class Main {
 
                 flashMatches.addAll(
                         FlashPreOddsLoader.load("data/BRApreflash.csv")
+                );
+                flashMatches.addAll(
+                        FlashPreOddsLoader.load("data/FINpreflash.csv")
                 );
 
                 // ===== SCAN VALUEBETS =====

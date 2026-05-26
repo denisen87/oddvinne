@@ -168,7 +168,7 @@
         "totalShotsAgainst": 754.0,
         "shotsPerMatch": 15.636363636363637,
         "shotsAgainstPerMatch": 11.424242424242424,
-        "elo": 1564.8735185722678,
+        "elo": 1564.9055950125517,
         "recentHomeResults": [
           "LOSS",
           "WIN",
@@ -1242,7 +1242,7 @@
         "totalShotsAgainst": 1304.0,
         "shotsPerMatch": 10.8,
         "shotsAgainstPerMatch": 14.488888888888889,
-        "elo": 1487.1559097746365,
+        "elo": 1486.4050956920687,
         "recentHomeResults": [
           "LOSS",
           "DRAW",
@@ -1281,7 +1281,7 @@
       },
       "millwall": {
         "name": "millwall",
-        "games": 137,
+        "games": 138,
         "wins": 46,
         "draws": 22,
         "losses": 22,
@@ -1314,9 +1314,9 @@
         "lastMatchCornersAgainst": 2.0,
         "totalShots": 1150.0,
         "totalShotsAgainst": 1156.0,
-        "shotsPerMatch": 8.394160583941606,
-        "shotsAgainstPerMatch": 8.437956204379562,
-        "elo": 1602.5660695817353,
+        "shotsPerMatch": 8.333333333333334,
+        "shotsAgainstPerMatch": 8.376811594202898,
+        "elo": 1598.7675517516657,
         "recentHomeResults": [
           "WIN",
           "LOSS",
@@ -1464,7 +1464,7 @@
         "totalShotsAgainst": 1422.0,
         "shotsPerMatch": 10.955555555555556,
         "shotsAgainstPerMatch": 15.8,
-        "elo": 1469.7952142161346,
+        "elo": 1469.1243554132086,
         "recentHomeResults": [
           "WIN",
           "LOSS",
@@ -2319,7 +2319,7 @@
       },
       "southampton": {
         "name": "southampton",
-        "games": 135,
+        "games": 136,
         "wins": 42,
         "draws": 26,
         "losses": 20,
@@ -2352,9 +2352,9 @@
         "lastMatchCornersAgainst": 3.0,
         "totalShots": 1262.0,
         "totalShotsAgainst": 1074.0,
-        "shotsPerMatch": 9.348148148148148,
-        "shotsAgainstPerMatch": 7.955555555555556,
-        "elo": 1621.9748863542861,
+        "shotsPerMatch": 9.279411764705882,
+        "shotsAgainstPerMatch": 7.897058823529412,
+        "elo": 1623.7175462677994,
         "recentHomeResults": [
           "DRAW",
           "WIN",
@@ -2854,7 +2854,7 @@
         "totalShotsAgainst": 830.0,
         "shotsPerMatch": 6.730769230769231,
         "shotsAgainstPerMatch": 7.980769230769231,
-        "elo": 1519.1760972870472,
+        "elo": 1519.0963934413346,
         "recentHomeResults": [
           "DRAW",
           "DRAW",
@@ -3410,7 +3410,7 @@
         "totalShotsAgainst": 1220.0,
         "shotsPerMatch": 7.352941176470588,
         "shotsAgainstPerMatch": 8.970588235294118,
-        "elo": 1553.2823363487043,
+        "elo": 1552.7696132951787,
         "recentHomeResults": [
           "WIN",
           "LOSS",
@@ -3558,7 +3558,7 @@
         "totalShotsAgainst": 786.0,
         "shotsPerMatch": 12.969696969696969,
         "shotsAgainstPerMatch": 11.909090909090908,
-        "elo": 1475.7718714725756,
+        "elo": 1475.8062330209063,
         "recentHomeResults": [
           "LOSS",
           "LOSS",
@@ -8432,7 +8432,7 @@
         "totalShotsAgainst": 816.0,
         "shotsPerMatch": 12.636363636363637,
         "shotsAgainstPerMatch": 12.363636363636363,
-        "elo": 1470.1190552043215,
+        "elo": 1470.154733894691,
         "recentHomeResults": [
           "WIN",
           "DRAW",
@@ -9858,7 +9858,7 @@
         "totalShotsAgainst": 860.0,
         "shotsPerMatch": 13.882352941176471,
         "shotsAgainstPerMatch": 12.647058823529411,
-        "elo": 1537.6007612347623,
+        "elo": 1537.5234278219416,
         "recentHomeResults": [
           "DRAW",
           "DRAW",
@@ -10228,7 +10228,7 @@
         "totalShotsAgainst": 910.0,
         "shotsPerMatch": 15.0,
         "shotsAgainstPerMatch": 10.340909090909092,
-        "elo": 1590.989863851239,
+        "elo": 1590.217267933084,
         "recentHomeResults": [
           "DRAW",
           "WIN",
@@ -11565,7 +11565,7 @@
       },
       "middlesbrough": {
         "name": "middlesbrough",
-        "games": 137,
+        "games": 139,
         "wins": 44,
         "draws": 26,
         "losses": 20,
@@ -11598,9 +11598,9 @@
         "lastMatchCornersAgainst": 3.0,
         "totalShots": 1464.0,
         "totalShotsAgainst": 898.0,
-        "shotsPerMatch": 10.686131386861314,
-        "shotsAgainstPerMatch": 6.554744525547445,
-        "elo": 1572.298882699734,
+        "shotsPerMatch": 10.532374100719425,
+        "shotsAgainstPerMatch": 6.460431654676259,
+        "elo": 1566.4688941479092,
         "recentHomeResults": [
           "WIN",
           "WIN",
@@ -12026,7 +12026,7 @@
         "totalShotsAgainst": 1136.0,
         "shotsPerMatch": 12.133333333333333,
         "shotsAgainstPerMatch": 12.622222222222222,
-        "elo": 1513.6303974582506,
+        "elo": 1512.9508019171562,
         "recentHomeResults": [
           "LOSS",
           "DRAW",
@@ -12100,7 +12100,7 @@
         "totalShotsAgainst": 0.0,
         "shotsPerMatch": 0.0,
         "shotsAgainstPerMatch": 0.0,
-        "elo": 1493.1550579190089,
+        "elo": 1483.4425859502828,
         "recentHomeResults": [],
         "recentAwayResults": [],
         "dna": {
@@ -12490,7 +12490,7 @@
         "totalShotsAgainst": 1030.0,
         "shotsPerMatch": 11.511111111111111,
         "shotsAgainstPerMatch": 11.444444444444445,
-        "elo": 1485.7557530820484,
+        "elo": 1485.0994658533252,
         "recentHomeResults": [
           "DRAW",
           "DRAW",
@@ -12564,7 +12564,7 @@
         "totalShotsAgainst": 1044.0,
         "shotsPerMatch": 8.058823529411764,
         "shotsAgainstPerMatch": 7.676470588235294,
-        "elo": 1486.5833751393993,
+        "elo": 1485.9399925544392,
         "recentHomeResults": [
           "WIN",
           "WIN",
@@ -13712,7 +13712,7 @@
         "totalShotsAgainst": 744.0,
         "shotsPerMatch": 8.773584905660377,
         "shotsAgainstPerMatch": 7.018867924528302,
-        "elo": 1489.9179848924562,
+        "elo": 1489.9677382715083,
         "recentHomeResults": [
           "LOSS",
           "LOSS",
@@ -15744,7 +15744,7 @@
       },
       "afc bournemouth": {
         "name": "afc bournemouth",
-        "games": 38,
+        "games": 37,
         "wins": 0,
         "draws": 0,
         "losses": 0,
@@ -15779,7 +15779,7 @@
         "totalShotsAgainst": 0.0,
         "shotsPerMatch": 0.0,
         "shotsAgainstPerMatch": 0.0,
-        "elo": 1551.945853993575,
+        "elo": 1550.0586240451307,
         "recentHomeResults": [],
         "recentAwayResults": [],
         "dna": {
@@ -16317,7 +16317,7 @@
         "totalShotsAgainst": 1154.0,
         "shotsPerMatch": 12.666666666666666,
         "shotsAgainstPerMatch": 12.822222222222223,
-        "elo": 1449.259653314572,
+        "elo": 1448.6148960837704,
         "recentHomeResults": [
           "DRAW",
           "DRAW",
@@ -16391,7 +16391,7 @@
         "totalShotsAgainst": 1142.0,
         "shotsPerMatch": 10.844444444444445,
         "shotsAgainstPerMatch": 12.688888888888888,
-        "elo": 1536.2364713176337,
+        "elo": 1535.5649041742392,
         "recentHomeResults": [
           "WIN",
           "WIN",
@@ -16521,7 +16521,7 @@
         "totalShotsAgainst": 814.0,
         "shotsPerMatch": 12.823529411764707,
         "shotsAgainstPerMatch": 11.970588235294118,
-        "elo": 1529.7284871836819,
+        "elo": 1529.772647490776,
         "recentHomeResults": [
           "WIN",
           "WIN",
@@ -17891,7 +17891,7 @@
         "totalShotsAgainst": 832.0,
         "shotsPerMatch": 12.617647058823529,
         "shotsAgainstPerMatch": 12.235294117647058,
-        "elo": 1500.5605441514017,
+        "elo": 1500.595151182951,
         "recentHomeResults": [
           "WIN",
           "DRAW",
@@ -17965,7 +17965,7 @@
         "totalShotsAgainst": 1042.0,
         "shotsPerMatch": 9.205882352941176,
         "shotsAgainstPerMatch": 7.661764705882353,
-        "elo": 1459.0362476400476,
+        "elo": 1458.3739100184841,
         "recentHomeResults": [
           "LOSS",
           "DRAW",
@@ -21350,7 +21350,7 @@
         "totalShotsAgainst": 1244.0,
         "shotsPerMatch": 12.066666666666666,
         "shotsAgainstPerMatch": 13.822222222222223,
-        "elo": 1462.6494923177006,
+        "elo": 1462.0916060054085,
         "recentHomeResults": [
           "WIN",
           "LOSS",
@@ -22536,7 +22536,7 @@
         "totalShotsAgainst": 1046.0,
         "shotsPerMatch": 16.288888888888888,
         "shotsAgainstPerMatch": 11.622222222222222,
-        "elo": 1616.5868121987048,
+        "elo": 1615.8967700788587,
         "recentHomeResults": [
           "WIN",
           "WIN",
@@ -22758,7 +22758,7 @@
         "totalShotsAgainst": 1082.0,
         "shotsPerMatch": 12.733333333333333,
         "shotsAgainstPerMatch": 12.022222222222222,
-        "elo": 1473.8316692771002,
+        "elo": 1473.1729998584483,
         "recentHomeResults": [
           "LOSS",
           "LOSS",
@@ -22980,7 +22980,7 @@
         "totalShotsAgainst": 0.0,
         "shotsPerMatch": 0.0,
         "shotsAgainstPerMatch": 0.0,
-        "elo": 1478.5730396741342,
+        "elo": 1478.2855116428602,
         "recentHomeResults": [],
         "recentAwayResults": [],
         "dna": {
@@ -23536,7 +23536,7 @@
         "totalShotsAgainst": 722.0,
         "shotsPerMatch": 7.254901960784314,
         "shotsAgainstPerMatch": 7.078431372549019,
-        "elo": 1479.0131330871272,
+        "elo": 1478.9639121125426,
         "recentHomeResults": [
           "DRAW",
           "WIN",
@@ -24483,7 +24483,7 @@
       },
       "manchester city": {
         "name": "manchester city",
-        "games": 104,
+        "games": 103,
         "wins": 42,
         "draws": 14,
         "losses": 10,
@@ -24516,9 +24516,9 @@
         "lastMatchCornersAgainst": 3.0,
         "totalShots": 1008.0,
         "totalShotsAgainst": 646.0,
-        "shotsPerMatch": 9.692307692307692,
-        "shotsAgainstPerMatch": 6.211538461538462,
-        "elo": 1655.3423714170176,
+        "shotsPerMatch": 9.78640776699029,
+        "shotsAgainstPerMatch": 6.271844660194175,
+        "elo": 1660.403723852605,
         "recentHomeResults": [
           "WIN",
           "DRAW",
@@ -24740,7 +24740,7 @@
         "totalShotsAgainst": 842.0,
         "shotsPerMatch": 11.181818181818182,
         "shotsAgainstPerMatch": 12.757575757575758,
-        "elo": 1424.6226681632868,
+        "elo": 1424.7861381558214,
         "recentHomeResults": [
           "DRAW",
           "LOSS",
@@ -25018,7 +25018,7 @@
         "totalShotsAgainst": 0.0,
         "shotsPerMatch": 0.0,
         "shotsAgainstPerMatch": 0.0,
-        "elo": 1576.0746528876157,
+        "elo": 1585.8383464477638,
         "recentHomeResults": [],
         "recentAwayResults": [],
         "dna": {
@@ -25796,7 +25796,7 @@
         "totalShotsAgainst": 962.0,
         "shotsPerMatch": 6.326923076923077,
         "shotsAgainstPerMatch": 9.25,
-        "elo": 1505.5549515912105,
+        "elo": 1505.5983623230716,
         "recentHomeResults": [
           "WIN",
           "LOSS",
@@ -26092,7 +26092,7 @@
         "totalShotsAgainst": 1162.0,
         "shotsPerMatch": 11.155555555555555,
         "shotsAgainstPerMatch": 12.911111111111111,
-        "elo": 1452.5870463072647,
+        "elo": 1451.9179351949797,
         "recentHomeResults": [
           "LOSS",
           "LOSS",
@@ -26166,7 +26166,7 @@
         "totalShotsAgainst": 906.0,
         "shotsPerMatch": 7.0,
         "shotsAgainstPerMatch": 8.711538461538462,
-        "elo": 1502.5876519209305,
+        "elo": 1502.5076966118338,
         "recentHomeResults": [
           "LOSS",
           "WIN",
@@ -27316,7 +27316,7 @@
         "totalShotsAgainst": 1184.0,
         "shotsPerMatch": 8.044117647058824,
         "shotsAgainstPerMatch": 8.705882352941176,
-        "elo": 1479.1214482318758,
+        "elo": 1478.4428671386897,
         "recentHomeResults": [
           "LOSS",
           "WIN",
@@ -28753,7 +28753,7 @@
         "totalShotsAgainst": 0.0,
         "shotsPerMatch": 0.0,
         "shotsAgainstPerMatch": 0.0,
-        "elo": 1412.4699829608248,
+        "elo": 1412.7062894006767,
         "recentHomeResults": [],
         "recentAwayResults": [],
         "dna": {
@@ -29255,7 +29255,7 @@
         "totalShotsAgainst": 1104.0,
         "shotsPerMatch": 8.838235294117647,
         "shotsAgainstPerMatch": 8.117647058823529,
-        "elo": 1477.870446838035,
+        "elo": 1477.2087595705318,
         "recentHomeResults": [
           "LOSS",
           "LOSS",
@@ -31533,7 +31533,7 @@
         "totalShotsAgainst": 952.0,
         "shotsPerMatch": 13.4,
         "shotsAgainstPerMatch": 10.577777777777778,
-        "elo": 1491.4653405049228,
+        "elo": 1490.7742321618243,
         "recentHomeResults": [
           "DRAW",
           "WIN",
@@ -31681,7 +31681,7 @@
         "totalShotsAgainst": 744.0,
         "shotsPerMatch": 9.961538461538462,
         "shotsAgainstPerMatch": 7.153846153846154,
-        "elo": 1544.5965422967934,
+        "elo": 1544.755746928437,
         "recentHomeResults": [
           "WIN",
           "DRAW",
@@ -32385,7 +32385,7 @@
         "totalShotsAgainst": 0.0,
         "shotsPerMatch": 0.0,
         "shotsAgainstPerMatch": 0.0,
-        "elo": 1482.9176405377075,
+        "elo": 1482.8641265900767,
         "recentHomeResults": [],
         "recentAwayResults": [],
         "dna": {
@@ -34539,7 +34539,7 @@
         "totalShotsAgainst": 784.0,
         "shotsPerMatch": 7.884615384615385,
         "shotsAgainstPerMatch": 7.538461538461538,
-        "elo": 1489.895137348393,
+        "elo": 1490.045599375651,
         "recentHomeResults": [
           "WIN",
           "LOSS",
@@ -34578,7 +34578,7 @@
       },
       "hull city": {
         "name": "hull city",
-        "games": 47,
+        "games": 49,
         "wins": 0,
         "draws": 0,
         "losses": 0,
@@ -34613,7 +34613,7 @@
         "totalShotsAgainst": 0.0,
         "shotsPerMatch": 0.0,
         "shotsAgainstPerMatch": 0.0,
-        "elo": 1525.261241551772,
+        "elo": 1547.060052140724,
         "recentHomeResults": [],
         "recentAwayResults": [],
         "dna": {
@@ -34947,7 +34947,7 @@
         "totalShotsAgainst": 970.0,
         "shotsPerMatch": 13.644444444444444,
         "shotsAgainstPerMatch": 10.777777777777779,
-        "elo": 1514.7785165372566,
+        "elo": 1514.1003278993883,
         "recentHomeResults": [
           "WIN",
           "WIN",
@@ -36613,7 +36613,7 @@
         "totalShotsAgainst": 1340.0,
         "shotsPerMatch": 11.266666666666667,
         "shotsAgainstPerMatch": 14.88888888888889,
-        "elo": 1518.6657140516968,
+        "elo": 1517.9827274790898,
         "recentHomeResults": [
           "DRAW",
           "DRAW",
@@ -36947,7 +36947,7 @@
         "totalShotsAgainst": 1418.0,
         "shotsPerMatch": 8.6,
         "shotsAgainstPerMatch": 15.755555555555556,
-        "elo": 1322.6839669377337,
+        "elo": 1322.0829510650158,
         "recentHomeResults": [
           "DRAW",
           "DRAW",
@@ -37330,7 +37330,7 @@
         "totalShotsAgainst": 992.0,
         "shotsPerMatch": 10.333333333333334,
         "shotsAgainstPerMatch": 15.030303030303031,
-        "elo": 1463.0184207422888,
+        "elo": 1463.0523417495622,
         "recentHomeResults": [
           "WIN",
           "DRAW",
@@ -38805,7 +38805,7 @@
         "totalShotsAgainst": 1142.0,
         "shotsPerMatch": 5.849056603773585,
         "shotsAgainstPerMatch": 10.773584905660377,
-        "elo": 1331.231882789326,
+        "elo": 1331.3089934926677,
         "recentHomeResults": [
           "LOSS",
           "LOSS",
@@ -39287,7 +39287,7 @@
         "totalShotsAgainst": 530.0,
         "shotsPerMatch": 9.192307692307692,
         "shotsAgainstPerMatch": 5.096153846153846,
-        "elo": 1655.702986422849,
+        "elo": 1655.7823428433694,
         "recentHomeResults": [
           "LOSS",
           "WIN",
@@ -39509,7 +39509,7 @@
         "totalShotsAgainst": 840.0,
         "shotsPerMatch": 8.153846153846153,
         "shotsAgainstPerMatch": 8.076923076923077,
-        "elo": 1564.2348893531278,
+        "elo": 1560.413054069631,
         "recentHomeResults": [
           "WIN",
           "WIN",
@@ -39731,7 +39731,7 @@
         "totalShotsAgainst": 928.0,
         "shotsPerMatch": 9.303030303030303,
         "shotsAgainstPerMatch": 14.06060606060606,
-        "elo": 1396.9754665599737,
+        "elo": 1397.0253339350613,
         "recentHomeResults": [
           "WIN",
           "WIN",
@@ -40657,7 +40657,7 @@
         "totalShotsAgainst": 1068.0,
         "shotsPerMatch": 12.622222222222222,
         "shotsAgainstPerMatch": 11.866666666666667,
-        "elo": 1545.9406240729224,
+        "elo": 1545.261855910119,
         "recentHomeResults": [
           "DRAW",
           "WIN",
@@ -42746,14 +42746,14 @@
     },
     "trainedMatches": [],
     "lastUpdateDates": {
-      "DED": "2026-05-25",
-      "PD": "2026-05-25",
-      "BL1": "2026-05-25",
-      "FL1": "2026-05-25",
-      "PL": "2026-05-25",
-      "PPL": "2026-05-25",
-      "ELC": "2026-05-25",
-      "SA": "2026-05-25"
+      "DED": "2026-05-26",
+      "PD": "2026-05-26",
+      "BL1": "2026-05-26",
+      "FL1": "2026-05-26",
+      "PL": "2026-05-26",
+      "PPL": "2026-05-26",
+      "ELC": "2026-05-26",
+      "SA": "2026-05-26"
     }
   },
   "trainedMatches": []

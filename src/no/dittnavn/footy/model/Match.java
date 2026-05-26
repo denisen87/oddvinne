@@ -44,6 +44,46 @@ public class Match {
     private double avgDraw;
     private double avgAway;
 
+    private int homePossession;
+    private int awayPossession;
+
+
+    private int homeDangerous;
+    private int awayDangerous;
+
+    private int homeBlockedShots;
+    private int awayBlockedShots;
+
+    private int homeOffsides;
+    private int awayOffsides;
+
+    private int homeThrowIns;
+    private int awayThrowIns;
+
+    private int homeRedCards;
+    private int awayRedCards;
+
+    private int homeYellowRedCards;
+    private int awayYellowRedCards;
+
+    private int homeSubstitutions;
+    private int awaySubstitutions;
+
+    private int homeAttacks;
+    private int awayAttacks;
+
+    private int homeDangerousAttacks;
+    private int awayDangerousAttacks;
+
+    private int homePenalties;
+    private int awayPenalties;
+
+    private int homeSaves;
+    private int awaySaves;
+
+    private int homeInjuries;
+    private int awayInjuries;
+
     private double PSCH;
     private double PSCA;
     private double AvgCH;
@@ -413,4 +453,41 @@ public class Match {
     public int getAwayFouls() {
         return awayFouls;
     }
+
+    public void setHomePossession(int v) {
+        this.homePossession = v;
+    }
+
+    public void setAwayPossession(int v) {
+        this.awayPossession = v;
+    }
+
+    public int getHomePossession() {
+        return homePossession;
+    }
+
+    public int getAwayPossession() {
+        return awayPossession;
+    }
+
+    public void setHomeDangerous(int homeDangerous) {
+        this.homeDangerous = homeDangerous;
+    }
+
+    public void setAwayDangerous(int awayDangerous) {
+        this.awayDangerous = awayDangerous;
+    }
+
+
+    public int getHomeDangerous() {
+        return homeDangerous;
+    }
+
+    public int getAwayDangerous() {
+        return awayDangerous;
+    }
+
+
+
+
 }

@@ -117,6 +117,9 @@ public class FlashscoreFixtureFetcher {
 
                             break;
                         }
+
+                        System.out.println("INDEX: " + row);
+                        System.out.println("TEXT: " + row.getText());
                     }
 
                     lastY = currentY;

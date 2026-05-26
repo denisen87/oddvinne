@@ -28,6 +28,11 @@ public class LeagueConfig { //
                     ),
 
                     Map.entry(
+                            "FIN",
+                            "https://www.flashscore.com/football/finland/suomen-cup/"
+                    ),
+
+                    Map.entry(
                             "E0",
                             "https://www.flashscore.com/football/england/premier-league/"
                     ),
