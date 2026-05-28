@@ -83,12 +83,12 @@ CREATE TABLE IF NOT EXISTS historical_matches (
     avgHome REAL,
     avgDraw REAL,
     avgAway REAL,
-    UNIQUE(date, homeTeam, awayTeam, league)
+    UNIQUE(date, homeTeam, awayTeam, league),
     
-    homePossession,
-    awayPossession,
-    homeDangerous
-    awayDangerous
+    homePossession Integer,
+    awayPossession Integer,
+    homeDangerous Integer,
+    awayDangerous Integer
 )
 """);
 
@@ -401,50 +401,124 @@ DO UPDATE SET
 
     public static void saveHistoricalMatch(Connection conn, Match m) {
 
-
-
         String sql = """
 INSERT INTO historical_matches(
-    date, league, homeTeam, awayTeam,
-    fthg, ftag,
-    homeShots, awayShots,
-    homeShotsTarget, awayShotsTarget,
-    homeCorners, awayCorners,
-    homeYellow, awayYellow,
-    homeOdds, drawOdds, awayOdds,
-    psHome, psDraw, psAway,
-    maxHome, maxDraw, maxAway,
-    avgHome, avgDraw, avgAway,
-                    homeFouls, awayFouls,
-                
-                    homePossession,
-                    awayPossession,
-                
-                    homeDangerous,
-                    awayDangerous
+    date,
+    league,
+    homeTeam,
+    awayTeam,
+
+    fthg,
+    ftag,
+
+    homeShots,
+    awayShots,
+
+    homeShotsTarget,
+    awayShotsTarget,
+
+    homeCorners,
+    awayCorners,
+
+    homeYellow,
+    awayYellow,
+
+    homeFouls,
+    awayFouls,
+
+    homePossession,
+    awayPossession,
+
+    homeDangerous,
+    awayDangerous,
+
+    homeOdds,
+    drawOdds,
+    awayOdds,
+
+    psHome,
+    psDraw,
+    psAway,
+
+    maxHome,
+    maxDraw,
+    maxAway,
+
+    avgHome,
+    avgDraw,
+    avgAway
 )
-VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+VALUES (
+    ?, ?, ?, ?,
+    ?, ?,
+    ?, ?,
+    ?, ?,
+    ?, ?,
+    ?, ?,
+    ?, ?,
+    ?, ?,
+    ?, ?,
+    ?, ?, ?,
+    ?, ?, ?,
+    ?, ?, ?,
+    ?, ?, ?
+)
 ON CONFLICT(date, homeTeam, awayTeam, league)
 DO UPDATE SET
+
+    fthg = excluded.fthg,
+    ftag = excluded.ftag,
+
+    homeShots = excluded.homeShots,
+    awayShots = excluded.awayShots,
+
+    homeShotsTarget = excluded.homeShotsTarget,
+    awayShotsTarget = excluded.awayShotsTarget,
+
+    homeCorners = excluded.homeCorners,
+    awayCorners = excluded.awayCorners,
+
+    homeYellow = excluded.homeYellow,
+    awayYellow = excluded.awayYellow,
+
+    homeFouls = excluded.homeFouls,
+    awayFouls = excluded.awayFouls,
+
+    homePossession = excluded.homePossession,
+    awayPossession = excluded.awayPossession,
+
+    homeDangerous = excluded.homeDangerous,
+    awayDangerous = excluded.awayDangerous,
+
     homeOdds = excluded.homeOdds,
     drawOdds = excluded.drawOdds,
     awayOdds = excluded.awayOdds,
+
     psHome = excluded.psHome,
     psDraw = excluded.psDraw,
     psAway = excluded.psAway,
+
     maxHome = excluded.maxHome,
     maxDraw = excluded.maxDraw,
     maxAway = excluded.maxAway,
+
     avgHome = excluded.avgHome,
     avgDraw = excluded.avgDraw,
     avgAway = excluded.avgAway
+
 """;
 
         try (PreparedStatement ps = conn.prepareStatement(sql)) {
 
-            int i = 1;
             if (m.getDate() == null || m.getDate().isBlank()) {
-                System.out.println("SKIPPER kamp uten dato: " + m.getHomeTeam() + " vs " + m.getAwayTeam());
+
+                System.out.println(
+                        "SKIPPER kamp uten dato: "
+                                + m.getHomeTeam()
+                                + " vs "
+                                + m.getAwayTeam()
+                );
+
                 return;
             }
 
@@ -452,20 +526,52 @@ DO UPDATE SET
             String rawDate = m.getDate();
 
             try {
-                parsed = LocalDate.parse(rawDate, DateTimeFormatter.ofPattern("dd/MM/yyyy"));
+
+                parsed = LocalDate.parse(
+                        rawDate,
+                        DateTimeFormatter.ofPattern("dd/MM/yy")
+                );
+
             } catch (Exception e1) {
+
                 try {
-                    parsed = LocalDate.parse(rawDate, DateTimeFormatter.ofPattern("dd.MM.yyyy"));
+
+                    parsed = LocalDate.parse(
+                            rawDate,
+                            DateTimeFormatter.ofPattern("dd.MM.yyyy")
+                    );
+
                 } catch (Exception e2) {
-                    System.out.println("FEIL DATO: " + rawDate);
-                    return; // ✅ riktig her
+
+                    try {
+
+                        parsed = LocalDate.parse(rawDate);
+
+                    } catch (Exception e3) {
+
+                        System.out.println(
+                                "FEIL DATO: " + rawDate
+                        );
+
+                        return;
+                    }
                 }
             }
 
+            int i = 1;
+
             ps.setString(i++, parsed.toString());
             ps.setString(i++, m.getLeague());
-            ps.setString(i++, TeamNameNormalizer.normalize(m.getHomeTeam()));
-            ps.setString(i++, TeamNameNormalizer.normalize(m.getAwayTeam()));
+
+            ps.setString(
+                    i++,
+                    TeamNameNormalizer.normalize(m.getHomeTeam())
+            );
+
+            ps.setString(
+                    i++,
+                    TeamNameNormalizer.normalize(m.getAwayTeam())
+            );
 
             ps.setInt(i++, m.getHomeGoals());
             ps.setInt(i++, m.getAwayGoals());
@@ -481,6 +587,15 @@ DO UPDATE SET
 
             ps.setInt(i++, m.getHomeYellow());
             ps.setInt(i++, m.getAwayYellow());
+
+            ps.setInt(i++, m.getHomeFouls());
+            ps.setInt(i++, m.getAwayFouls());
+
+            ps.setInt(i++, m.getHomePossession());
+            ps.setInt(i++, m.getAwayPossession());
+
+            ps.setInt(i++, m.getHomeDangerous());
+            ps.setInt(i++, m.getAwayDangerous());
 
             ps.setDouble(i++, m.getHomeOdds());
             ps.setDouble(i++, m.getDrawOdds());
@@ -498,22 +613,17 @@ DO UPDATE SET
             ps.setDouble(i++, m.getAvgDraw());
             ps.setDouble(i++, m.getAvgAway());
 
-            ps.setInt(i++, m.getHomeFouls());
-            ps.setInt(i++, m.getAwayFouls());
-
-            ps.setInt(i++, m.getHomePossession());
-            ps.setInt(i++, m.getAwayPossession());
-
-            ps.setInt(i++, m.getHomeDangerous());
-            ps.setInt(i++, m.getAwayDangerous());
-
             ps.executeUpdate();
 
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
+            System.out.println("SAVED TO DATABASE");
 
+        } catch (SQLException e) {
+
+            e.printStackTrace();
+
+        }
     }
+
     public static List<Match> getHistoricalMatchesOrdered() {
 
         List<Match> list = new ArrayList<>();
@@ -677,5 +787,44 @@ DO UPDATE SET
         } catch (Exception e) {
             e.printStackTrace();
         }
+    }
+
+    public static boolean matchExists(
+            Connection conn,
+            String homeTeam,
+            String awayTeam,
+            String date
+    ) {
+
+        String sql = """
+            SELECT 1
+            FROM historical_matches
+            WHERE
+                homeTeam = ?
+            AND awayTeam = ?
+            AND date = ?
+            LIMIT 1
+            """;
+
+        try {
+
+            PreparedStatement ps =
+                    conn.prepareStatement(sql);
+
+            ps.setString(1, homeTeam);
+            ps.setString(2, awayTeam);
+            ps.setString(3, date);
+
+            ResultSet rs =
+                    ps.executeQuery();
+
+            return rs.next();
+
+        } catch (Exception e) {
+
+            e.printStackTrace();
+        }
+
+        return false;
     }
 }

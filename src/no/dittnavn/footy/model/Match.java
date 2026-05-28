@@ -84,6 +84,26 @@ public class Match {
     private int homeInjuries;
     private int awayInjuries;
 
+
+    private int homeShotsOnTarget;
+    private int awayShotsOnTarget;
+
+    private int homeKeeperSaves;
+    private int awayKeeperSaves;
+
+    private int homeYellowCards;
+    private int awayYellowCards;
+
+    private int HomeOffsides;
+
+    private int homeGoalKicks;
+    private int awayGoalKicks;
+
+    private int homeFreeKicks;
+    private int awayFreeKicks;
+
+
+
     private double PSCH;
     private double PSCA;
     private double AvgCH;
@@ -93,6 +113,8 @@ public class Match {
     private int homeFouls = -1;
     private int awayFouls = -1;
 
+    private int homeRed = -1;
+    private int awayRed = -1;
 
     public Match() {
     }
@@ -108,6 +130,7 @@ public class Match {
                  int awayGoals,
                  double homeOdds,
                  double drawOdds,
+                 int homeOffsides,
                  double awayOdds) {
 
         this.date = date;
@@ -118,6 +141,7 @@ public class Match {
         this.homeOdds = homeOdds;
         this.drawOdds = drawOdds;
         this.awayOdds = awayOdds;
+        this.homeOffsides = homeOffsides;
     }
 
     // =====================================================
@@ -485,8 +509,104 @@ public class Match {
 
     public int getAwayDangerous() {
         return awayDangerous;
+
     }
 
+    public int getHomeShotsOnTarget() {
+        return homeShotsOnTarget;
+    }
+
+    public void setHomeShotsOnTarget(int homeShotsOnTarget) {
+        this.homeShotsOnTarget = homeShotsOnTarget;
+    }
+
+    public int getAwayShotsOnTarget() {
+        return awayShotsOnTarget;
+    }
+
+    public void setAwayShotsOnTarget(int awayShotsOnTarget) {
+        this.awayShotsOnTarget = awayShotsOnTarget;
+    }
+
+    public int getHomeKeeperSaves() {
+        return homeKeeperSaves;
+    }
+
+    public void setHomeKeeperSaves(int homeKeeperSaves) {
+        this.homeKeeperSaves = homeKeeperSaves;
+    }
+
+    public int getAwayKeeperSaves() {
+        return awayKeeperSaves;
+    }
+
+    public void setAwayKeeperSaves(int awayKeeperSaves) {
+        this.awayKeeperSaves = awayKeeperSaves;
+    }
+
+    public int getHomeRed() {
+        return homeRed;
+    }
+
+    public void setHomeRed(int homeRed) {
+        this.homeRed = homeRed;
+    }
+
+    public int getAwayRed() {
+        return awayRed;
+    }
+
+    public void setAwayRed(int awayRed) {
+        this.awayRed = awayRed;
+    }
+
+    public int getHomeOffsides() {
+        return homeOffsides;
+    }
+
+    public void setHomeOffsides(int homeOffsides) {
+        this.homeOffsides = homeOffsides;
+    }
+
+    public int getAwayOffsides() {
+        return awayOffsides;
+    }
+
+    public void setAwayOffsides(int awayOffsides) {
+        this.awayOffsides = awayOffsides;
+    }
+
+    public int getHomeGoalKicks() {
+        return homeGoalKicks;
+    }
+
+    public void setHomeGoalKicks(int homeGoalKicks) {
+        this.homeGoalKicks = homeGoalKicks;
+    }
+
+    public int getAwayGoalKicks() {
+        return awayGoalKicks;
+    }
+
+    public void setAwayGoalKicks(int awayGoalKicks) {
+        this.awayGoalKicks = awayGoalKicks;
+    }
+
+    public int getHomeFreeKicks() {
+        return homeFreeKicks;
+    }
+
+    public void setHomeFreeKicks(int homeFreeKicks) {
+        this.homeFreeKicks = homeFreeKicks;
+    }
+
+    public int getAwayFreeKicks() {
+        return awayFreeKicks;
+    }
+
+    public void setAwayFreeKicks(int awayFreeKicks) {
+        this.awayFreeKicks = awayFreeKicks;
+    }
 
 
 

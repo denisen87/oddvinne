@@ -8,6 +8,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import java.time.format.DateTimeFormatter;
 
 import java.time.Duration;
 import java.time.LocalDate;
@@ -92,6 +93,8 @@ public class FlashscoreFixtureFetcher {
 
                 int lastY = -1;
 
+                String currentDate = "";
+
                 for (WebElement row : rows) {
 
                     int currentY =
@@ -131,6 +134,19 @@ public class FlashscoreFixtureFetcher {
 
                         String classes =
                                 row.getAttribute("class");
+
+                        if (classes.contains("event__header")) {
+
+                            currentDate =
+                                    row.getText();
+
+                            System.out.println(
+                                    "CURRENT DATE: "
+                                            + currentDate
+                            );
+
+                            continue;
+                        }
 
                         System.out.println(
                                 "ROW TEXT: " + text
@@ -187,6 +203,23 @@ public class FlashscoreFixtureFetcher {
 
                         String timeText =
                                 timeEls.get(0).getText();
+
+                        String matchDate;
+
+                        if (timeText.contains(".")) {
+
+                            matchDate =
+                                    timeText.split(" ")[0];
+
+                        } else {
+
+                            matchDate =
+                                    LocalDate.now()
+                                            .format(
+                                                    DateTimeFormatter
+                                                            .ofPattern("dd.MM.")
+                                            );
+                        }
 
                         if (!timeText.contains(":")) {
 
@@ -265,9 +298,7 @@ public class FlashscoreFixtureFetcher {
                         // DATO
                         // =====================================
 
-                        f.date =
-                                LocalDate.now()
-                                        .toString();
+                        f.date = matchDate;
 
                         System.out.println(
                                 "FOUND MATCH: "

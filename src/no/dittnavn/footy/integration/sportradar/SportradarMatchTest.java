@@ -13,7 +13,8 @@ public class SportradarMatchTest {
                 new SportradarMatchClient();
 
         String json =
-                client.fetchMatchDetails(71297426);
+                client.fetchMatchDetails(61732312); // Torrense
+                //client.fetchMatchDetails(71297426); // Tolima
                 //client.fetchMatchDetails(71516508); // tolima
 
         SportradarMatchParser parser =
@@ -23,9 +24,9 @@ public class SportradarMatchTest {
                 parser.parse(json);
 
         // test-data
-        match.setDate("03/05/2026");
+        match.setDate("16/05/2026");
 
-        match.setLeague("Colombia");
+        match.setLeague("LigaPorgugal2");
 
         System.out.println(match.getDate());
 

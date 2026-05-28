@@ -41,7 +41,8 @@ public class DataImporter {
                 Map.entry("FIN", "FinskVeikausliga"),
                 Map.entry("Bel", "Jupilerleague"),
                 Map.entry("SWE", "Allsvenskan"),
-                Map.entry("Ire", "Premierchip")
+                Map.entry("Ire", "Premierchip"),
+                Map.entry("POR", "LigaPortugal")
         );
 
         try (Connection conn = DatabaseManager.getConnection()) {

@@ -86,7 +86,17 @@ public class Main {
         DatabaseManager.init();
 
         StatsIndeks stats = new StatsIndeks();
+
         stats.loadFromFile();
+
+// 🔥 legg til DB-kamper også
+        List<Match> dbMatches =
+                DatabaseManager.getHistoricalMatchesOrdered();
+
+        for (Match m : dbMatches) {
+
+            stats.update(m);
+        }
         System.out.println("=== TEAMS INDEKS ===");
         stats.printAllTeams();
         GlobalStats.stats = stats;
@@ -111,7 +121,7 @@ public class Main {
             List<Match> historicalMatches = new ArrayList<>();
 
             String[] leagues = {
-                    "E0", "E1", "D1", "D2", "I1", "I2", "SP1", "SP2", "F1", "F2", "B1", "P1", "T1", "NOR", "SWE", "Ire",
+                    "E0", "E1", "D1", "D2", "I1", "I2", "SP1", "SP2", "F1", "F2", "B1", "P1", "T1", "NOR", "SWE", "Ire","POR","POR2",
             };
 
             for (String league : leagues) {
@@ -509,11 +519,15 @@ public class Main {
 
         AutoBetEngine.run(indeks, neural, tracker, upcoming);
 
-        List<OddsRow> odds = Preoddsloader.load("data/1pre.csv");
+        //List<OddsRow> odds = Preoddsloader.load("data/1pre.csv");
 
+        scanner = new Scanner(System.in);
+        List<OddsRow> odds = new ArrayList<>();
         for (OddsRow o : odds) {
             System.out.println(o.home + " vs " + o.away + " | " + o.label + " @ " + o.price);
         }
+
+
 /*
         no.dittnavn.footy.engine.BacktestEngine.run(); // bruker backtestrunner nå istede,
 
@@ -740,6 +754,8 @@ public class Main {
 
                     System.out.println("DEBUG home: " + homeInput);
                     System.out.println("DEBUG away: " + awayInput);
+
+                    System.out.println(indeks.getAllTeams());
 
                     homeStats = indeks.getTeam(homeInput);
                     awayStats = indeks.getTeam(awayInput);
@@ -1017,6 +1033,8 @@ public class Main {
 
                 System.out.println("\n=== SIMULERING 1000 KAMPER ===");
                 System.out.println(Actualresult);
+
+
 /*
                 System.out.println("FINAL PROBS NOW:");
                 System.out.println(finalHome + " " + finalDraw + " " + finalAway);
@@ -1291,12 +1309,14 @@ public class Main {
                         //"SP1",
                         //"D1",
                         //"I1",
-                        //"NOR",
+                        "NOR",
                         //"F1",
                         //"SWE",
                           //"BRA",
                           //"IRE",
-                           "FIN",
+                           //"FIN",
+                         //"FIN_CUP",
+                        "POR",
                 };
 
                 // ===== SCRAPE =====
@@ -1360,6 +1380,10 @@ public class Main {
                 );
                 flashMatches.addAll(
                         FlashPreOddsLoader.load("data/FINpreflash.csv")
+                );
+
+                flashMatches.addAll(
+                        FlashPreOddsLoader.load("data/PORpreflash.csv")
                 );
 
                 // ===== SCAN VALUEBETS =====

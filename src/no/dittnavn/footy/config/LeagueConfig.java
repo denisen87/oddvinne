@@ -28,8 +28,13 @@ public class LeagueConfig { //
                     ),
 
                     Map.entry(
-                            "FIN",
+                            "FIN_CUP",
                             "https://www.flashscore.com/football/finland/suomen-cup/"
+                    ),
+
+                    Map.entry(
+                            "FIN",
+                            "https://www.flashscore.com/football/finland/veikkausliiga/"
                     ),
 
                     Map.entry(
@@ -65,6 +70,11 @@ public class LeagueConfig { //
                     Map.entry(
                             "europa-league",
                             "https://www.flashscore.com/football/europe/europa-league/"
+
+                    ),
+                    Map.entry(
+                            "POR",
+                            "https://www.flashscore.com/football/portugal/liga-portugal/"
                     )
 
 
